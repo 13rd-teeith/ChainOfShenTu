@@ -1,0 +1,362 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>注册</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- ========================= CSS here ========================= -->
+    <link rel="stylesheet" href="assets/css/bootstrap-5.0.0-alpha.min.css">
+    <link rel="stylesheet" href="assets/css/LineIcons.2.0.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/tiny-slider.css">
+    <link rel="stylesheet" href="assets/css/glightbox.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+
+<!-- ========================= header start ========================= -->
+<header class="header navbar-area">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-12">
+                <nav class="navbar navbar-expand-lg">
+                    <a class="navbar-brand" href="#">
+                        <img src="assets/img/logo/logo.svg" alt="Logo">
+                    </a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="toggler-icon"></span>
+                    </button>
+                </nav> <!-- navbar -->
+            </div>
+        </div> <!-- row -->
+    </div> <!-- container -->
+
+</header>
+<!-- ========================= header end ========================= -->
+
+<!-- ========================= 功能模式详细阐释 pricing-section start ========================= -->
+<section id="pricing" class="pricing-section pt-140 pb-100">
+    <div class="row">
+        <div class="col-xl-6 col-lg-7 col-md-10 mx-auto">
+            <div class="section-title text-center mb-60">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-xl-6 col-lg-7 col-md-10 mx-auto">
+            <div class="section-title text-center mb-60">
+            </div>
+        </div>
+    </div>
+    <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-home-tab">
+            <div class="row">
+                <div class="col-xl-2">
+                    <div class="contact-item-wrapper">
+                        <div class="row">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-xl-8">
+                    <div class="contact-form-wrapper">
+
+                        <div class="row">
+                            <div class="col-xl-10 col-lg-8 mx-auto">
+                                <div class="section-title text-center mb-50">
+                                    <span class="wow fadeInDown" data-wow-delay=".4s">为办案机关提供的注册hhh</span>
+                                    <p class="wow fadeInUp" data-wow-delay=".6s">需选择您所属的行政区划并提供您的单位编号</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div>
+
+                            <body onload='getProvince()'>
+                                <div class="sltcontain">
+                                    <div class="sltaaa">
+                                        <select class="provinceChoice" id="province" onchange="chooseProvince(this)">
+                                            <option value="1">请选择省</option>
+                                        </select>
+                                    </div>
+                                    <div class="sltaaa">
+
+                                        <select class="provinceChoice" id="city" onchange="chooseCity(this)">
+                                            <option value="2">请选择市</option>
+                                        </select>
+                                    </div>
+                                    <div class="sltaaa">
+                                        <select class="provinceChoice" id="area">
+                                            <option value="3">请选择区</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </body>
+                            <style>
+                                .sltcontain {
+                                    display: flex;
+                                    flex-wrap: wrap;
+                                }
+
+                                .sltaaa {
+                                    text-align: center;
+                                    flex: 1;
+                                }
+
+                                .provinceChoice {
+                                    text-align: center;
+                                    font-family: 微软雅黑;
+                                    font-size: 18px;
+                                    letter-spacing: 6px;
+                                    color: #ffffff;
+                                    width: 220px;
+                                    height: 50px;
+                                    line-height: 40px;
+                                    border: none;
+                                    border-radius: 10px;
+                                    background-image: linear-gradient(150deg, #4371f0, rgb(108, 64, 219));
+                                    background-color: #434343;
+                                    padding: 0;
+                                    cursor: pointer;
+                                    box-shadow: 3px 3px 10px rgb(205, 167, 255),
+                                        -3px -3px 10px rgb(178, 220, 255);
+                                }
+
+                                .provinceChoice:hover {
+                                    font-size: 18px;
+                                    letter-spacing: 6px;
+                                    color: #ffffff;
+                                    background-color: #666666;
+                                    border: none;
+                                    box-shadow: 3px 3px 25px rgb(205, 167, 255),
+                                        -3px -3px 25px rgb(178, 220, 255);
+                                }
+
+                                .provinceChoice:focus {
+                                    outline: none;
+                                }
+                            </style>
+
+                            <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+                            <script language="javascript" src="assets/js/province.js" type="text/javascript"
+                                charset="utf-8"></script>
+
+                            <div class="row">
+                                <div class="col-xl-10 col-lg-8 mx-auto">
+                                    <div class="section-title text-center mb-50">
+                                        <span class="wow fadeInDown" data-wow-delay=".4s"></span>
+                                        <p class="wow fadeInUp" data-wow-delay=".6s"></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="contact-form">
+                            <div id="unitcode-papa">
+                                <p id="unittxt">请提供您所在单位编码</p>
+                                <br>
+                                <input type="text" id="unitcode" placeholder="单位编码" maxlength="18">
+                            </div>
+                        </div>
+                        <style>
+                            #unittxt {
+                                color: #3e6be6;
+                                font-size: 21px;
+                                font-weight: bolder;
+                                letter-spacing: 3px;
+                            }
+
+                            #unitcode-papa {
+                                text-align: center;
+                            }
+
+                            #unitcode {
+                                color: #434343;
+                                font-size: large;
+                                box-shadow: 3px 3px 10px rgb(153, 124, 190),
+                                    -3px -3px 10px rgb(178, 220, 255);
+                                width: 500px;
+                                letter-spacing: 2px;
+                            }
+
+                            #unitcode:hover {
+                                color: #434343;
+                                font-size: large;
+                                box-shadow: 3px 3px 10px rgb(205, 167, 255),
+                                    -3px -3px 10px rgb(178, 220, 255);
+                                width: 500px;
+                                letter-spacing: 2px;
+                            }
+
+                            #unitcode:focus {
+                                color: #434343;
+                                font-size: large;
+                                box-shadow: 3px 3px 10px rgb(153, 124, 190),
+                                    -3px -3px 10px rgb(178, 220, 255);
+                                width: 500px;
+                                letter-spacing: 2px;
+                            }
+                        </style>
+
+                        <div class="row">
+                            <div class="col-xl-10 col-lg-8 mx-auto">
+                                <div class="section-title text-center mb-50">
+                                    <span class="wow fadeInDown" data-wow-delay=".4s"></span>
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-12">
+                                <div class="button text-center">
+                                    <button type="submit" class="theme-btn" onclick="signuphere()">注册</button>
+                                    <script>
+                                        function signuphere() {
+                                            const idNumber = document.getElementById('unitcode').value;
+                                            const reg = /^[1-9]\d{5}(19|20)\d{2}(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])\d{3}[\dxX]$/;
+
+                                            var province = document.getElementById('province').value;
+                                            var city = document.getElementById('city').value;
+                                            var area = document.getElementById('area').value;
+
+                                            if (province === "1" || city === "2" || area === "3") {
+                                                alert("请选择完整的行政区划信息！");
+                                            } else {
+                                                if (!reg.test(idNumber)) {
+                                                    alert('请输入正确的机关编号！');
+                                                } else {
+                                                    /*
+                                                    进行注册数据传输
+                                                    */
+                                                    var nxtpage = "signup_successful.html";
+                                                    window.location.href = nxtpage;
+                                                }
+                                            }
+                                        }
+                                    </script>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    </div>
+
+    <footer class="footer pt-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-5 offset-xl-1 col-lg-6 col-md-6">
+                    <div class="footer-widget mb-60 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="pp">神荼:全流量取证调查框架</div>
+                        <div class="ppp">更高效、安全的数字取证解决方案</div>
+                        <div class="txth">
+                            神荼系统支持全流量数据采集、数据分析与可视化,极其注重个人隐私权利保障,为办案机关与公民用户提供有力保护！
+                        </div>
+
+                        <style>
+                            .pp {
+                                font-weight: bold;
+                                font-size: 25px;
+                            }
+
+                            .ppp {
+                                font-weight: 900;
+                                font-size: 30px;
+                                color: rgb(57, 62, 116)
+                            }
+                        </style>
+                    </div>
+                </div>
+                <div class="col-xl-2 offset-xl-1 col-lg-2 col-md-6">
+                    <div class="txth footer-widget mb-60 wow fadeInUp" data-wow-delay=".4s">
+                        <h4>导航</h4>
+                        <ul class="footer-links">
+                            <li>
+                                <a href="#">主页</a>
+                            </li>
+                            <li>
+                                <a href="#aboutus">关于我们</a>
+                            </li>
+                            <li>
+                                <a onclick=to()>普法援助</a>
+                            </li>
+                            <li>
+                                <a onclick=to()>风险分析</a>
+                            </li>
+
+                            <script>
+                                function to() {
+                                    alert('请先注册！');
+                                    window.location.href = "signup_stage0.html";
+                                }
+                            </script>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="txth col-xl-3 col-lg-3 col-md-6">
+                    <div class="footer-widget mb-60 wow fadeInRight" data-wow-delay=".8s">
+                        <h4>联系我们</h4>
+                        <ul class="footer-contact">
+                            <li>
+                                <a>没有电话</a>
+                            </li>
+                            <li>
+                                <a>没有邮箱</a>
+                            </li>
+                            <li>
+                                <a>成都市双流区川大路二段</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <style>
+                .txth {
+                    font-weight: 900;
+                }
+                h4{
+                    font-weight:bold;
+                    font-size: 30px;
+                    font-family: '微软雅黑';
+                }
+            </style>
+            <div class="copyright-area">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="footer-social-links">
+                            <ul class="d-flex">
+                                <li><a href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="lni lni-twitter-filled"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="lni lni-instagram-filled"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="wow fadeInUp" data-wow-delay=".3s"><a href="#" title="神荼锁链：取证研判系统">神荼锁链：取证研判系统</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+</section>
+<!-- ========================= pricing-section end ========================= -->
+</body>
+
+</html>

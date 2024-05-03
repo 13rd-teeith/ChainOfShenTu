@@ -1,0 +1,614 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>登录</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- ========================= CSS here ========================= -->
+    <link rel="stylesheet" href="assets/css/bootstrap-5.0.0-alpha.min.css">
+    <link rel="stylesheet" href="assets/css/LineIcons.2.0.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/tiny-slider.css">
+    <link rel="stylesheet" href="assets/css/glightbox.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- preloader end -->
+
+    <!-- ========================= header start ========================= -->
+    <header class="header navbar-area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg">
+                        <a class="navbar-brand" href="#">
+                            <img src="assets/img/logo/logo.svg" alt="Logo">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="toggler-icon"></span>
+                        </button>
+                    </nav> <!-- navbar -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+
+    </header>
+    <!-- ========================= header end ========================= -->
+
+    <!-- ========================= 功能模式详细阐释 pricing-section start ========================= -->
+    <section id="pricing" class="pricing-section pt-140 pb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-7 col-md-10 mx-auto">
+                    <div class="section-title text-center mb-60">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="pricing-btn text-center wow fadeInUp" data-wow-delay=".3s">
+                        <ul class="nav justify-content-center mb-90" id="pills-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="pills-1-tab" data-toggle="pill" href="#pills-1"
+                                    role="tab" aria-controls="pills-1" aria-selected="true">验证码登录</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="pills-2-tab" data-toggle="pill" href="#pills-2" role="tab"
+                                    aria-controls="pills-2" aria-selected="false">密码登录</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <div class="row">
+                        <div class="col-xl-2">
+                            <div class="contact-item-wrapper">
+                                <div class="row">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-8">
+                            <div class="contact-form-wrapper">
+                                <div class="row">
+                                    <div class="col-xl-10 col-lg-8 mx-auto">
+                                        <div class="section-title text-center mb-50">
+                                            <span class="wow fadeInDown" data-wow-delay=".4s">验证码登录界面</span>
+                                            <p class="wow fadeInUp" data-wow-delay=".6s">请使用手机号码及验证码登录</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact-form">
+                                    <div class="sltcontain">
+                                        <div class="sltaaa">
+                                            <input type="text" name="" id="phn" placeholder="手机号码" required>
+                                        </div>
+
+                                        <br>
+                                        <style>
+                                            #phn {
+                                                color: #434343;
+                                                font-size: large;
+                                                box-shadow: 3px 3px 10px rgb(153, 124, 190),
+                                                    -3px -3px 10px rgb(178, 220, 255);
+                                                width: 710px;
+                                                letter-spacing: 2px;
+                                            }
+
+                                            #phn:hover {
+                                                color: #434343;
+                                                font-size: large;
+                                                box-shadow: 3px 3px 10px rgb(205, 167, 255),
+                                                    -3px -3px 10px rgb(178, 220, 255);
+                                                width: 710px;
+                                                letter-spacing: 2px;
+                                            }
+
+                                            #phn:focus {
+                                                color: #434343;
+                                                font-size: large;
+                                                box-shadow: 3px 3px 10px rgb(153, 124, 190),
+                                                    -3px -3px 10px rgb(178, 220, 255);
+                                                width: 710px;
+                                                letter-spacing: 2px;
+                                            }
+                                        </style>
+
+
+                                        <div class="col-md-12">
+
+                                            <body>
+                                                <div class="sltcontain">
+                                                    <div class="sltaaa">
+                                                        <input type="text" name="" id="phn2" placeholder="验证码" required>
+                                                    </div>
+                                                    <div class="sltaaa">
+                                                        <button onclick="getkey(this)" class="phnbtn"
+                                                            id="get-code">发送验证码</button>
+                                                    </div>
+                                                    <div class="sltaaa">
+                                                        <button type="submit" class="phnbtn"
+                                                            onclick="loginhere()">登录</button>
+                                                    </div>
+                                                </div>
+                                            </body>
+                                            <script>
+                                                function loginhere() {
+                                                    var inputVal1 = document.getElementById('phn').value;
+                                                    var inputVal2 = document.getElementById('phn2').value;
+                                                    if (inputVal1.trim() === "") {
+                                                        alert("请输入电话号码");
+                                                    } else if (inputVal2.trim() === "") {
+                                                        alert("请输入验证码");
+                                                    } else {
+                                                        var nxtpage = "signup_successful.html";
+                                                        window.location.href = nxtpage;
+                                                    }
+                                                }
+
+                                                function getkey(button) {
+                                                    var inputVal = document.getElementById('phn').value;
+                                                    console.log("phn，启动")
+                                                    if (inputVal.trim() === "") {
+                                                        alert("请输入电话号码");
+                                                    } else {
+                                                        button.disabled = true; // 禁用按钮
+                                                        var countdown = 60; // 倒计时时间，单位为秒
+                                                        var countdownElement = document.getElementById("get-code");
+
+                                                        console.log("电话号码，启动")
+                                                        /*
+                                                        向后端申请执行验证码发送操作
+                                                        */
+                                                        var timer = setInterval(function () {
+                                                            countdown--;
+                                                            countdownElement.textContent = "剩余时间：" + countdown + "秒";
+
+                                                            if (countdown <= 0) {
+                                                                clearInterval(timer);
+                                                                button.disabled = false; // 启用按钮
+                                                                countdownElement.textContent = "发送验证码"; // 清空倒计时显示
+                                                            }
+                                                        }, 1000); // 每秒更新一次倒计时
+
+                                                    }
+                                                }
+                                            </script>
+                                        </div>
+                                        <style>
+                                            #phn2 {
+                                                color: #434343;
+                                                font-size: large;
+                                                box-shadow: 3px 3px 10px rgb(153, 124, 190),
+                                                    -3px -3px 10px rgb(178, 220, 255);
+                                                width: 200px;
+                                                letter-spacing: 2px;
+                                            }
+
+                                            #phn2:hover {
+                                                color: #434343;
+                                                font-size: large;
+                                                box-shadow: 3px 3px 10px rgb(205, 167, 255),
+                                                    -3px -3px 10px rgb(178, 220, 255);
+                                                width: 200px;
+                                                letter-spacing: 2px;
+                                            }
+
+                                            #phn2:focus {
+                                                color: #434343;
+                                                font-size: large;
+                                                box-shadow: 3px 3px 10px rgb(153, 124, 190),
+                                                    -3px -3px 10px rgb(178, 220, 255);
+                                                width: 200px;
+                                                letter-spacing: 2px;
+                                            }
+
+                                            .phnbtn {
+                                                border: none;
+                                                border-radius: 30px;
+                                                color: #434343;
+                                                font-size: large;
+                                                box-shadow: 3px 3px 10px rgb(153, 124, 190),
+                                                    -3px -3px 10px rgb(178, 220, 255);
+                                                width: 200px;
+                                                height: 65px;
+                                                letter-spacing: 2px;
+                                                background-image: linear-gradient(150deg, #4371f0, rgb(108, 64, 219));
+                                                color: aliceblue;
+                                            }
+
+                                            .phnbtn:hover {
+                                                box-shadow: -3px -3px 20px rgb(178, 220, 255),
+                                                    3px 3px 20px rgb(153, 124, 190);
+                                            }
+
+                                            .phnbtn:focus {
+                                                box-shadow: -3px -3px 15px rgb(178, 220, 255),
+                                                    3px 3px 15px rgb(153, 124, 190);
+                                            }
+
+                                            .sltcontain {
+                                                display: flex;
+                                                flex-wrap: wrap;
+                                            }
+
+                                            .sltaaa {
+                                                text-align: center;
+                                                flex: 1;
+                                            }
+                                        </style>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab">
+                    <div class="row">
+                        <div class="col-xl-2">
+                            <div class="contact-item-wrapper">
+                                <div class="row">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-8">
+                            <div class="contact-form-wrapper">
+                                <div class="row">
+                                    <div class="col-xl-10 col-lg-8 mx-auto">
+                                        <div class="section-title text-center mb-50">
+                                            <span class="wow fadeInDown" data-wow-delay=".4s">密码登录界面</span>
+                                            <p class="wow fadeInUp" data-wow-delay=".6s">请使用手机号码及密码登录</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="contact-form">
+                                    <div class="sltcontain">
+                                        <div class="sltaaa">
+                                            <input type="text" name="" id="phn3" placeholder="手机号码" required>
+                                        </div>
+
+                                        <br>
+                                        <style>
+                                            #phn3 {
+                                                color: #1b1b1b;
+                                                font-size: large;
+                                                box-shadow: 3px 3px 10px rgb(153, 124, 190),
+                                                    -3px -3px 10px rgb(178, 220, 255);
+                                                width: 710px;
+                                                letter-spacing: 2px;
+                                            }
+
+                                            #phn3:hover {
+                                                font-size: large;
+                                                box-shadow: 3px 3px 10px rgb(205, 167, 255),
+                                                    -3px -3px 10px rgb(178, 220, 255);
+                                                width: 710px;
+                                                letter-spacing: 2px;
+                                            }
+
+                                            #phn3:focus {
+                                                font-size: large;
+                                                box-shadow: 3px 3px 10px rgb(153, 124, 190),
+                                                    -3px -3px 10px rgb(178, 220, 255);
+                                                width: 710px;
+                                                letter-spacing: 2px;
+                                            }
+                                        </style>
+
+
+                                        <div class="col-md-12">
+
+                                            <body>
+                                                <div class="sltcontaina">
+                                                    <div class="sltaaaa">
+                                                        <input type="password" name="" id="phn4" placeholder="密码"
+                                                            maxlength="15" required>
+                                                    </div>
+                                                    <div class="sltaaab">
+                                                        <button type="submit" class="phnbtn"
+                                                            onclick="gloginhere()">登录</button>
+                                                    </div>
+                                                </div>
+                                            </body>
+                                            <script>
+                                                function gloginhere() {
+                                                    var inputVal1 = document.getElementById('phn3').value;
+                                                    var inputVal2 = document.getElementById('phn4').value;
+                                                    if (inputVal1.trim() === "") {
+                                                        alert("请输入手机号码");
+                                                    } else if (inputVal2.trim() === "") {
+                                                        alert("请输入密码");
+                                                    } else {
+                                                        const mydata_1 = {
+                                                            phoneNumber: inputVal1,
+                                                            password: inputVal2
+                                                        };
+
+                                                        fetch('http://localhost:8000/login_usr', {
+                                                            method: 'POST',
+                                                            headers: {
+                                                                'Content-Type': 'application/json'
+                                                            },
+                                                            body: JSON.stringify(mydata_1)
+                                                        })
+                                                            .then(response => response.text())
+                                                            .then(data => {
+                                                                if (data === '00') {
+                                                                    alert('用户不存在,请先注册');
+                                                                    location.reload();
+                                                                } else {
+                                                                    if (data === '01') {
+                                                                        alert('密码错误');
+                                                                        location.reload();
+                                                                    } else {
+                                                                        // 将数据以查询参数的形式拼接到 URL 中
+                                                                        let queryString = new URLSearchParams({_0wq:data}).toString();
+
+                                                                        window.location.href = "./backmanage/index_nor.html?" + queryString;
+                                                                    }
+                                                                }
+                                                            })
+                                                            .catch(error => {
+                                                                console.error('Error:', error);
+                                                            });
+                                                    }
+                                                }
+                                            </script>
+                                        </div>
+                                        <style>
+                                            #phn4 {
+                                                color: #1b1b1b;
+                                                font-size: large;
+                                                box-shadow: 3px 3px 10px rgb(153, 124, 190),
+                                                    -3px -3px 10px rgb(178, 220, 255);
+                                                width: 450px;
+                                                letter-spacing: 2px;
+                                            }
+
+                                            #phn4:hover {
+                                                box-shadow: 3px 3px 10px rgb(205, 167, 255),
+                                                    -3px -3px 10px rgb(178, 220, 255);
+                                            }
+
+                                            #phn4:focus {
+                                                box-shadow: 3px 3px 10px rgb(153, 124, 190),
+                                                    -3px -3px 10px rgb(178, 220, 255);
+                                            }
+
+                                            .phnbtn {
+                                                border: none;
+                                                border-radius: 30px;
+                                                color: #ffffff;
+                                                font-size: large;
+                                                box-shadow: 3px 3px 10px rgb(153, 124, 190),
+                                                    -3px -3px 10px rgb(178, 220, 255);
+                                                width: 200px;
+                                                height: 65px;
+                                                letter-spacing: 2px;
+                                                background-image: linear-gradient(150deg, #4371f0, rgb(108, 64, 219));
+                                            }
+
+                                            .phnbtn:hover {
+                                                box-shadow: -3px -3px 20px rgb(178, 220, 255),
+                                                    3px 3px 20px rgb(153, 124, 190);
+                                            }
+
+                                            .phnbtn:focus {
+                                                box-shadow: -3px -3px 15px rgb(178, 220, 255),
+                                                    3px 3px 15px rgb(153, 124, 190);
+                                            }
+
+                                            .sltcontaina {
+                                                display: flex;
+                                                flex-wrap: wrap;
+                                            }
+
+                                            .sltaaaa {
+                                                text-align: center;
+                                                flex: 2;
+                                            }
+
+                                            .sltaaab {
+                                                text-align: center;
+                                                flex: 1;
+                                            }
+                                        </style>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <style>
+                .innnnn {
+                    color: #434343;
+                    font-size: large;
+                    box-shadow: 2px 2px 10px rgb(153, 124, 190),
+                        -2px -2px 10px rgb(194, 224, 249);
+                    width: 500px;
+                    letter-spacing: 2px;
+                }
+
+                .innnnn:hover {
+                    color: #434343;
+                    font-size: large;
+                    box-shadow: 3px 3px 10px rgb(205, 167, 255),
+                        -3px -3px 10px rgb(178, 220, 255);
+                    width: 500px;
+                    letter-spacing: 2px;
+                }
+
+                .innnnn:focus {
+                    color: #434343;
+                    font-size: large;
+                    box-shadow: 3px 3px 10px rgb(153, 124, 190),
+                        -3px -3px 10px rgb(178, 220, 255);
+                    width: 500px;
+                    letter-spacing: 2px;
+                }
+            </style>
+        </div>
+    </section>
+    <!-- ========================= pricing-section end ========================= -->
+
+    <!-- ========================= footer start ========================= -->
+    <footer class="footer pt-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-5 offset-xl-1 col-lg-6 col-md-6">
+                    <div class="footer-widget mb-60 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="pp">神荼:全流量取证调查框架</div>
+                        <div class="ppp">更高效、安全的数字取证解决方案</div>
+                        <div class="txth">
+                            神荼系统支持全流量数据采集、数据分析与可视化,极其注重个人隐私权利保障,为办案机关与公民用户提供有力保护！
+                        </div>
+
+                        <style>
+                            .pp {
+                                font-weight: bold;
+                                font-size: 25px;
+                            }
+
+                            .ppp {
+                                font-weight: 900;
+                                font-size: 30px;
+                                color: rgb(57, 62, 116)
+                            }
+                        </style>
+                    </div>
+                </div>
+                <div class="col-xl-2 offset-xl-1 col-lg-2 col-md-6">
+                    <div class="txth footer-widget mb-60 wow fadeInUp" data-wow-delay=".4s">
+                        <h4>导航</h4>
+                        <ul class="footer-links">
+                            <li>
+                                <a href="#">主页</a>
+                            </li>
+                            <li>
+                                <a href="#aboutus">关于我们</a>
+                            </li>
+                            <li>
+                                <a onclick=to()>普法援助</a>
+                            </li>
+                            <li>
+                                <a onclick=to()>风险分析</a>
+                            </li>
+
+                            <script>
+                                function to() {
+                                    alert('请先注册！');
+                                    window.location.href = "signup_stage0.html";
+                                }
+                            </script>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="txth col-xl-3 col-lg-3 col-md-6">
+                    <div class="footer-widget mb-60 wow fadeInRight" data-wow-delay=".8s">
+                        <h4>联系我们</h4>
+                        <ul class="footer-contact">
+                            <li>
+                                <a>没有电话</a>
+                            </li>
+                            <li>
+                                <a>没有邮箱</a>
+                            </li>
+                            <li>
+                                <a>成都市双流区川大路二段</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <style>
+                .txth {
+                    font-weight: 900;
+                }
+                h4{
+                    font-weight:bold;
+                    font-size: 30px;
+                    font-family: '微软雅黑';
+                }
+            </style>
+            <div class="copyright-area">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="footer-social-links">
+                            <ul class="d-flex">
+                                <li><a href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="lni lni-twitter-filled"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="lni lni-instagram-filled"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="wow fadeInUp" data-wow-delay=".3s"><a href="#" title="神荼锁链：取证研判系统">神荼锁链：取证研判系统</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ========================= footer end ========================= -->
+
+
+    <!-- ========================= scroll-top ========================= -->
+    <a href="#" class="scroll-top">
+        <i class="lni lni-arrow-up"></i>
+    </a>
+
+    <!-- ========================= JS here ========================= -->
+    <!--省市区县-->
+    <script src="assets/js/province.js" type="text/javascript" charset="utf-8"></script>
+    <!--省市区县-->
+
+    <script src="assets/js/bootstrap.bundle-5.0.0.alpha-min.js"></script>
+    <script src="assets/js/contact-form.js"></script>
+    <script src="assets/js/count-up.min.js"></script>
+    <script src="assets/js/tiny-slider.js"></script>
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/glightbox.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/imagesloaded.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

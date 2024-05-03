@@ -1,0 +1,7 @@
+运行/assets/data/cors.py加载json资源
+
+index_in index_off分别是登入登出状态的主界面
+
+由于没有用户数据index_in&index_off暂时无法直接定位到后台管理系统
+
+index_spe和index_nor分别是办案机关和普通用户的管理界面

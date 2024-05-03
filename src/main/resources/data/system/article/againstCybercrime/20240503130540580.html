@@ -1,0 +1,673 @@
+<!doctype html>
+<html style='font-size:20px !important'>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.loli.net/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext' rel='stylesheet' type='text/css' /><link href='https://fonts.loli.net/css?family=Lato:900,300&subset=latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+@include-when-export url(https://fonts.loli.net/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext);
+@include-when-export url(https://fonts.loli.net/css?family=Lato:900,300&subset=latin-ext);
+
+:root {
+	--control-text-color: #777;
+}
+
+/**
+ * forked from pixyll.com
+ * MIT license
+ */
+
+h1,
+.h1,
+.f1 {
+	font-size: 2rem;
+	line-height: 2.5rem;
+}
+h2,
+.h2,
+.f2 {
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+h3,
+.h3,
+.f3 {
+	font-size: 1.25rem;
+	line-height: 1.5rem;
+}
+p,
+.p,
+.f4,
+h4,
+h5,
+h6,
+dl,
+ol,
+ul,
+pre[cid],
+div[cid],
+#typora-source {
+	font-size: 1.125rem;
+	line-height: 1.5rem;
+}
+
+h4 {
+	font-size: 1.13rem;
+}
+/*
+ Pixyll
+ A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff.
+ Best served with BASSCSS (http://jxnblk.github.io/basscss)
+ Crafted with <3 by John Otander (@4lpine) - ©2015 John Otander MIT License http://opensource.org/licenses/MIT
+
+*/
+
+body {
+	font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", "STSong", 'Segoe UI Emoji', Serif;
+	line-height: 1.5rem;
+	font-weight: 400;
+}
+
+#write {
+	max-width: 914px;
+	color: #333;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1100px;
+	}
+}
+
+@media only screen and (min-width: 1700px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+img {
+	width: auto;
+	max-width: 100%;
+}
+body {
+	font-size: 1.5rem;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.ty-table-edit {
+	background: #ededed;
+}
+
+table {
+	width: 100%;
+	font-size: 1.125rem;
+}
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td,
+table > tfoot > tr > th,
+table > tfoot > tr > td {
+	padding: 12px;
+	line-height: 1.2;
+	vertical-align: top;
+	border-top: 1px solid #333;
+}
+table > thead > tr > th {
+	vertical-align: bottom;
+	border-bottom: 2px solid #333;
+}
+table > caption + thead > tr:first-child > th,
+table > caption + thead > tr:first-child > td,
+table > colgroup + thead > tr:first-child > th,
+table > colgroup + thead > tr:first-child > td,
+table > thead:first-child > tr:first-child > th,
+table > thead:first-child > tr:first-child > td {
+	border-top: 0;
+}
+table > tbody + tbody {
+	border-top: 2px solid #333;
+}
+p {
+	font-weight: 300;
+	line-height: 1.5;
+}
+abbr {
+	border-bottom: 1px black dotted;
+	cursor: help;
+}
+pre,
+code {
+	font-family: Menlo, Monaco, "Courier New", monospace;
+}
+
+code,
+.md-fences  {
+	color: #7a7a7a;
+}
+
+.md-fences {
+	padding: 1.125em;
+	margin-bottom: 0.88em;
+	font-size: 1rem;
+	border: 1px solid #7a7a7a;
+	padding-bottom: 0.5rem;
+	padding-top: 0.5rem;
+}
+
+blockquote {
+	padding: 1.33em;
+	font-style: italic;
+	border-left: 5px solid #7a7a7a;
+	color: #555;
+}
+blockquote em {
+	color: #000;
+}
+blockquote footer {
+	font-size: .85rem;
+	font-style: normal;
+	background-color: #fff;
+	color: #7a7a7a;
+	border-color: transparent;
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	font-family: "Lato", 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: bold;
+	line-height: 1.2;
+	margin: 1em 0 0.5em;
+}
+@media screen and (min-width: 48em) {
+	.h1,
+	h1 {
+		font-size: 3.250rem;
+	}
+	.h2,
+	h2 {
+		font-size: 2.298rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.625rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.3rem;
+	}
+	#write>h4.md-focus:before,
+	#write>h5.md-focus:before,
+	#write>h6.md-focus:before{
+		top: 1px;
+	}
+	.p,
+	p,
+	li {
+		font-size: 1.25rem;
+		line-height: 1.8;
+	}
+	table {
+		font-size: 1.25rem;
+	}
+}
+@media (max-width: 48em) {
+	blockquote {
+		margin-left: 1rem;
+		margin-right: 0;
+		padding: 0.5em;
+	}
+	.h1,
+	h1 {
+		font-size: 2.827rem;
+	}
+	.h2,
+	h2 {
+		font-size: 1.999rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.413rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.3rem;
+	}
+}
+@media screen and (min-width: 64em) {
+	.h1,
+	h1 {
+		font-size: 4.498rem;
+	}
+	.h2,
+	h2 {
+		font-size: 2.29rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.9rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.591rem;
+	}
+	#write>h4.md-focus:before{
+		top:4px;
+	}
+}
+a {
+	color: #463F5C;
+	text-decoration: underline;
+}
+
+#write {
+	padding-top: 2rem;
+}
+
+#write pre.md-meta-block {
+	min-height: 35px;
+	padding: 0.5em 1em;
+	white-space: pre;
+	border: 0px;
+
+	border-left: 30px #f8f8f8 solid;
+	border-right: 30px #f8f8f8 solid;
+	width: 100vw;
+	max-width: calc(100% + 60px);
+
+	margin-left: -30px;
+	margin-bottom: 2em;
+	margin-top: -2010px;
+	padding-top: 2000px;
+	padding-bottom: 10px;
+	line-height: 1.5em;
+	color: #7a7a7a;
+	background-color: #fafafa;
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: 300;
+	clear: both;
+	padding-left: 0;
+	font-size:1.125rem;
+}
+.md-image>.md-meta {
+	color: #463F5C
+}
+.footnotes {
+	font-size:1.1rem;
+}
+.md-tag {
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+}
+.code-tooltip {
+	background: white;
+}
+.code-tooltip-content {
+	font-size: 1.1rem;
+}
+
+.task-list{
+	padding-left: 0;
+}
+
+.md-task-list-item {
+	padding-left:34px;
+}
+
+.md-task-list-item > input{
+	width: 1.25rem;
+	height: 1.25rem;
+	display: block;
+	-webkit-appearance: initial;
+	top: -0.2rem;
+	margin-left: -1.6em;
+	margin-top: calc(1rem - 7px);
+	border: none;
+}
+
+.md-task-list-item > input:focus{
+	outline: none;
+	box-shadow: none;
+}
+
+.md-task-list-item > input:before{
+	border: 1px solid #555;
+	border-radius: 1.5rem;
+	width: 1.5rem;
+	height: 1.5rem;
+	background: #fff;
+	content: ' ';
+	transition: background-color 200ms ease-in-out;
+	display: block;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before{
+	background: #333;
+	border-width: 2px;
+	display:inline-block;
+	transition: background-color 200ms ease-in-out;
+}
+
+.md-task-list-item > input:checked:after,
+.md-task-list-item > input[checked]:after {
+	opacity: 1;
+}
+
+.md-task-list-item > input:after {
+	opacity: 1;
+	-webkit-transition: opacity 0.05s ease-in-out;
+	-moz-transition: opacity 0.05s ease-in-out;
+	transition: opacity 0.05s ease-in-out;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	position: absolute;
+	top: 0.4375rem;
+	left: 0.28125rem;
+	width: 0.9375rem;
+	height: 0.5rem;
+	border: 3px solid #fff;
+	border-top: 0;
+	border-right: 0;
+	content: ' ';
+	opacity: 0;
+}
+
+.md-tag {
+	color:inherit;
+}
+
+.md-toc:focus .md-toc-content{
+	margin-top: 19px;
+}
+
+#typora-sidebar {
+	font-size:1rem !important;
+}
+
+.html-for-mac #typora-sidebar {
+	background-color:white;
+}
+
+.outline-content li, .outline-content ul {
+	font-size:1rem !important;
+}
+
+.outline-title {
+	line-height: inherit;
+	margin-top: 10px;
+}
+
+.outline-expander {
+	width: 18px;
+}
+
+.outline-expander:before {
+ 	content: "+";
+	font-family: inherit;
+	color: rgb(108, 108, 108); 
+  font-size: 1.5rem;
+ 	top: -0.1rem;
+}
+
+.outline-expander:hover:before {
+	content: "+";
+}
+
+.outline-item-open>.outline-item>.outline-expander:before{
+	content: "-";
+}
+
+/** source code mode */
+#typora-source {
+	font-family: Courier, monospace;
+    color: #6A6A6A;
+}
+
+.os-windows #typora-source {
+	font-family: inherit;
+}
+
+.cm-s-typora-default .cm-header, 
+.cm-s-typora-default .cm-property,
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
+	color: #428bca;
+}
+
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
+	color: #777777;
+}
+
+.md-diagram-panel {
+	margin-top: 24px;
+	margin-left: -1.2em;
+}
+
+.md-mathjax-midline {
+	background: #fafafa;
+}
+
+.enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="flow"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="mermaid"] .code-tooltip {
+    bottom: -3.4em;
+}
+
+.dropdown-menu .divider {
+	border-color: #e5e5e5;
+}
+
+
+</style><title></title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h3 id='电子证据法院怎么才认可'><span>电子证据，法院怎么才认可</span></h3><p><em><strong><span>*</span><span>侧重点：</span><span>*</span></strong></em><span>电子证据的认定</span></p><h2 id='01-网页博客微博客等网络平台发布的信息'><em><strong><span>*</span><span>01 网页、博客、微博客等网络平台发布的信息</span><span>*</span></strong></em></h2><p><span>咪咕数字传媒有限公司、济南麦吉文化传播有限公司侵害作品信息网络传播权纠纷二审民事判决书</span></p><p><em><strong><span>*</span><span>审理法院：</span><span>*</span></strong></em><span>山东省高级人民法院</span></p><p><em><strong><span>*</span><span>案号：</span><span>*</span></strong></em><span>（2019）鲁民终1670号</span></p><p><em><strong><span>*</span><span>法院观点：</span><span>*</span></strong></em><span>以可信时间戳作为保障电子数据原始性的技术手段，按照规范操作流程对取证计算机及网络环境进行安全性和清洁性检查后，对整个取证过程全程录像记录并对录像文件申请可信时间戳认证。采用该取证方法可在事后追溯取证过程、方法及内容，形成完整证据链。因此，严格按照该操作指引对相关电子证据进行保全固定的，如无相反证据，其所固定的电子证据的真实性可以确认。</span></p><p><span>本案中，案涉网页电子证据保全固定的整个过程虽由麦吉公司自行操作，但</span><em><strong><span>*</span><span>整个操作过程系按照可信时间戳互联网电子数据取证及固化保全操作指引进行。</span><span>*</span></strong></em><span>保全固化证据过程中，不仅有计算机中安装的屏幕录像软件录像记录，取证前还对所用计算机的操作环境和相关的网络环境进行了一系列合理的清洁性检查，最大限度地排除了因操作者不当介入、操作计算机不清洁、网络环境不真实等因素可能对取证结果造成的影响，保证了电子数据生成、储存方法的可靠性。</span></p><p><span>根据时间戳固化电子数据原理，每个电子数据文件在申请时间戳认证时自动产生时间戳认证证书（*tsa），该证书为加密格式的电子证书，用于和对应的证据文件匹配并在时间戳中心验证平台进行验证。如果文件自申请时间戳时起，内容保持完整、未被改变，则可以通过时间戳验证，反之则无法通过时间戳验证，此种方式有效保障了电子证据的完整性。此外，由中国科学院国家授时中心负责系统的国家标准时间溯源及系统时间同步与分配，保证了电子数据形成时间的准确性。</span></p><p><span>综上所述，</span><em><strong><span>*</span><span>在没有相反证据的情况下，麦吉公司以时间戳服务系统固定的案涉网络页面的真实性，本院予以确认。</span><span>*</span></strong></em><span>一审法院虽然没有公开对电子证据的认定理由，确有不当，但认定结果并无不当，本院予以维持。</span></p><p><span> </span></p><p><span> </span></p><p><span> </span></p><h2 id='02-手机短信电子邮件即时通信通讯群组等网络应用服务的通信信息'><em><strong><span>*</span><span>02 手机短信、电子邮件、即时通信、通讯群组等网络应用服务的通信信息</span><span>*</span></strong></em></h2><p><em><strong><span>*</span><span>案例四</span><span>*</span></strong></em></p><p><span>李水花与宋志立委托合同纠纷二审民事判决书</span></p><p><em><strong><span>*</span><span>审理法院：</span><span>*</span></strong></em><span>湖北省高级人民法院</span></p><p><em><strong><span>*</span><span>案号：</span><span>*</span></strong></em><span>（2015）鄂民四终字第00162号</span></p><p><em><strong><span>*</span><span>法院观点：</span><span>*</span></strong></em><span>QQ聊天记录是李水花与宋志立通过QQ软件聊天形成的电子数据，双方均持有，现宋志立未提供其持有的QQ聊天记录，应以李水花提供的QQ聊天记录来认定相关事实。</span><em><strong><span>*</span><span>宋志立认为QQ聊天记录不完整，有删改的可能，但在一审中没有申请进行鉴定，也不能提供自己持有QQ聊天记录，且无充分依据证明李水花持有QQ聊天记录有删改情况，</span><span>*</span></strong></em><span>本院对其要求对QQ聊天记录进行鉴定的申请不予准许。宋志立的该上诉请求不成立，本院不予支持。</span></p><p><em><strong><span>*</span><span>案例五</span><span>*</span></strong></em></p><p><span>靳某1与靳某2等所有权确认纠纷二审民事判决书</span></p><p><em><strong><span>*</span><span>审理法院：</span><span>*</span></strong></em><span>北京市第一中级人民法院</span></p><p><em><strong><span>*</span><span>案号：</span><span>*</span></strong></em><span>（2019）京01民终3470号</span></p><p><em><strong><span>*</span><span>法院观点：</span><span>*</span></strong></em><span>靳某1向法院提交光盘一张，称内载有代书人王某1与靳某1之女靳某6的微信视频通话记录，以证明王某1的代书追认情况。该视频当庭播放中出现间断，且不能听到靳某6的声音，靳某1称视频间断系因网络卡顿造成，没有靳某6的声音系因靳某6未开启扬声器。靳某2、靳某3对该证据三性均不认可，</span><em><strong><span>*</span><span>因该录像视频时有间断、不连续，且王某1具备出庭作证的条件而未出庭作证并接受法庭询问，不能确认真实性。</span><span>*</span></strong></em></p><p><em><strong><span>*</span><span>案例六</span><span>*</span></strong></em></p><p><span>史猛与滕伟、上海红星美凯龙品牌管理有限公司天津河东分公司等买卖合同纠纷二审民事判决书</span></p><p><em><strong><span>*</span><span>审理法院：</span><span>*</span></strong></em><span>天津市第二中级人民法院</span></p><p><em><strong><span>*</span><span>案号：</span><span>*</span></strong></em><span>（2016）津02民终530号</span></p><p><em><strong><span>*</span><span>法院观点：</span><span>*</span></strong></em><span>滕伟提交史猛与销售人员的另一份微信聊天记录予以抗辩，经询，史猛、滕伟提出的手机中的微信聊天记录均为打印的照片，双方手机中的微信内容已灭失，根据双方提供手机号，原审法院依法到深圳市腾讯计算机系统有限公司调查，其安全管理部出具情况说明，关于手机号注册的微信账号的聊天记录，</span><em><strong><span>*</span><span>鉴于用户网络通讯属点对点通讯，其公司技术上无对通讯内容做记录，无法提供相关证明，</span><span>*</span></strong></em><span>故对于双方提交的微信聊天记录的真伪无法确认。</span></p><p><em><strong><span>*</span><span>案例八</span><span>*</span></strong></em></p><p><span>杨媚清与北京奥索克体育用品有限公司劳动争议二审民事判决书</span></p><p><em><strong><span>*</span><span>审理法院：</span><span>*</span></strong></em><span>北京市第三中级人民法院</span></p><p><em><strong><span>*</span><span>案号：</span><span>*</span></strong></em><span>（2018）京03民终5470号</span></p><p><em><strong><span>*</span><span>法院观点：</span><span>*</span></strong></em><span>二审中，杨媚清提交四张微信聊天记录打印件，主张根据该聊天记录可知杨媚清从德国调研的相关资料与公司进行过沟通。奥索克公司针对上述材料发表意见称：</span><em><strong><span>*</span><span>无原始载体，不认可真实性。</span><span>*</span></strong></em><span>本院认为，因杨媚清未提交证据原件，在奥索克公司不认可的情况下，本院不予采信。</span></p><h2 ><span> </span></h2><h2 id='03-用户注册信息身份认证信息电子交易记录通信记录登录日志等信息'><em><strong><span>*</span><span>03 用户注册信息、身份认证信息、电子交易记录、通信记录、登录日志等信息</span><span>*</span></strong></em></h2><p><em><strong><span>*</span><span>案例九</span><span>*</span></strong></em></p><p><span>张晓琳与中国农业银行股份有限公司淮南八公山支行储蓄存款合同纠纷二审民事判决书</span></p><p><em><strong><span>*</span><span>审理法院：</span><span>*</span></strong></em><span>淮南市中级人民法院</span></p><p><em><strong><span>*</span><span>案号：</span><span>*</span></strong></em><span>（2015）淮民一终字第00771号</span></p><p><em><strong><span>*</span><span>法院观点：</span><span>*</span></strong></em><span>八公山农行当庭提交如下证据：张晓琳涉诉的整个20笔账户的一个电子交易记录。证明整个交易记录完整的反映在银行系统里，不存在帐外情形的出现。张晓琳质证意见：真实性不认可，没有时间显示。本院对该证据的真实性予以确认。</span><em><strong><span>*</span><span>电子交易记录完整的记录交易情况。</span><span>*</span></strong></em></p><p><span> </span></p><p><em><strong><span>*</span><span>04 文档、图片、音频、视频、数字证书、计算机程序等电子文件</span><span>*</span></strong></em></p><p><em><strong><span>*</span><span>案例十一</span><span>*</span></strong></em></p><p><span>读书郎教育科技有限公司、汉华易美（天津）图像技术有限公司著作权权属、侵权纠纷二审民事判决书</span></p><p><em><strong><span>*</span><span>审理法院：</span><span>*</span></strong></em><span>中山市中级人民法院</span></p><p><em><strong><span>*</span><span>案号：</span><span>*</span></strong></em><span>（2018）粤20民终1731号</span></p><p><em><strong><span>*</span><span>法院观点：上述电子文件符合《中华人民共和国电子签名法》第四、五、六、七条有关数据电文作为证据使用的要求，可作为合法证据使用，</span><span>*</span></strong></em><span>足以证实“读书郎幼教电子”的新浪微博在2013年1月期间发布的信息中使用了与汉华易美公司主张权利的图片相同的图片。虽然申请认证的单位是华盖公司而非汉华易美公司，但根据盖帝公司出具的授权书的相关记载，华盖公司与汉华易美公司系关联公司，且华盖公司在取证时有权进行相应的维权活动，读书郎公司以申请人并非汉华易美公司为由否认时间戳证书的证明效力于法无据。读书郎公司在未经许可，也未举证证明其使用属法律规定合理使用或法定许可使用的情形下，在其经营的微博上使用了汉华易美公司享有著作权的图片，因涉案微博是企业用户注册使用，并非公益性质，读书郎公司发布微博主观上是为了吸引更多的网友点击关注，增加网友对公司的关注程度，推广公司的产品、服务，客观上可以给公司带来一定的经济利益，具有营利性，故读书郎公司辩称在微博中使用涉案图片的行为并非商业性使用，不具有营利性没有事实依据，不予采信。</span></p><p><em><strong><span>*</span><span>案例十二</span><span>*</span></strong></em></p><p><span>海口非凡创意传媒有限公司、姚文智著作权权属、侵权纠纷二审民事判决书</span></p><p><em><strong><span>*</span><span>审理法院：</span><span>*</span></strong></em><span>广州知识产权法院</span></p><p><em><strong><span>*</span><span>案号：</span><span>*</span></strong></em><span>（2018）粤73民终2117号</span></p><p><em><strong><span>*</span><span>法院观点：</span><span>*</span></strong></em><span>首先，就真实性而言，姚文智提供的</span><em><strong><span>*</span><span>电子文件系存储于光盘中，这一载体并非该电子数据的原始载体，而原始载体相对于电子证据而言才具有类似于“原件”的功能，</span><span>*</span></strong></em><span>故该光盘中所载数码照片并非法律意义上的涉案图片底稿，不足以证明姚文智系涉案图片的作者；其次，就可靠性而言，光盘中的电子文件经读取虽然可以显示出涉案图片的像素、照相机信息、拍摄日期等具体信息，该信息与《摄影作品声明》的部分内容亦可以相互印证，但</span><em><strong><span>*</span><span>该电子数据从原始载体到光盘中的提取过程缺乏证据证实，不足以证实其始终保持完整并未经篡改，</span><span>*</span></strong></em><span>加之本案亦无其他有效证据佐证图片所显示信息的真实性，故仅凭借该数码照片本身不足以证实姚文智系涉案图片的作者。鉴于姚文智所提供的证据不足以证实其系涉案作品的著作权人，理应由其承担举证不能的不利后果。姚文智虽于二审期间演示了登陆其在秀人网的账户的过程，用以证实“摄影师泓佑DEYN”为其网名,但该账户显示的姓名信息并未经认证，该账户也未能显示出已上传至网站的图片中确已包含涉案图片。故此，非凡创意公司所提现有证据不足以证实姚文智为涉案图片著作权人的上诉意见有理，本院予以采纳；姚文智诉请非凡创意公司停止侵权并承担赔偿责任缺乏依据，本院不予支持。一审法院对涉案作品的权属认定不清，导致本案法律适用有误，本院予以纠正。</span></p><p><em><strong><span>*</span><span>案例十三</span><span>*</span></strong></em></p><p><span>福州君立视讯知识产权代理有限公司与广州花都东亚酒店有限公司、徐亦中著作权权属、侵权纠纷一审民事判决书</span></p><p><em><strong><span>*</span><span>审理法院：</span><span>*</span></strong></em><span>广州市花都区人民法院</span></p><p><em><strong><span>*</span><span>案号：</span><span>*</span></strong></em><span>（2020）粤0114民初1686号</span></p><p><em><strong><span>*</span><span>法院观点：</span><span>*</span></strong></em><span>东亚酒店公司、徐亦中认为福州君立公司并</span><em><strong><span>*</span><span>未提供侵权视频的原始载体，不符合证据规则中关于多媒体证据的规定；联合信任时间戳服务中心并非法律认定的具有鉴定资质的公司，</span><span>*</span></strong></em><span>福州君立公司提供的可信时间戳证书、可信时间戳认证证书，仅能证明文件的提交人、提交时间、文件名称，不能证明视频内容的真实性，其在申请认证前有可能篡改或变造多媒体证据内容，因此福州君立公司提供的证据并不能证明东亚酒店公司、徐亦中存在侵权事实。</span></p><p><em><strong><span>*</span><span>05 其他以数字化形式存储、处理、传输的能够证明案件事实的信息</span><span>*</span></strong></em></p><p><em><strong><span>*</span><span>案例十四</span><span>*</span></strong></em></p><p><span>杭州网易雷火科技有限公司、汉华易美（天津）图像技术有限公司侵害作品信息网络传播权纠纷二审民事判决书</span></p><p><em><strong><span>*</span><span>审理法院：</span><span>*</span></strong></em><span>杭州市中级人民法院</span></p><p><em><strong><span>*</span><span>案号：</span><span>*</span></strong></em><span>（2018）浙01民终7365号</span></p><p><em><strong><span>*</span><span>法院观点：</span><span>*</span></strong></em><span>可信时间戳是由联合信任时间戳服务中心签发的电子凭证，用于证明电子数据文件自申请时间戳后内容保持完整，未被更改，是解决电子签名有效性和数据电文（电子文件）时间权威问题的有效方式，也是证明数字化作品的产生时间、内容、权属、遭受侵权等事实的有效方式，具有快捷高效、成本低廉等优势。</span><em><strong><span>*</span><span>司法对可信时间戳等可验证真实性的电子证据可采开放态度，在可验证真实性的情形下可对其形式真实性予以认可，但关于其内容的真实性则需要结合其他事实予以综合认定。</span><span>*</span></strong></em></p><p><span>综上，法院对汉华易美公司提交的通过时间戳服务系统固定的网易雷火公司微信公众号取证截图及对应的时间戳认证证书（pdf格式）和时间戳证书（tsa格式），还有屏幕录像文件及对应的时间戳认证证书（pdf格式）及时间戳证书（tsa格式）等可信时间戳证据均予以认定。根据上述电子证据，法院认定网易雷火公司在其微信公众号上发布了涉案摄影作品。</span></p><p><em><strong><span>*</span><span>案例十五</span><span>*</span></strong></em></p><p><span>仝飞与方向明、杨朝霞民间借贷纠纷二审民事判决书</span></p><p><em><strong><span>*</span><span>审理法院：</span><span>*</span></strong></em><span>太原市中级人民法院</span></p><p><em><strong><span>*</span><span>案号：</span><span>*</span></strong></em><span>（2017）晋01民终2447号</span></p><p><em><strong><span>*</span><span>法院观点：</span><span>*</span></strong></em><span>《中华人民共和国合同法》第十一规定，书面形式是指合同书、信件和数据电文（包括电报、电传、传真、电子数据交的和电子邮件）等可以有形地表现所载内容的形式。根据上诉人仝飞提供的公证机关对仝飞与方向明QQ聊天记录的完整、真实的页面拷屏公证书、借款协议复印件、银行转帐记录及双方的通话录音，</span><em><strong><span>*</span><span>能形成完整的证据链，足以认定仝飞与方向明之间借款协议的真实性。</span><span>*</span></strong></em></p></div></div>
+</body>
+</html>

@@ -1,0 +1,673 @@
+<!doctype html>
+<html style='font-size:20px !important'>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.loli.net/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext' rel='stylesheet' type='text/css' /><link href='https://fonts.loli.net/css?family=Lato:900,300&subset=latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+@include-when-export url(https://fonts.loli.net/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext);
+@include-when-export url(https://fonts.loli.net/css?family=Lato:900,300&subset=latin-ext);
+
+:root {
+	--control-text-color: #777;
+}
+
+/**
+ * forked from pixyll.com
+ * MIT license
+ */
+
+h1,
+.h1,
+.f1 {
+	font-size: 2rem;
+	line-height: 2.5rem;
+}
+h2,
+.h2,
+.f2 {
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+h3,
+.h3,
+.f3 {
+	font-size: 1.25rem;
+	line-height: 1.5rem;
+}
+p,
+.p,
+.f4,
+h4,
+h5,
+h6,
+dl,
+ol,
+ul,
+pre[cid],
+div[cid],
+#typora-source {
+	font-size: 1.125rem;
+	line-height: 1.5rem;
+}
+
+h4 {
+	font-size: 1.13rem;
+}
+/*
+ Pixyll
+ A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff.
+ Best served with BASSCSS (http://jxnblk.github.io/basscss)
+ Crafted with <3 by John Otander (@4lpine) - ©2015 John Otander MIT License http://opensource.org/licenses/MIT
+
+*/
+
+body {
+	font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", "STSong", 'Segoe UI Emoji', Serif;
+	line-height: 1.5rem;
+	font-weight: 400;
+}
+
+#write {
+	max-width: 914px;
+	color: #333;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1100px;
+	}
+}
+
+@media only screen and (min-width: 1700px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+img {
+	width: auto;
+	max-width: 100%;
+}
+body {
+	font-size: 1.5rem;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.ty-table-edit {
+	background: #ededed;
+}
+
+table {
+	width: 100%;
+	font-size: 1.125rem;
+}
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td,
+table > tfoot > tr > th,
+table > tfoot > tr > td {
+	padding: 12px;
+	line-height: 1.2;
+	vertical-align: top;
+	border-top: 1px solid #333;
+}
+table > thead > tr > th {
+	vertical-align: bottom;
+	border-bottom: 2px solid #333;
+}
+table > caption + thead > tr:first-child > th,
+table > caption + thead > tr:first-child > td,
+table > colgroup + thead > tr:first-child > th,
+table > colgroup + thead > tr:first-child > td,
+table > thead:first-child > tr:first-child > th,
+table > thead:first-child > tr:first-child > td {
+	border-top: 0;
+}
+table > tbody + tbody {
+	border-top: 2px solid #333;
+}
+p {
+	font-weight: 300;
+	line-height: 1.5;
+}
+abbr {
+	border-bottom: 1px black dotted;
+	cursor: help;
+}
+pre,
+code {
+	font-family: Menlo, Monaco, "Courier New", monospace;
+}
+
+code,
+.md-fences  {
+	color: #7a7a7a;
+}
+
+.md-fences {
+	padding: 1.125em;
+	margin-bottom: 0.88em;
+	font-size: 1rem;
+	border: 1px solid #7a7a7a;
+	padding-bottom: 0.5rem;
+	padding-top: 0.5rem;
+}
+
+blockquote {
+	padding: 1.33em;
+	font-style: italic;
+	border-left: 5px solid #7a7a7a;
+	color: #555;
+}
+blockquote em {
+	color: #000;
+}
+blockquote footer {
+	font-size: .85rem;
+	font-style: normal;
+	background-color: #fff;
+	color: #7a7a7a;
+	border-color: transparent;
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	font-family: "Lato", 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: bold;
+	line-height: 1.2;
+	margin: 1em 0 0.5em;
+}
+@media screen and (min-width: 48em) {
+	.h1,
+	h1 {
+		font-size: 3.250rem;
+	}
+	.h2,
+	h2 {
+		font-size: 2.298rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.625rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.3rem;
+	}
+	#write>h4.md-focus:before,
+	#write>h5.md-focus:before,
+	#write>h6.md-focus:before{
+		top: 1px;
+	}
+	.p,
+	p,
+	li {
+		font-size: 1.25rem;
+		line-height: 1.8;
+	}
+	table {
+		font-size: 1.25rem;
+	}
+}
+@media (max-width: 48em) {
+	blockquote {
+		margin-left: 1rem;
+		margin-right: 0;
+		padding: 0.5em;
+	}
+	.h1,
+	h1 {
+		font-size: 2.827rem;
+	}
+	.h2,
+	h2 {
+		font-size: 1.999rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.413rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.3rem;
+	}
+}
+@media screen and (min-width: 64em) {
+	.h1,
+	h1 {
+		font-size: 4.498rem;
+	}
+	.h2,
+	h2 {
+		font-size: 2.29rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.9rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.591rem;
+	}
+	#write>h4.md-focus:before{
+		top:4px;
+	}
+}
+a {
+	color: #463F5C;
+	text-decoration: underline;
+}
+
+#write {
+	padding-top: 2rem;
+}
+
+#write pre.md-meta-block {
+	min-height: 35px;
+	padding: 0.5em 1em;
+	white-space: pre;
+	border: 0px;
+
+	border-left: 30px #f8f8f8 solid;
+	border-right: 30px #f8f8f8 solid;
+	width: 100vw;
+	max-width: calc(100% + 60px);
+
+	margin-left: -30px;
+	margin-bottom: 2em;
+	margin-top: -2010px;
+	padding-top: 2000px;
+	padding-bottom: 10px;
+	line-height: 1.5em;
+	color: #7a7a7a;
+	background-color: #fafafa;
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: 300;
+	clear: both;
+	padding-left: 0;
+	font-size:1.125rem;
+}
+.md-image>.md-meta {
+	color: #463F5C
+}
+.footnotes {
+	font-size:1.1rem;
+}
+.md-tag {
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+}
+.code-tooltip {
+	background: white;
+}
+.code-tooltip-content {
+	font-size: 1.1rem;
+}
+
+.task-list{
+	padding-left: 0;
+}
+
+.md-task-list-item {
+	padding-left:34px;
+}
+
+.md-task-list-item > input{
+	width: 1.25rem;
+	height: 1.25rem;
+	display: block;
+	-webkit-appearance: initial;
+	top: -0.2rem;
+	margin-left: -1.6em;
+	margin-top: calc(1rem - 7px);
+	border: none;
+}
+
+.md-task-list-item > input:focus{
+	outline: none;
+	box-shadow: none;
+}
+
+.md-task-list-item > input:before{
+	border: 1px solid #555;
+	border-radius: 1.5rem;
+	width: 1.5rem;
+	height: 1.5rem;
+	background: #fff;
+	content: ' ';
+	transition: background-color 200ms ease-in-out;
+	display: block;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before{
+	background: #333;
+	border-width: 2px;
+	display:inline-block;
+	transition: background-color 200ms ease-in-out;
+}
+
+.md-task-list-item > input:checked:after,
+.md-task-list-item > input[checked]:after {
+	opacity: 1;
+}
+
+.md-task-list-item > input:after {
+	opacity: 1;
+	-webkit-transition: opacity 0.05s ease-in-out;
+	-moz-transition: opacity 0.05s ease-in-out;
+	transition: opacity 0.05s ease-in-out;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	position: absolute;
+	top: 0.4375rem;
+	left: 0.28125rem;
+	width: 0.9375rem;
+	height: 0.5rem;
+	border: 3px solid #fff;
+	border-top: 0;
+	border-right: 0;
+	content: ' ';
+	opacity: 0;
+}
+
+.md-tag {
+	color:inherit;
+}
+
+.md-toc:focus .md-toc-content{
+	margin-top: 19px;
+}
+
+#typora-sidebar {
+	font-size:1rem !important;
+}
+
+.html-for-mac #typora-sidebar {
+	background-color:white;
+}
+
+.outline-content li, .outline-content ul {
+	font-size:1rem !important;
+}
+
+.outline-title {
+	line-height: inherit;
+	margin-top: 10px;
+}
+
+.outline-expander {
+	width: 18px;
+}
+
+.outline-expander:before {
+ 	content: "+";
+	font-family: inherit;
+	color: rgb(108, 108, 108); 
+  font-size: 1.5rem;
+ 	top: -0.1rem;
+}
+
+.outline-expander:hover:before {
+	content: "+";
+}
+
+.outline-item-open>.outline-item>.outline-expander:before{
+	content: "-";
+}
+
+/** source code mode */
+#typora-source {
+	font-family: Courier, monospace;
+    color: #6A6A6A;
+}
+
+.os-windows #typora-source {
+	font-family: inherit;
+}
+
+.cm-s-typora-default .cm-header, 
+.cm-s-typora-default .cm-property,
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
+	color: #428bca;
+}
+
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
+	color: #777777;
+}
+
+.md-diagram-panel {
+	margin-top: 24px;
+	margin-left: -1.2em;
+}
+
+.md-mathjax-midline {
+	background: #fafafa;
+}
+
+.enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="flow"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="mermaid"] .code-tooltip {
+    bottom: -3.4em;
+}
+
+.dropdown-menu .divider {
+	border-color: #e5e5e5;
+}
+
+
+</style><title></title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h2 ><strong><span>国家网络安全宣传周特别报道·严惩电信网络诈骗犯罪|聚焦反诈难题 守护网络安全</span></strong></h2><p><span>编者按　网络和信息安全牵涉到国家安全和社会稳定，是我们面临的新的综合性挑战。习近平总书记强调，“没有网络安全就没有国家安全，就没有经济社会稳定运行，广大人民群众利益也难以得到保障”，“要推动依法管网、依法办网、依法上网，确保互联网在法治轨道上健康运行”。随着网络技术的发展，大量跨境诈骗犯罪都在网络空间展开。电信网络诈骗犯罪也成为严重污染网络空间、严重威胁群众网络安全的“毒瘤”。检察机关认真贯彻落实习近平总书记关于网络安全的重要指示精神，充分发挥检察职能作用，依法严厉打击在网络空间泛滥的、群众反映强烈的电信网络诈骗犯罪，维护人民群众合法权益。值国家网络安全宣传周之际，本报推出特别报道，以期推动全社会共同参与反诈工作，共筑网络安全防线。</span></p><p><img src="https://www.spp.gov.cn/spp/zdgz/202309/628117/images/4a72878f6aaa48dfa54b51ed60e1673d.jpg" referrerpolicy="no-referrer" alt="img"></p><p><strong><span>“海外淘金”梦碎 归家之路艰辛</span></strong></p><p><strong><span>公司给每个人下达诈骗人数指标，凡是完不成任务的人都将受到折磨。</span></strong></p><p><strong><span>“不要相信什么境外高薪招聘，那边不是天堂，是地狱。”差一点儿命丧国外的犯罪嫌疑人王某在向办案检察官讲起在柬埔寨“打工”的经历时，仍心有余悸，坦言那是一场噩梦。今年3月，经河南省内乡县检察院提起公诉，法院以偷越国（边）境罪、组织他人偷越国（边）境罪、诈骗罪，数罪并罚，判处王某、别某、苗某等6名被告人有期徒刑二年三个月至六年三个月不等刑期，各并处罚金。苗某、别某、王某不服一审判决，上诉至南阳市中级法院。近日，南阳市中级法院依法裁定驳回上诉，维持原判。</span></strong></p><p><span>2021年2月，别某在网吧看到一条招聘信息，一个自称“KK”的人告诉他，到国外工作很好赚钱，轻松月入数万元，还包吃住。听说此事，别某等6人萌生了到柬埔寨发财的想法。同年3月，在苗某的组织下，别某、王某等人未办理出入境手续，在境内外“蛇头”的安排下，白天躲进山洞，夜里摸黑赶路，偷渡到越南境内，后从越南偷渡至柬埔寨。</span></p><p><span>到达“园区”（诈骗窝点）后，主管便为他们安排了工作。该诈骗集团分工明确，下设财务、后勤、代理、组长、业务员等岗位，统一安排食宿，统一配发诈骗使用的手机。后台人员负责提供诈骗统一使用的交友软件及账户，通过控制投资理财、刷单返利、同城网恋等App平台，诱导被害人充值。业务员在社交软件上发布虚假资料进行形象包装，并海量添加好友，通过后台人为控制，先让被害人成功提现，引诱其继续大额充值，后以“账户被冻结”“银行卡密码输错”等理由拒绝提现，并引导被害人继续充值。</span></p><p><span>6人经过诈骗话术培训后，先后在三个窝点分工协作，分别扮演“接粉”（筛查引流）、“接待”（引诱投资）、“炒群”（外围迷惑）、“刀客”（最后收尾）等角色，假借投资理财、刷单返利、同城网恋等名义，使用多个微信号，在诈骗集团建立的聊天群里，以小额红包、盈利截图、黄色图片、小视频、诱惑性短信等为诱饵，诱骗被害人下载、注册诈骗团伙开发的诈骗App软件，逐步诱导被害人由小到大、由少到多进行大额投资理财、高额充值刷单、押注赌博等。待时机成熟，“刀客”便从诈骗App后台操控，故意造成系统崩盘，被害人投资全部亏损的假象，或以操作失误需要交税、交保证金、验证资金、支付救援金等借口，诱骗对方继续投资、充值。如果被害人发现被骗，业务员就把被害人账户拉黑、删除并踢出群聊，再由专门公司对赃款洗钱后分赃。2021年4月至2022年10月间，王某等6人共针对中国公民诈骗1000余万元。</span></p><p><span>经过所谓的实习期后，公司会给每个人下达诈骗人数指标，凡是完不成任务的人都将受到折磨。“打手经常用拳头、棍棒等殴打员工，对完不成任务的员工，还用电棍电击，直到电量消耗殆尽……”王某说。</span></p><p><span>2022年9月，中柬警方联合打击偷渡、电信诈骗、网络赌博犯罪，王某等6人所属的诈骗团伙被打击，6人趁乱逃跑后分散藏匿，立即与南阳市公安局取得联系并求助，欲回国自首。南阳市公安局详细了解相关情况后，协调有关部门给予王某等人帮助，苗某、陈某等4人被先行解救回国。同年12月，王某、别某2人被遣返回国。</span></p><p><span>公安机关立案后，邀请内乡县检察院依法介入，帮助明确侦查方向，固定证据材料。案件移送审查起诉后，承办检察官认为，王某等6人以非法占有为目的，偷渡出境加入电信网络诈骗集团，利用通信工具、互联网等技术手段实施欺诈，骗取他人财物，涉嫌诈骗罪；该团伙出境赴境外诈骗犯罪窝点累计时间30日以上，且系三人以上相互配合共同实施偷越国（边）境的，属于结伙偷渡，行为人偷渡后又实施了诈骗犯罪，应当数罪并罚。此外，苗某组织了偷越国边境活动，涉嫌组织他人偷越国（边）境罪。</span></p><p><span>今年2月，内乡县检察院对王某等人以涉嫌偷越国（边）境罪、组织他人偷越国（边）境罪、诈骗罪提起公诉。</span></p><p><span>（本报通讯员汪宇堂 朱成兴 吴姗怡）</span></p><p><strong><span>“兼职手工活”背后竟是跨国诈骗</span></strong></p><p><strong><span>在该诈骗团伙眼中，年龄25岁至50岁的女性客户是“优质客户”，特别是宝妈。</span></strong></p><p><strong><span>本报讯（通讯员朱敏 吴俊 贾栩）</span></strong><span>本想找份兼职赚生活费，不承想着了境外诈骗集团的道，不少全职太太、宝妈被步步诱骗，被骗金额达上亿元。经江苏省扬州市广陵区检察院提起公诉，今年6月，首批落网的49名被告人被一审法院判处有期徒刑七年至八个月不等刑期，适用缓刑，各并处罚金。其中一名被告人提出上诉，二审法院尚未宣判。近日，广陵区检察院又以涉嫌诈骗罪、非法利用信息网络罪对4名国内地推团队人员提起公诉。</span></p><p><span>不少逛街的人会在商场遇到推销员热情地送小玩偶，唯一的条件就是帮忙发一张邀约兼职的广告图片到微信群，特别要求必须是超过30人且以女性群友居多的群。操作完成后，路人便可以得到一个小玩偶。</span></p><p><span>宝妈王女士恰好在一个朋友群内看到了这则广告，图片上写着“手工兼职”，一旁标注道：只需添加微信，就能免费领取手工材料包。王女士添加了广告上的企业微信号，客服表示，他们公司的手工活以串珠和装笔芯为主，日薪可达150元至500元，需要王女士下载一个名为“B工艺”的App，之后会在App上进行派单操作。</span></p><p><span>王女士很快下载并成功注册。客服回复手工材料包将通过快递的形式发送，大约需要6天至7天的时间，并提出：“等待收货的时间里，您可以在平台做任务得到相应的返利奖励。”王女士便跟随客服指引开始做任务，在短时间内获得了数十元的返利奖励。客服还向王女士发起仅需1元钱的公益捐款活动，王女士根据客服要求绑定了自己的银行账户，支付了1元捐款。</span></p><p><span>绑定银行卡后，任务便丰富了起来。客服向王女士推荐了“幸运联单”等多种刷单任务，比如预付36元可到账70元，预付的金额越高，佣金就越多。王女士先后投了几百元进去，均得到了超额回报。于是，她便放心地提高预付金额，进行大额转账。然而接下来客服屡次以账号输入错误或转账时间超期等理由，让她无法及时提现。</span></p><p><span>等到察觉到被骗时，王女士已累计充值17万余元，遂报警。此后，陆续有多名市民向公安机关报案，反映自己在“B工艺”等App平台上被骗。经扬州市公安机关立案侦查，一个总部位于迪拜境内的庞大诈骗组织“大A”集团浮出水面。</span></p><p><span>经查，2020年11月至2022年7月，“大A”集团在中国境内以“高工资”“高提成”为诱惑，招募袁某、周某、肖某等人加入，不断扩大规模，最终形成拥有上百名员工，下设两个子公司的庞大诈骗集团。集团成员分为5个层级，分别负责招募人员、研发App、指挥客服实施电信诈骗、诱导受害人大额充值下注等工作。</span></p><p><span>“大A”集团首先在中国境内开展地推引流。他们在各地商圈以送玩偶为诱饵骗取路人信任，再通过路人的微信群传播手工兼职软件的诈骗广告。当被害人通过微信扫码方式加入后，专属客服便与被害人沟通，询问其姓名、年龄、工作，判断其是否属于“优质客户”。在该诈骗团伙眼中，年龄25岁至50岁的女性客户是“优质客户”，特别是宝妈。锁定目标后，客服再通过线上聊天的方式，以高薪手工活兼职为由头，以做任务刷单为形式，用“连环套”诱使被害人参加各种活动，直至被害人大额充值。据统计，全国串联案件诈骗总金额达上亿元，目前查实的被害人有上百人。</span></p><p><span>因该案涉案范围广、人数多、金额大，广陵区检察院成立办案组依法介入此案，积极引导公安机关固定关键证据，完善证据链。该院持续督促在境外躲藏的犯罪嫌疑人回国投案，先后劝返48人，还通过羁押必要性审查、适用认罪认罚从宽制度等多种方式，督促犯罪嫌疑人主动退赔，目前已追赃挽损近300万元。</span></p><p><span>2022年11月，首批落网的49名犯罪嫌疑人先后被移送审查起诉，大多为“大A”集团业务部接待组成员。综合考虑被告人在诈骗集团中的地位作用、诈骗金额、工作时间等因素，广陵区检察院坚持分类分层、宽严相济的处理方法：对诈骗集团小组主管按其管理小组所涉金额从严处罚，对小组业务员等普通诈骗人员则认定为从犯，并对其中愿意退赔的人员提出相对宽缓的量刑建议。</span></p><p><span>2022年12月至今年4月，广陵区检察院陆续对首批49名犯罪嫌疑人提起公诉。今年6月，法院采纳了检察机关的量刑建议，作出上述判决。目前，“大A”集团的其他犯罪嫌疑人正在进一步审理中。</span></p><p><strong><span>以务工为名把老乡拖进泥潭</span></strong></p><p><strong><span>这个代理专门招募老乡出境加入诈骗公司，为境外诈骗团伙提供“人力资源”。</span></strong></p><p><strong><span>本报讯（通讯员曾甜甜 柯美中）</span></strong><span>他一人兼任四家境外公司的代理，以介绍海外打工的名义，专门招募老乡到境外从事诈骗活动。这些出境人员成为境外诈骗集团的业务员，常常会扮演不同角色，寻找“待宰”目标，通过虚拟赌博平台实施诈骗。近日，湖北省阳新县检察院依法对谈某涉嫌诈骗罪、组织他人偷越国（边）境罪一案提起公诉。</span></p><p><span>谈某是阳新县人。2018年以来，他以介绍外出打工挣钱、高额工资回报为诱饵，招募了70余名业务员前往境外从事诈骗活动，为境外诈骗团伙的幕后老板提供“人力资源”。</span></p><p><span>经查，2018年初，谈某在与老乡朱某（另案处理）闲聊中提到，自己在老挝那边做赌盘，收益不菲，提出让朱某跟他一起试试。“谈某告诉我，业务员的业绩提成是5%，只要努力工作，晋升后提成就会变高。他是那边的高管，业绩最低可以提成20%。”听到谈某说还有职业上升空间，朱某心动不已，表示愿意前往。谈某随即帮朱某购买了机票并组织其出境。</span></p><p><span>“我堂弟说帮我在境外找了一家公司上班，可以赚大钱。”被谈某以同样方式招募出境的还有谈某的堂哥谈某键（另案处理）。谈某键失业后一直闲居在家，听说堂弟谈某在国外有渠道，赚了很多钱，就希望其能带自己一起发财。“堂弟以前也是做业务的，后面才开始做管理，主要负责招人，每天就是跟业务员们开开会，稳定下军心。他跟我保证说，只要我的业绩做起来，他们就提拔我为组长。”谈某键说。</span></p><p><span>今年4月24日，阳新县公安局将滞留境外的谈某带回阳新进行审查时发现，其为老挝金三角“恒荣公司”管理层，专门负责招募大量人员前往境外从事电信诈骗活动，遂立案侦查。</span></p><p><span>案件移送阳新县检察院审查起诉后，承办检察官审查所有案卷，并讯问了谈某。经查，2018年3月至2022年4月，谈某作为老挝金三角“共赢公司”、菲律宾“马尼拉公司”、马来西亚吉隆坡“卓越公司”、老挝金三角“恒荣公司”四个公司的阳新籍代理，先后招募70余名阳新籍人员前往境外，利用网络社交平台，引诱中国等国居民在虚拟赌博平台上投资押注，从而骗取巨额钱财。几年下来，谈某已非法牟利700余万元。</span></p><p><span>结合案件事实，阳新县检察院认为，谈某以非法占有为目的，多次出境参加境外诈骗活动，骗取他人钱财，数额特别巨大，并组织他人偷越国（边）境，应当以诈骗罪、组织他人偷越国（边）境罪追究其刑事责任，遂依法对谈某提起公诉。</span></p><p>&nbsp;</p><p><strong><span>短评</span></strong></p><p><strong><span>打防并举，合力筑牢网络安全之堤</span></strong></p><p><span>低投资就能获取高收益、只需在平台消费就可获取返利、预付刷单款赢取高额佣金……通过上述多地检察机关办理的案例不难发现，利用网络手段实施的诈骗存在共同特性，即以引诱被害人扫码入群等方式确定目标，之后用购物返现、刷单返利等小恩小惠成功骗取被害人信任，诱导其大量投入资金，最终实现诈骗目的。近年来，电信网络诈骗犯罪已成为人民群众反映最强烈的犯罪类型之一，也极大影响了人们的网络安全获得感。</span></p><p><span>国家高度重视网络领域安全，特别是加大对电信网络诈骗这一危害网络安全的高发犯罪的打击力度。对此，许多国内“黑灰产”团伙将整个或部分犯罪链条转移到境外，实施跨国犯罪行为，以逃避境内警方打击。此外，犯罪集团规模逐渐扩大，犯罪链条进一步延长，关联犯罪滋生蔓延，逐渐形成了一条“境内+境外”里应外合的完整产业链条，给司法办案带来了新挑战。各地检察机关在司法实践中积极贯彻落实习近平总书记的重要指示精神，不断探索积累服务保障网络安全的经验，发挥大数据技术优势，筛查违法犯罪案件线索，建立线索移送机制，适时介入引导侦查取证，加强与公安等有关部门协作配合，形成打击危害网络安全违法犯罪合力。</span></p><p><span>网络安全为人民，网络安全靠人民。维护网络安全是全社会的责任，各地检察机关也积极发挥典型案例引导作用，广泛开展网络安全进企业、进社区、进学校等活动，提升全社会的网络安全意识。同时，广大群众也需提升防骗识骗“免疫力”，在日常生活中，擦亮双眼，做到不轻信不转账，不给犯罪分子以可乘之机。只有全社会共同发力，才能筑牢网络安全之堤。</span></p></div></div>
+</body>
+</html>

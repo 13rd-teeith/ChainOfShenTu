@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>重案追踪</title>
+  <link rel="stylesheet" href="vendors/feather/feather.css">
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" type="text/css" href="js/select.dataTables.min.css">
+  <link rel="stylesheet" href="css/vertical-layout-light/style.css">
+  <link rel="shortcut icon" href="images/favicon.png" />
+
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png" />
+  <link rel="stylesheet" href="../assets/css/bootstrap-5.0.0-alpha.min.css" />
+  <link rel="stylesheet" href="../assets/css/LineIcons.2.0.css" />
+  <link rel="stylesheet" href="../assets/css/animate.css" />
+  <link rel="stylesheet" href="../assets/css/tiny-slider.css" />
+  <link rel="stylesheet" href="../assets/css/glightbox.min.css" />
+  <link rel="stylesheet" href="../assets/css/main.css" />
+
+
+
+
+</head>
+
+<body>
+  <div class="container-scroller">
+    <nav class="mynav navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <style>
+        .logo-container {
+          width: 110px;
+          height: 110px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -25%);
+        }
+
+        .logo-container img {
+          max-width: 100%;
+          max-height: 100%;
+        }
+
+        .navbar-brand-wrapper {
+          position: relative;
+        }
+      </style>
+
+      <div class="text-center navbar-brand-wrapper d-flex justify-content-center">
+        <div class="logo-container">
+          <img src="../assets/img/logo/logo.svg" alt="Logo" />
+        </div>
+      </div>
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        <ul class="navbar-nav mr-lg-2">
+          <li class="nav-item nav-search d-none d-lg-block">
+
+            <form action="#" class="search-form thisheader">
+              <input type="text" placeholder="Search" />
+              <button type="submit">
+                <i class="lni lni-search-alt"></i>
+              </button>
+            </form>
+            <style>
+              .thisheader {
+                height: 50px;
+                box-shadow: 3px 3px 10px rgb(153, 124, 190),
+                  -3px -3px 10px rgb(178, 220, 255);
+                letter-spacing: 2px;
+              }
+
+              .thisheader:hover {
+                box-shadow: 3px 3px 10px rgb(176, 138, 225),
+                  -3px -3px 10px rgb(178, 179, 255);
+                letter-spacing: 2px;
+              }
+
+              .thisheader:focus {
+                box-shadow: 3px 3px 10px rgb(153, 124, 190),
+                  -3px -3px 10px rgb(178, 220, 255);
+                letter-spacing: 2px;
+              }
+            </style>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="../assets/img/team/zhao.png" alt="profile" />
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item" href="index_nor.html">
+                <i class="ti-settings text-primary"></i>
+              </a>
+              <a class="dropdown-item" href="../index_off.html">
+                <i class="ti-power-off text-primary"></i>
+                登出
+              </a>
+            </div>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+          data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
+
+
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <!-- partial:partials/_settings-panel.html -->
+      <div class="theme-setting-wrapper">
+        <div id="settings-trigger"><i class="ti-settings"></i></div>
+        <div id="theme-settings" class="settings-panel">
+          <i class="settings-close ti-close"></i>
+          <p class="settings-heading">SIDEBAR SKINS</p>
+          <div class="sidebar-bg-options selected" id="sidebar-light-theme">
+            <div class="img-ss rounded-circle bg-light border mr-3"></div>Light
+          </div>
+          <div class="sidebar-bg-options" id="sidebar-dark-theme">
+            <div class="img-ss rounded-circle bg-dark border mr-3"></div>Dark
+          </div>
+          <p class="settings-heading mt-2">HEADER SKINS</p>
+          <div class="color-tiles mx-0 px-4">
+            <div class="tiles success"></div>
+            <div class="tiles warning"></div>
+            <div class="tiles danger"></div>
+            <div class="tiles info"></div>
+            <div class="tiles dark"></div>
+            <div class="tiles default"></div>
+          </div>
+        </div>
+      </div>
+      <div id="right-sidebar" class="settings-panel">
+        <i class="settings-close ti-close"></i>
+        <ul class="nav nav-tabs border-top" id="setting-panel" role="tablist">
+          <li class="nav-item">
+            <a class="nav-link active" id="todo-tab" data-toggle="tab" href="#todo-section" role="tab"
+              aria-controls="todo-section" aria-expanded="true">TO DO LIST</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" id="chats-tab" data-toggle="tab" href="#chats-section" role="tab"
+              aria-controls="chats-section">CHATS</a>
+          </li>
+        </ul>
+        <div class="tab-content" id="setting-content">
+          <div class="tab-pane fade show active scroll-wrapper" id="todo-section" role="tabpanel"
+            aria-labelledby="todo-section">
+            <div class="add-items d-flex px-3 mb-0">
+              <form class="form w-100">
+                <div class="form-group d-flex">
+                  <input type="text" class="form-control todo-list-input" placeholder="Add To-do">
+                  <button type="submit" class="add btn btn-primary todo-list-add-btn" id="add-task">Add</button>
+                </div>
+              </form>
+            </div>
+            <div class="list-wrapper px-3">
+              <ul class="d-flex flex-column-reverse todo-list">
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Team review meeting at 3.00 PM
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Prepare for presentation
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li>
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox">
+                      Resolve all the low priority tickets due today
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li class="completed">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox" checked>
+                      Schedule meeting for next week
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+                <li class="completed">
+                  <div class="form-check">
+                    <label class="form-check-label">
+                      <input class="checkbox" type="checkbox" checked>
+                      Project review
+                    </label>
+                  </div>
+                  <i class="remove ti-close"></i>
+                </li>
+              </ul>
+            </div>
+            <h4 class="px-3 text-muted mt-5 font-weight-light mb-0">Events</h4>
+            <div class="events pt-4 px-3">
+              <div class="wrapper d-flex mb-2">
+                <i class="ti-control-record text-primary mr-2"></i>
+                <span>Feb 11 2018</span>
+              </div>
+              <p class="mb-0 font-weight-thin text-gray">Creating component page build a js</p>
+              <p class="text-gray mb-0">The total number of sessions</p>
+            </div>
+            <div class="events pt-4 px-3">
+              <div class="wrapper d-flex mb-2">
+                <i class="ti-control-record text-primary mr-2"></i>
+                <span>Feb 7 2018</span>
+              </div>
+              <p class="mb-0 font-weight-thin text-gray">Meeting with Alisa</p>
+              <p class="text-gray mb-0 ">Call Sarah Graves</p>
+            </div>
+          </div>
+          <!-- To do section tab ends -->
+          <div class="tab-pane fade" id="chats-section" role="tabpanel" aria-labelledby="chats-section">
+            <div class="d-flex align-items-center justify-content-between border-bottom">
+              <p class="settings-heading border-top-0 mb-3 pl-3 pt-0 border-bottom-0 pb-0">Friends</p>
+              <small class="settings-heading border-top-0 mb-3 pt-0 border-bottom-0 pb-0 pr-3 font-weight-normal">See
+                All</small>
+            </div>
+            <ul class="chat-list">
+              <li class="list active">
+                <div class="profile"><img src="images/faces/face1.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Thomas Douglas</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">19 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face2.jpg" alt="image"><span class="offline"></span></div>
+                <div class="info">
+                  <div class="wrapper d-flex">
+                    <p>Catherine</p>
+                  </div>
+                  <p>Away</p>
+                </div>
+                <div class="badge badge-success badge-pill my-auto mx-2">4</div>
+                <small class="text-muted my-auto">23 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face3.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Daniel Russell</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">14 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face4.jpg" alt="image"><span class="offline"></span></div>
+                <div class="info">
+                  <p>James Richardson</p>
+                  <p>Away</p>
+                </div>
+                <small class="text-muted my-auto">2 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face5.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Madeline Kennedy</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">5 min</small>
+              </li>
+              <li class="list">
+                <div class="profile"><img src="images/faces/face6.jpg" alt="image"><span class="online"></span></div>
+                <div class="info">
+                  <p>Sarah Graves</p>
+                  <p>Available</p>
+                </div>
+                <small class="text-muted my-auto">47 min</small>
+              </li>
+            </ul>
+          </div>
+          <!-- chat tab ends -->
+        </div>
+      </div>
+      <!-- partial -->
+      <!-- partial:partials/_sidebar.html -->
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <style>
+            .balala {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+
+            .hahaha {
+              background-color: #f5f7ff;
+              box-shadow: inset 0 -5px 5px rgba(0, 0, 0, 0.01);
+              /* 底部阴影效果 */
+              font-size: 18px;
+              border-radius: 10px;
+              height: 65px;
+              transition: background-color 2.8s ease-out, box-shadow 0.8s ease-out;
+            }
+
+            .hahaha:hover {
+              background-color: rgb(249, 249, 253);
+              background-image: linear-gradient(150deg, rgba(88, 105, 239, 1), rgb(108, 64, 219));
+              color: aliceblue;
+              box-shadow: 2px 2px 10px rgba(88, 105, 239, 0.3);
+            }
+          </style>
+          <li class="hahaha wuhu">
+            <a class="hahaha balala nav-link" href="olstu.html">
+              <i class="icon-layout menu-icon"></i>
+              <span class="menu-">&nbsp&nbsp在线学习</span>
+            </a>
+            <style>
+              .datactr {
+                background-color: #f5f7ff;
+                /* 底部阴影效果 */
+                font-size: 18px;
+                border-radius: 10px;
+                height: 65px;
+                transition: background-color 2.8s ease-out, box-shadow 0.8s ease-out;
+                background-image: linear-gradient(150deg, rgba(88, 105, 239, 1), rgb(108, 64, 219));
+                color: aliceblue;
+                box-shadow: 2px 2px 10px rgba(88, 105, 239, 0.3);
+              }
+
+              .datactr:hover {
+                color: aliceblue;
+              }
+            </style>
+          </li>
+          <br>
+          <li class="hahaha wuhu">
+            <a class="hahaha balala nav-link" href="manageforan.html">
+              <i class="icon-layout menu-icon"></i>
+              <span class="menu-">&nbsp&nbsp案件管理</span>
+            </a>
+          </li>
+          <br>
+          <li class="datactr wuhu">
+            <a class="datactr balala nav-link" href="espvital.html">
+              <i class="icon-layout menu-icon"></i>
+              <span class="menu-">&nbsp&nbsp案件追踪</span>
+            </a>
+          </li>
+          <br>
+          <li class="">
+            <a class="">
+
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- partial -->
+      <div class="main-panel ff">
+        <div class="content-wrapper ff ct">
+          <li class="nav-item nav-search d-none d-lg-block">
+            <h3 id="srh">案件搜索</h3>
+            <br>
+            <form action="evisrhres.html" class="search-form thish">
+              <input type="text" placeholder="案件编号" />
+              <button type="submit">
+                <i class="lni lni-search-alt"></i>
+              </button>
+            </form>
+
+            <style>
+              a {
+                color: rgb(60, 66, 108);
+                text-decoration: none;
+                font-weight: bolder;
+              }
+
+              .thish {
+                height: 60px;
+                width: 500px;
+                box-shadow: 3px 3px 10px rgb(153, 124, 190),
+                  -3px -3px 10px rgb(178, 220, 255);
+                letter-spacing: 2px;
+              }
+
+              .thish:hover {
+                box-shadow: 3px 3px 10px rgb(176, 138, 225),
+                  -3px -3px 10px rgb(178, 179, 255);
+                letter-spacing: 2px;
+              }
+
+              .thish:focus {
+                box-shadow: 3px 3px 10px rgb(153, 124, 190),
+                  -3px -3px 10px rgb(178, 220, 255);
+                letter-spacing: 2px;
+              }
+
+              .ct {
+                display: grid;
+                place-items: center;
+                text-align: center;
+              }
+
+              .ff {
+                height: 500px;
+              }
+
+              #srh {
+                color: rgba(88, 105, 239, 1);
+              }
+            </style>
+          </li>
+        </div>
+      </div>
+
+  </div>
+
+  <footer class="footer">
+    <div class="d-sm-flex justify-content-center justify-content-sm-between">
+      <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">神荼锁链：取证研判系统</span>
+      <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> 神荼锁链
+      </span>
+    </div>
+  </footer>
+  <script src="vendors/js/vendor.bundle.base.js"></script>
+  <script src="vendors/chart.js/Chart.min.js"></script>
+  <script src="vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+  <script src="js/dataTables.select.min.js"></script>
+
+  <script src="js/off-canvas.js"></script>
+  <script src="js/hoverable-collapse.js"></script>
+  <script src="js/template.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/todolist.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/Chart.roundedBarCharts.js"></script>
+</body>
+
+</html>

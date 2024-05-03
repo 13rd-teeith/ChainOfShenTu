@@ -1,0 +1,129 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>注册成功</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- ========================= CSS here ========================= -->
+    <link rel="stylesheet" href="assets/css/bootstrap-5.0.0-alpha.min.css">
+    <link rel="stylesheet" href="assets/css/LineIcons.2.0.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/tiny-slider.css">
+    <link rel="stylesheet" href="assets/css/glightbox.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+    <!--[if lte IE 9]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+        <![endif]-->
+    <!-- =========================加载画面 preloader start ========================= -->
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- preloader end -->
+    <!-- ========================= page-404-section end ========================= -->
+
+    <body>
+        <section class="page-404-section pt-130 pb-130">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="page-404-content text-center">
+                            <div class="suc">注册成功</div>
+                            <br>
+                            <style>
+                                .suc {
+                                    color: #3763EB;
+                                    font-size: 40px;
+                                    font-weight: bold;
+                                }
+                            </style>
+                            <h4 id="welcome">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp欢迎您使用神荼&nbsp&nbsp神荼与您安全同行！</h4>
+                            <br>
+                            <button class="theme-btn" id="b2h" onclick="back2homepage()">回到主界面</button>
+                            <br> <br>
+                            <p id="auto">即将自动跳转</p>
+                            <style>
+                                #welcome {
+                                    color: #747a8c;
+                                    font-size: 25px;
+                                    font-weight: bolder;
+                                    letter-spacing: 3px;
+                                }
+
+                                #auto {
+                                    color: #747a8c;
+                                    font-size: 15px;
+                                    letter-spacing: 3px;
+                                }
+                            </style>
+                            <script>
+                                function back2homepage() {
+                                    console.log("按钮，启动！");
+                                    window.location.href = "index_in.html";
+                                }
+                                document.addEventListener("DOMContentLoaded", function () {
+                                    console.log("返回，启动！");
+                                    var button = document.getElementById("auto");
+                                    var countdown = 10;
+                                    var countdownElement = document.getElementById("auto");
+                                    var timer = setInterval(function () {
+                                        countdown--;
+                                        countdownElement.textContent = countdown + "秒后自动跳转";
+                                        if (countdown <= 0) {
+                                            clearInterval(timer);
+                                            window.location.href = "index_out.html";
+                                        }
+                                    }, 1000);
+                                });
+                            </script>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </body>
+    <style>
+        body {
+            zoom: 0.85;
+            -moz-transform: scale(0.85);
+            /* 兼容 Firefox */
+            transform: scale(0.85);
+        }
+    </style>
+    <!-- ========================= page-404-section end ========================= -->
+
+    <!-- ========================= JS here ========================= -->
+    <script src="assets/js/bootstrap.bundle-5.0.0.alpha-min.js"></script>
+    <script src="assets/js/contact-form.js"></script>
+    <script src="assets/js/count-up.min.js"></script>
+    <script src="assets/js/tiny-slider.js"></script>
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/glightbox.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/imagesloaded.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

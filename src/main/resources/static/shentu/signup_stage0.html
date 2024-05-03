@@ -1,0 +1,468 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>注册</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- ========================= CSS here ========================= -->
+    <link rel="stylesheet" href="assets/css/bootstrap-5.0.0-alpha.min.css">
+    <link rel="stylesheet" href="assets/css/LineIcons.2.0.css">
+    <link rel="stylesheet" href="assets/css/animate.css">
+    <link rel="stylesheet" href="assets/css/tiny-slider.css">
+    <link rel="stylesheet" href="assets/css/glightbox.min.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+
+<body>
+    <div class="preloader">
+        <div class="loader">
+            <div class="ytp-spinner">
+                <div class="ytp-spinner-container">
+                    <div class="ytp-spinner-rotator">
+                        <div class="ytp-spinner-left">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                        <div class="ytp-spinner-right">
+                            <div class="ytp-spinner-circle"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- preloader end -->
+
+    <!-- ========================= header start ========================= -->
+    <header class="header navbar-area">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-12">
+                    <nav class="navbar navbar-expand-lg">
+                        <a class="navbar-brand" href="#">
+                            <img src="assets/img/logo/logo.svg" alt="Logo">
+                        </a>
+                        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                            data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                            aria-expanded="false" aria-label="Toggle navigation">
+                            <span class="toggler-icon"></span>
+                        </button>
+                    </nav> <!-- navbar -->
+                </div>
+            </div> <!-- row -->
+        </div> <!-- container -->
+
+    </header>
+    <!-- ========================= header end ========================= -->
+
+    <!-- ========================= 功能模式详细阐释 pricing-section start ========================= -->
+    <section id="pricing" class="pricing-section pt-140 pb-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-6 col-lg-7 col-md-10 mx-auto">
+                    <div class="section-title text-center mb-60">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-xl-12">
+                    <div class="pricing-btn text-center wow fadeInUp" data-wow-delay=".3s">
+                        <ul class="nav justify-content-center mb-90" id="pills-tab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="pills-1-tab" data-toggle="pill" href="#pills-1"
+                                    role="tab" aria-controls="pills-1" aria-selected="true">普通注册</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="pills-2-tab" data-toggle="pill" href="#pills-2" role="tab"
+                                    aria-controls="pills-2" aria-selected="false">特殊注册</a>
+                            </li>
+
+
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="tab-content" id="pills-tabContent">
+                <div class="tab-pane fade show active" id="pills-1" role="tabpanel" aria-labelledby="pills-home-tab">
+                    <div class="row">
+                        <div class="col-xl-2">
+                            <div class="contact-item-wrapper">
+                                <div class="row">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-8">
+                            <div class="contact-form-wrapper">
+                                <div class="row">
+                                    <div class="col-xl-10 col-lg-8 mx-auto">
+                                        <div class="section-title text-center mb-50">
+                                            <span class="wow fadeInDown" data-wow-delay=".4s">为普通用户提供的注册</span>
+                                            <p class="wow fadeInUp" data-wow-delay=".6s">仅需提供您的电话号、真实姓名与身份证号</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <!--这是注册表单js的位置-->
+                                <form action="assets/php/mail.php" class="contact-form" id="idForm">
+                                    <div class="row">
+                                        <div class="col-md-3">
+                                            <input type="text" class="innnnn" id="usrname" placeholder="姓名" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="email" class="innnnn" id="eadd" placeholder="邮箱地址" required>
+                                        </div>
+                                        <div class="col-md-3">
+                                            <input type="text" class="innnnn" id="zhgender" placeholder="性别" required>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <input type="tel" class="innnnn" id="phnn" placeholder="电话号码" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="text" class="innnnn" id="ID_Number" placeholder="身份证号"
+                                                required>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-8">
+                                            <input type="text" class="innnnn" id="regadd" placeholder="户籍地址(_省/_市/_区_)"
+                                                required>
+                                        </div>
+                                        <div class="col-4">
+                                            <input type="text" class="innnnn" id="key" placeholder="口令" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <input type="password" class="innnnn" id="password_1" placeholder="密码" required>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <input type="password" class="innnnn" id="password_2" placeholder="确认密码" required>
+                                        </div>
+                                    </div>
+
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="button text-center">
+                                                <button type="submit" class="theme-btn">下一步</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+
+                                <script>
+                                    document.getElementById('idForm').addEventListener('submit', function (e) {
+                                        e.preventDefault();
+                                        let ID_Number = document.getElementById('ID_Number').value;
+                                        const reg = /^[1-9]\d{5}(19|20)\d{2}(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])\d{3}[\dxX]$/;
+                                        let gender_temp = document.getElementById('zhgender').value;
+                                        if (gender_temp === '男' || gender_temp === '女' || gender_temp === '男性' || gender_temp === '女性') {
+                                            if (!reg.test(ID_Number)) {
+                                                alert('请输入正确的身份证号！');
+                                            } else {
+                                                if (gender_temp === '男' || gender_temp === '男性') {
+                                                    gender = true;
+                                                } else gender = false;
+
+                                                let regadd = document.getElementById('regadd').value;
+                                                let namae = document.getElementById('usrname').value;
+                                                let phn = document.getElementById('phnn').value;
+                                                let emadd = document.getElementById('eadd').value;
+                                                let KEY = document.getElementById('key').value;
+
+                                                let pass1 = document.getElementById('password_1').value;
+                                                let pass2 = document.getElementById('password_2').value;
+                                                
+                                                if(pass1 !== pass2){
+                                                    alert('两次密码不一致！请重试');
+                                                }
+                                                const mydata = {
+                                                    usrName: namae,
+                                                    phoneNumber: phn,
+                                                    usrPassword: pass1, // 这里可以设置一个默认密码
+                                                    chineseName: '<未设置>', // 如果有默认值也可以设置在这里
+                                                    ID_Number: ID_Number,
+                                                    registeredAddress: regadd,
+                                                    emailAddress: emadd,
+                                                    shentuKey: KEY,
+                                                    gender: gender
+                                                };
+
+                                                fetch('http://localhost:8000/user', {
+                                                    method: 'POST',
+                                                    headers: {
+                                                        'Content-Type': 'application/json'
+                                                    },
+                                                    body: JSON.stringify(mydata)
+                                                })
+                                                    .then(response => response.json())
+                                                    .then(data => {
+                                                        if (data[0] === false) {
+                                                            alert('创建失败:口令错误');
+                                                            location.reload();
+                                                        } else {
+                                                            if (data[1] === true) {
+                                                                console.log('用户创建成功');
+                                                                window.location.href = "signup_successful.html";
+                                                            } else {
+                                                                alert('创建失败:用户数量达到上限或用户已存在');
+                                                                location.reload();
+                                                            }
+                                                        }
+                                                    })
+                                                    .catch(error => {
+                                                        console.error('Error:', error);
+                                                    });
+                                            }
+                                        } else {
+                                            alert('底层数据格式暂时只支持男女两种性别');
+                                            location.reload();
+                                        }
+                                    });
+                                </script>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="tab-pane fade" id="pills-2" role="tabpanel" aria-labelledby="pills-2-tab">
+                    <div class="row">
+                        <div class="col-xl-2">
+                            <div class="contact-item-wrapper">
+                                <div class="row">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-xl-8">
+                            <div class="contact-form-wrapper">
+                                <div class="row">
+                                    <div class="col-xl-10 col-lg-8 mx-auto">
+                                        <div class="section-title text-center mb-50">
+                                            <span class="wow fadeInDown" data-wow-delay=".4s">为办案机关提供的注册</span>
+                                            <p class="wow fadeInUp" data-wow-delay=".6s">请提供您的注册审批号</p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <form action="assets/php/mail.php" class="contact-form" id="hereForm">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="button text-center">
+                                                <input type="text" class="innnnn" id="signcode" placeholder="审批编号"
+                                                    required>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <div class="button text-center">
+                                                <button type="submit" class="theme-btn">下一步</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </form>
+
+                                <script>
+                                    //请根据审批编号设置正确的正则表达式进行验证,现在这里暂时还用的是身份证验证
+                                    document.getElementById('hereForm').addEventListener('submit', function (e) {
+                                        e.preventDefault();
+                                        const ID_Number = document.getElementById('signcode').value;
+                                        const reg = /^[1-9]\d{5}(19|20)\d{2}(0[1-9]|1[0-2])(0[1-9]|[12]\d|3[01])\d{3}[\dxX]$/;
+                                        if (!reg.test(ID_Number)) {
+                                            alert('请输入正确的机关编号！');
+                                        } else {
+                                            window.location.href = "signup_stage1_spe.html";
+                                        }
+                                    });
+                                </script>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <style>
+                .innnnn {
+                    color: #434343;
+                    font-size: large;
+                    box-shadow: 2px 2px 10px rgb(153, 124, 190),
+                        -2px -2px 10px rgb(194, 224, 249);
+                    width: 500px;
+                    letter-spacing: 2px;
+                }
+
+                .innnnn:hover {
+                    color: #434343;
+                    font-size: large;
+                    box-shadow: 3px 3px 10px rgb(205, 167, 255),
+                        -3px -3px 10px rgb(178, 220, 255);
+                    width: 500px;
+                    letter-spacing: 2px;
+                }
+
+                .innnnn:focus {
+                    color: #434343;
+                    font-size: large;
+                    box-shadow: 3px 3px 10px rgb(153, 124, 190),
+                        -3px -3px 10px rgb(178, 220, 255);
+                    width: 500px;
+                    letter-spacing: 2px;
+                }
+            </style>
+        </div>
+    </section>
+    <!-- ========================= pricing-section end ========================= -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ========================= footer start ========================= -->
+    <footer class="footer pt-100">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-5 offset-xl-1 col-lg-6 col-md-6">
+                    <div class="footer-widget mb-60 wow fadeInUp" data-wow-delay=".4s">
+                        <div class="pp">神荼:全流量取证调查框架</div>
+                        <div class="ppp">更高效、安全的数字取证解决方案</div>
+                        <div class="txth">
+                            神荼系统支持全流量数据采集、数据分析与可视化,极其注重个人隐私权利保障,为办案机关与公民用户提供有力保护！
+                        </div>
+
+                        <style>
+                            .pp {
+                                font-weight: bold;
+                                font-size: 25px;
+                            }
+
+                            .ppp {
+                                font-weight: 900;
+                                font-size: 30px;
+                                color: rgb(57, 62, 116)
+                            }
+                        </style>
+                    </div>
+                </div>
+                <div class="col-xl-2 offset-xl-1 col-lg-2 col-md-6">
+                    <div class="txth footer-widget mb-60 wow fadeInUp" data-wow-delay=".4s">
+                        <h4>导航</h4>
+                        <ul class="footer-links">
+                            <li>
+                                <a href="#">主页</a>
+                            </li>
+                            <li>
+                                <a href="#aboutus">关于我们</a>
+                            </li>
+                            <li>
+                                <a onclick=to()>普法援助</a>
+                            </li>
+                            <li>
+                                <a onclick=to()>风险分析</a>
+                            </li>
+
+                            <script>
+                                function to() {
+                                    alert('请先注册！');
+                                    window.location.href = "signup_stage0.html";
+                                }
+                            </script>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="txth col-xl-3 col-lg-3 col-md-6">
+                    <div class="footer-widget mb-60 wow fadeInRight" data-wow-delay=".8s">
+                        <h4>联系我们</h4>
+                        <ul class="footer-contact">
+                            <li>
+                                <a>没有电话</a>
+                            </li>
+                            <li>
+                                <a>没有邮箱</a>
+                            </li>
+                            <li>
+                                <a>成都市双流区川大路二段</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <style>
+                .txth {
+                    font-weight: 900;
+                }
+                h4{
+                    font-weight:bold;
+                    font-size: 30px;
+                    font-family: '微软雅黑';
+                }
+            </style>
+            <div class="copyright-area">
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <div class="footer-social-links">
+                            <ul class="d-flex">
+                                <li><a href="javascript:void(0)"><i class="lni lni-facebook-filled"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="lni lni-twitter-filled"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="lni lni-linkedin-original"></i></a></li>
+                                <li><a href="javascript:void(0)"><i class="lni lni-instagram-filled"></i></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <p class="wow fadeInUp" data-wow-delay=".3s"><a href="#" title="神荼锁链：取证研判系统">神荼锁链：取证研判系统</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- ========================= footer end ========================= -->
+
+
+    <!-- ========================= scroll-top ========================= -->
+    <a href="#" class="scroll-top">
+        <i class="lni lni-arrow-up"></i>
+    </a>
+
+    <!-- ========================= JS here ========================= -->
+    <!--省市区县-->
+    <script src="assets/js/province.js" type="text/javascript" charset="utf-8"></script>
+    <!--省市区县-->
+
+    <script src="assets/js/bootstrap.bundle-5.0.0.alpha-min.js"></script>
+    <script src="assets/js/contact-form.js"></script>
+    <script src="assets/js/count-up.min.js"></script>
+    <script src="assets/js/tiny-slider.js"></script>
+    <script src="assets/js/isotope.min.js"></script>
+    <script src="assets/js/glightbox.min.js"></script>
+    <script src="assets/js/wow.min.js"></script>
+    <script src="assets/js/imagesloaded.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+
+</html>

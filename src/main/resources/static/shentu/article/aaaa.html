@@ -1,0 +1,673 @@
+<!doctype html>
+<html style='font-size:20px !important'>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.loli.net/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext' rel='stylesheet' type='text/css' /><link href='https://fonts.loli.net/css?family=Lato:900,300&subset=latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+@include-when-export url(https://fonts.loli.net/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext);
+@include-when-export url(https://fonts.loli.net/css?family=Lato:900,300&subset=latin-ext);
+
+:root {
+	--control-text-color: #777;
+}
+
+/**
+ * forked from pixyll.com
+ * MIT license
+ */
+
+h1,
+.h1,
+.f1 {
+	font-size: 2rem;
+	line-height: 2.5rem;
+}
+h2,
+.h2,
+.f2 {
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+h3,
+.h3,
+.f3 {
+	font-size: 1.25rem;
+	line-height: 1.5rem;
+}
+p,
+.p,
+.f4,
+h4,
+h5,
+h6,
+dl,
+ol,
+ul,
+pre[cid],
+div[cid],
+#typora-source {
+	font-size: 1.125rem;
+	line-height: 1.5rem;
+}
+
+h4 {
+	font-size: 1.13rem;
+}
+/*
+ Pixyll
+ A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff.
+ Best served with BASSCSS (http://jxnblk.github.io/basscss)
+ Crafted with <3 by John Otander (@4lpine) - ©2015 John Otander MIT License http://opensource.org/licenses/MIT
+
+*/
+
+body {
+	font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", "STSong", 'Segoe UI Emoji', Serif;
+	line-height: 1.5rem;
+	font-weight: 400;
+}
+
+#write {
+	max-width: 914px;
+	color: #333;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1100px;
+	}
+}
+
+@media only screen and (min-width: 1700px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+img {
+	width: auto;
+	max-width: 100%;
+}
+body {
+	font-size: 1.5rem;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.ty-table-edit {
+	background: #ededed;
+}
+
+table {
+	width: 100%;
+	font-size: 1.125rem;
+}
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td,
+table > tfoot > tr > th,
+table > tfoot > tr > td {
+	padding: 12px;
+	line-height: 1.2;
+	vertical-align: top;
+	border-top: 1px solid #333;
+}
+table > thead > tr > th {
+	vertical-align: bottom;
+	border-bottom: 2px solid #333;
+}
+table > caption + thead > tr:first-child > th,
+table > caption + thead > tr:first-child > td,
+table > colgroup + thead > tr:first-child > th,
+table > colgroup + thead > tr:first-child > td,
+table > thead:first-child > tr:first-child > th,
+table > thead:first-child > tr:first-child > td {
+	border-top: 0;
+}
+table > tbody + tbody {
+	border-top: 2px solid #333;
+}
+p {
+	font-weight: 300;
+	line-height: 1.5;
+}
+abbr {
+	border-bottom: 1px black dotted;
+	cursor: help;
+}
+pre,
+code {
+	font-family: Menlo, Monaco, "Courier New", monospace;
+}
+
+code,
+.md-fences  {
+	color: #7a7a7a;
+}
+
+.md-fences {
+	padding: 1.125em;
+	margin-bottom: 0.88em;
+	font-size: 1rem;
+	border: 1px solid #7a7a7a;
+	padding-bottom: 0.5rem;
+	padding-top: 0.5rem;
+}
+
+blockquote {
+	padding: 1.33em;
+	font-style: italic;
+	border-left: 5px solid #7a7a7a;
+	color: #555;
+}
+blockquote em {
+	color: #000;
+}
+blockquote footer {
+	font-size: .85rem;
+	font-style: normal;
+	background-color: #fff;
+	color: #7a7a7a;
+	border-color: transparent;
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	font-family: "Lato", 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: bold;
+	line-height: 1.2;
+	margin: 1em 0 0.5em;
+}
+@media screen and (min-width: 48em) {
+	.h1,
+	h1 {
+		font-size: 3.250rem;
+	}
+	.h2,
+	h2 {
+		font-size: 2.298rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.625rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.3rem;
+	}
+	#write>h4.md-focus:before,
+	#write>h5.md-focus:before,
+	#write>h6.md-focus:before{
+		top: 1px;
+	}
+	.p,
+	p,
+	li {
+		font-size: 1.25rem;
+		line-height: 1.8;
+	}
+	table {
+		font-size: 1.25rem;
+	}
+}
+@media (max-width: 48em) {
+	blockquote {
+		margin-left: 1rem;
+		margin-right: 0;
+		padding: 0.5em;
+	}
+	.h1,
+	h1 {
+		font-size: 2.827rem;
+	}
+	.h2,
+	h2 {
+		font-size: 1.999rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.413rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.3rem;
+	}
+}
+@media screen and (min-width: 64em) {
+	.h1,
+	h1 {
+		font-size: 4.498rem;
+	}
+	.h2,
+	h2 {
+		font-size: 2.29rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.9rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.591rem;
+	}
+	#write>h4.md-focus:before{
+		top:4px;
+	}
+}
+a {
+	color: #463F5C;
+	text-decoration: underline;
+}
+
+#write {
+	padding-top: 2rem;
+}
+
+#write pre.md-meta-block {
+	min-height: 35px;
+	padding: 0.5em 1em;
+	white-space: pre;
+	border: 0px;
+
+	border-left: 30px #f8f8f8 solid;
+	border-right: 30px #f8f8f8 solid;
+	width: 100vw;
+	max-width: calc(100% + 60px);
+
+	margin-left: -30px;
+	margin-bottom: 2em;
+	margin-top: -2010px;
+	padding-top: 2000px;
+	padding-bottom: 10px;
+	line-height: 1.5em;
+	color: #7a7a7a;
+	background-color: #fafafa;
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: 300;
+	clear: both;
+	padding-left: 0;
+	font-size:1.125rem;
+}
+.md-image>.md-meta {
+	color: #463F5C
+}
+.footnotes {
+	font-size:1.1rem;
+}
+.md-tag {
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+}
+.code-tooltip {
+	background: white;
+}
+.code-tooltip-content {
+	font-size: 1.1rem;
+}
+
+.task-list{
+	padding-left: 0;
+}
+
+.md-task-list-item {
+	padding-left:34px;
+}
+
+.md-task-list-item > input{
+	width: 1.25rem;
+	height: 1.25rem;
+	display: block;
+	-webkit-appearance: initial;
+	top: -0.2rem;
+	margin-left: -1.6em;
+	margin-top: calc(1rem - 7px);
+	border: none;
+}
+
+.md-task-list-item > input:focus{
+	outline: none;
+	box-shadow: none;
+}
+
+.md-task-list-item > input:before{
+	border: 1px solid #555;
+	border-radius: 1.5rem;
+	width: 1.5rem;
+	height: 1.5rem;
+	background: #fff;
+	content: ' ';
+	transition: background-color 200ms ease-in-out;
+	display: block;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before{
+	background: #333;
+	border-width: 2px;
+	display:inline-block;
+	transition: background-color 200ms ease-in-out;
+}
+
+.md-task-list-item > input:checked:after,
+.md-task-list-item > input[checked]:after {
+	opacity: 1;
+}
+
+.md-task-list-item > input:after {
+	opacity: 1;
+	-webkit-transition: opacity 0.05s ease-in-out;
+	-moz-transition: opacity 0.05s ease-in-out;
+	transition: opacity 0.05s ease-in-out;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	position: absolute;
+	top: 0.4375rem;
+	left: 0.28125rem;
+	width: 0.9375rem;
+	height: 0.5rem;
+	border: 3px solid #fff;
+	border-top: 0;
+	border-right: 0;
+	content: ' ';
+	opacity: 0;
+}
+
+.md-tag {
+	color:inherit;
+}
+
+.md-toc:focus .md-toc-content{
+	margin-top: 19px;
+}
+
+#typora-sidebar {
+	font-size:1rem !important;
+}
+
+.html-for-mac #typora-sidebar {
+	background-color:white;
+}
+
+.outline-content li, .outline-content ul {
+	font-size:1rem !important;
+}
+
+.outline-title {
+	line-height: inherit;
+	margin-top: 10px;
+}
+
+.outline-expander {
+	width: 18px;
+}
+
+.outline-expander:before {
+ 	content: "+";
+	font-family: inherit;
+	color: rgb(108, 108, 108); 
+  font-size: 1.5rem;
+ 	top: -0.1rem;
+}
+
+.outline-expander:hover:before {
+	content: "+";
+}
+
+.outline-item-open>.outline-item>.outline-expander:before{
+	content: "-";
+}
+
+/** source code mode */
+#typora-source {
+	font-family: Courier, monospace;
+    color: #6A6A6A;
+}
+
+.os-windows #typora-source {
+	font-family: inherit;
+}
+
+.cm-s-typora-default .cm-header, 
+.cm-s-typora-default .cm-property,
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
+	color: #428bca;
+}
+
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
+	color: #777777;
+}
+
+.md-diagram-panel {
+	margin-top: 24px;
+	margin-left: -1.2em;
+}
+
+.md-mathjax-midline {
+	background: #fafafa;
+}
+
+.enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="flow"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="mermaid"] .code-tooltip {
+    bottom: -3.4em;
+}
+
+.dropdown-menu .divider {
+	border-color: #e5e5e5;
+}
+
+
+</style><title>aaaa</title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><p><span>国内网络犯罪形势概况</span></p><p><span>背景介绍</span></p><p><span>1997年我国刑法修订将其中部分行为予以犯罪化吸收到刑法典中，刑法理论界对该类犯罪行为也早有探讨。但不论已有的理论成果或现行</span><a href='https://baike.baidu.com/item/刑法/0?fromModule=lemma_inlink'><span>刑法</span></a><span>规定更多的是关注计算机信息系统而对网络问题却少有专门探讨。在计算机科学上，计算机网络毕竟不同于计算机信息系统本身，二者在外延上存在差别。</span></p><p><span>1994年2月18号国务院颁布的《</span><a href='https://baike.baidu.com/item/中华人民共和国计算机信息系统安全保护条例/0?fromModule=lemma_inlink'><span>中华人民共和国计算机信息系统安全保护条例</span></a><span>》第2条规定：所谓计算机信息系统是指由计算机及其相关的配套的设备、设施（含网络）构成的，按照一定的应用目标和规则对信息进行收集、加工、存储、检索等处理的人机系统。由此可见，计算机信息系统是由计算机作为信息载体的系统。例如，一台计算机出厂时，只要已安装程序文件或应用文件，并具有信息处理功能，即构成一定信息系统，但由于未投入使用，没有按照一定的应用目标和规则对信息进行收集、加工、存储、传输、检索等处理，因而不能称为“人机系统”，其信息安全当然不受上述条例保护，更不受刑法保护。</span></p><p><span>新兴的网络科学认为计算机网络是用电缆、光缆、无线电波或其他物理链路，将地理上分散的计算机信息系统连接起来的资源共享系统。通过上述定义的比较，可以认为计算机网络与计算机系统在概念的外延上是有交叉的，计算机信息系统并非一定存在着网络，通过计算机网络组建的计算机信息系统是其高级形式。因此，计算机网络实际上是多个单机信息系统的联接。</span></p><p><span>根据《中华人民共和国计算机信息网络国际管理暂行规定 》实施办法的规定，我国时下主要存在以下几种网络形式：国际互联网、专业计算机信息网、企业计算机信息网。其中，国际联网是指中华人民共和国境内的计算机互联网络、专业信息网络、企业信息网络，以及其他通过专线进行国际联网的计算机信息网络同外国的计算机信息网相联接。专业信息网络是为行业服务的专用计算机信息网络；企业信息网络，是企业内部自用的计算机信息网络。</span></p><p><span>由于受到计算机犯罪概念的影响，理论界有学者认为“网络犯罪就是行为主体以计算机或计算机网络为犯罪工具或攻击对象，故意实施的危害计算机网络安全的，触犯有关法律规范的行为[3]。”从此概念出发，网络犯罪在行为方式上包括以计算机网络为犯罪工具和以计算机网络为攻击对象两种；在行为性质上包括网络一般违法行为和网络严重违法即犯罪行为两种。此概念的界定过于宽泛，不利于从刑法理论对网络犯罪的研究。综观现有的关于网络犯罪的描述，大体可归纳为三种类型：</span></p><p><span>第一，通过网络以其为工具进行各种犯罪活动；</span></p><p><span>第二，攻击网络以其为标的进行的犯罪活动；</span></p><p><span>第三，使用网络以其为获利来源的犯罪活动。第一种以网络为犯罪手段，视其为工具，可以称之为网络工具犯。由于网络已渗透到人们生活方方面面，其被犯罪分子利用进行犯罪活动的表现形形色色，可以说刑法分则中除了杀人、抢劫、强奸等需要两相面对的罪行以外，绝大多数都可以通过网络进行。</span></p><p><span>后两类型均以网络为行为对象，称其为网络对象犯。它包含着以网络为获利来源的犯罪行为和以网络为侵害对象的犯罪行为，分别称为网络用益犯和网络侵害犯。 [3]</span></p><p><span>特点</span></p><p><span>播报</span></p><p><span>编辑</span></p><p><span>同传统的犯罪相比，网络犯罪具有一些独特的特点：即成本低、传播迅速，传播范围广；互动性、隐蔽性高，取证困难；严重的社会危害性；网络犯罪是典型的计算机犯罪[4]。</span></p><p><span>第一，成本低、传播迅速，传播范围广。就电子邮件而言，比起传统寄信所花的成本少得多，尤其是寄到国外的邮件。网络的发展，只要敲一下键盘，几秒种就可以把电子邮件发给众多的人。理论上而言，接受者是全世界的人。</span></p><p><span>第二，互动性、隐蔽性高，取证困难。网络发展形成了一个虚拟的电脑空间，既消除了国境线，也打破了社会和空间界限，使得双向性、多向性交流传播成为可能。在这个虚拟空间里对所有事物的描述都仅仅是一堆冷冰冰的密码数据，因此谁掌握了密码就等于获得了对财产等权利的控制权，就可以在任何地方登陆网站。</span></p><p><span>第三，严重的社会危害性。随着计算机信息技术的不断发展，从国防、电力到银行和电话系统此刻都是数字化、网络化，一旦这些部门遭到侵入和破坏，后果将不可设想。</span></p><p><span>第四，网络犯罪是典型的计算机犯罪。时下对什么是计算机犯罪理论界有多种观点，其中双重说（即行为人以计算机为工具或以其为攻击对象而实施的犯罪行为）的定义比较科学。网络犯罪比较常见的偷窥、复制、更改或者删除计算机数据、信息的犯罪，散布破坏性病毒、逻辑炸弹或者放置后门程序的犯罪，就是典型的以计算机为对象的犯罪，而网络色情传播犯罪、网络侮辱、诽谤与恐吓犯罪以及网络 诈骗、教唆等犯罪，则是以计算机网络形成的虚拟空间作为犯罪工具、犯罪场所进行的犯罪。 [3]</span></p><p><span>分析</span></p><p><span>播报</span></p><p><span>编辑</span></p><p><span>1、智能性</span></p><p><span>计算机犯罪的犯罪手段的技术性和专业化使得计算机犯罪具有极强的智能性。实施计算机犯罪，罪犯要掌握相当的计算机技术，需要对计算机技术具备较高专业知识并擅长实用操作技术，才能逃避</span><a href='https://baike.baidu.com/item/安全防范系统/0?fromModule=lemma_inlink'><span>安全防范系统</span></a><span>的监控，掩盖犯罪行为。</span></p><p><span>所以，</span><a href='https://baike.baidu.com/item/计算机/0?fromModule=lemma_inlink'><span>计算机</span></a><span>犯罪的犯罪主体许多是掌握了计算机技术和网络技术的专业人士。他们洞悉网络的缺陷与漏洞，运用丰富的电脑及网络技术，借助四通八达的网络，对网络系统及各种电子数据、资料等信息发动进攻，进行破坏。由于有高技术支撑，网上犯罪作案时间短，手段复杂隐蔽，许多犯罪行为的实施，可在瞬间完成，而且往往不留痕迹，给网上犯罪案件的侦破和审理带来了极大的困难。而且，随着计算机及网络</span><a href='https://baike.baidu.com/item/信息安全技术/0?fromModule=lemma_inlink'><span>信息安全技术</span></a><span>的不断发展，犯罪分子的作案手段日益翻新，甚至一些原为计算机及网络技术和信息安全技术专家的职务人员也铤而走险，其作恶犯科所采用的手段则更趋专业化。</span></p><p><span>2、隐蔽性</span></p><p><span>由于网络的开放性、不确定性、虚拟性和超越时空性等特点，使得计算机犯罪具有极高的隐蔽性，增加了计算机犯罪案件的侦破难度。据调查已经发现的利用计算机或计算机犯罪的仅占实施的计算机犯罪或计算机犯罪总数的5%－10%，而且往往很多犯罪行为的发现是出于偶然，例如同伙的告发或计算机出了故障，用于手工作业的处理业务是偶尔发现的。</span></p><p><span>大多数的计算机犯罪，都是行为人经过狡诈而周密的安排，运用计算机专业知识，所从事的智力犯罪行为。进行这种犯罪行为时，犯罪分子只需要向计算机输入错误指令，篡改软件程序，作案时间短且对计算机硬件和信息载体不会造成任何损害，作案不留痕迹，使一般人很难觉察到计算机内部软件上发生的变化。</span></p><p><span>3、复杂性</span></p><p><span>计算机犯罪的复杂性主要表现为：第一、犯罪主体的复杂性。任何罪犯只要通过一台联网的计算机便可以在电脑的终端与整个网络合成一体，调阅、下载、发布各种信息，实施犯罪行为。而且由于网络的跨国性，罪犯完全可来自各个不同的民族、国家、地区，网络的“时空压缩性”的特点为</span><a href='https://baike.baidu.com/item/犯罪集团/0?fromModule=lemma_inlink'><span>犯罪集团</span></a><span>或共同犯罪有提供了极大的便利。第二、犯罪对象的复杂性。计算机犯罪就是行为人利用网络所实施的侵害</span><a href='https://baike.baidu.com/item/计算机信息系统/0?fromModule=lemma_inlink'><span>计算机信息系统</span></a><span>和其它严重危害社会的行为。其犯罪对象也是越来越复杂和多样。有盗用、伪造客户网上支付帐户的犯罪；电子商务诈骗犯罪侵犯知识产权犯罪；非法侵入电子商务认证机构、金融机构计算机信息系统犯罪破坏电子商务计算机信息系统犯罪恶意攻击电子商务计算机信息系统犯罪；虚假认证犯罪；网络色情、网络赌博、洗钱、盗窃银行、操纵股市等。</span></p><p><span>4、跨国性</span></p><p><span>网络冲破了地域限制，计算机犯罪呈国际化趋势。因特网络具有“时空压缩化”的特点，当各式各样的信息通过因特网络传送时，国界和地理距离的暂时消失就是空间压缩的具体表现。这为犯罪分了跨地域、跨国界作案提供了可能。犯罪分子只要拥有一台联网的终端机，就可以通过因特网到网络上任何一个站点实施犯罪活动。而且，可以甲地作案，通过中间结点，使其他联网地受害。由于这种跨国界、跨地区的作案隐蔽性强、不易侦破，危害也就更大。</span></p><p><span>5、匿名性</span></p><p><span>罪犯在接受网络中的文字或图像信息的过程是不需要任何登记，完全匿名，因而对其实施的犯罪行为也就很难控制。罪犯可以通过反复匿名登录，几经周折，最后直奔罪犯目标，而作为对计算机犯罪的侦查，就得按部就班地调查取证，等到接近犯罪的目标时，犯罪分子早已逃之夭夭了。</span></p><p><span>6、损失大，对象广泛，发展迅速，涉及面广</span></p><p><span>计算机犯罪始于六十年代，七十年代迅速增长，八十年代形成威胁，美国因计算机犯罪造成的损失已在千亿美元以上，年损失达几十亿，甚至上百亿美元，英、德的年损失也达几十亿美元。随着社会的网络化，计算机犯罪的对象从金融犯罪都个人隐私、国家安全、信用卡密码、军事机密等等，无所不包。而且犯罪发展迅速。我国从1986年开始每年出现至少几起或几十起计算机犯罪，到1993年一年就发生了上百起，利用计算机犯罪的案件以每年30%的速度递增，其中金融行业发案比例占61%，平均每期金额都在几十万元以上，单起犯罪案件的最大金额高达1400余万元，每年造成的</span><a href='https://baike.baidu.com/item/直接经济损失/0?fromModule=lemma_inlink'><span>直接经济损失</span></a><span>近亿元，而且这类案件危害的领域和范围将越来越大，危害的程度也更严重。计算机犯罪涉及面广。据统计，在美国计算机及计算机犯罪造成的损失，每年接近上百亿美元。计算机犯罪从原来的金融犯罪发展为时下的生产、科研、卫生、邮电等几乎所有计算机联网的领域。</span></p><p><span>7、持获利和探秘动机居多</span></p><p><span>计算机犯罪作案动机多种多样，但是最近几年，越来越多计算机犯罪活动集中于获取高额利润和探寻各种秘密。据统计，金融系统的计算机犯罪占计算机犯罪总数的60%以上。全世界每年被计算机犯罪直接盗走的资金达20亿美元。我国当年发现的计算机作案的</span><a href='https://baike.baidu.com/item/经济犯罪/0?fromModule=lemma_inlink'><span>经济犯罪</span></a><span>已达100余件，涉及金额达1700万元，在整个计算机犯罪中占有相当的比例。</span></p><p><span>8、低龄化和内部人员多</span></p><p><span>主体的低龄化是指计算机犯罪的作案人员年龄越来越小和低龄的人占整个罪犯中的比例越来越高。从时下发现的计算机犯罪来看，犯罪分子大多是具有一定学历，知识面较宽的，了解某地的计算机系统的，对业务上比较熟练的年轻人。我国对某地的金融犯罪情况的调查，犯罪的年龄在35岁以下的人占整个犯罪人数的比例：1989年是69.9%，1990年是73.2%，1991年是75.8%。其中年龄最小的只有18岁。</span></p><p><span>此外，在计算机犯罪中犯罪主体为内部人员也占有相当的比例。据有关统计，计算机犯罪的犯罪主体集中为金融、证券业的“白领阶层“，身为银行或证券公司职员而犯罪的占78%，并且绝大多数为单位内部的计算机操作管理人员；从年龄和文化程度看，集中表现为具有一定专业技术知识、能独立工作的大、中专文化程度的年轻人，这类人员占83%，案发时最大年龄为34岁，利用电脑搞破坏绝大多数是对心怀不满的企业内部人员，通常他们掌握企业计算机系统内情。</span></p><p><span>9、巨大的</span><a href='https://baike.baidu.com/item/社会危害性/0?fromModule=lemma_inlink'><span>社会危害性</span></a></p><p><span>网络的普及程度越高，计算机犯罪的危害也就越大，而且计算机犯罪的危害性远非一般传统犯罪所能比拟，不仅会造成财产损失，而且可能危及公共安全和国家安全。据美国联邦调查局统计测算，一起刑事案件的平均损失仅为2000美元，而一起计算机犯罪案件的平均损失高达50万美元。据计算机安全专家估算，因计算机犯罪给总部在美国的公司带来的损失为2500亿美元。</span></p><p><span>在科技发展迅猛，世界各国对网络的利用和依赖将会越来越多，因而网络安全的维护变的越来越重要，也因此越来越多的受到来自世界各地的攻击。美国每年因</span><a href='https://baike.baidu.com/item/信息与网络安全/0?fromModule=lemma_inlink'><span>信息与网络安全</span></a><span>所造成的经济损失高达75亿美元，企业电脑安全受到侵犯的比例为50%，1998年我国公安部破获黑客案件近百起，其中以经济为目的的计算机犯罪占70%，计算机犯罪能使一个企业倒闭，个人隐私的泄露，或是一个国家经济的瘫痪，这些绝非危言耸听。</span></p><p><span>构成</span></p><p><span>播报</span></p><p><span>编辑</span></p><p><span>1、 犯罪主体</span></p><p><span>犯罪主体是指实施危害社会的行为、依法应当负刑事责任的自然人和单位。笔者认为网络犯罪的主体应是一般主体，既可以是自然人，也可以是法人。从网络犯罪的具体表现来看，犯罪主体具有多样性，各种年龄、各种职业的人都可以进行网络犯罪，对社会所造成的危害都相差不大。一般来讲，进行网络犯罪的主体必须是具有一定计算机专业知识水平的行为人，但是不能认为具有计算机专业知识的人就是特殊的主体。按照我国刑法学界通行的主张，所谓主体的特殊身份，是指刑法所规定的行为人刑事责任的行为人人身方面的资格、地位或者状态。通常将具有特定职务、从事特定业务、具有特定地位以及具有特定人身关系的人视为特殊主体。我国虽然将具有计算机专业知识的人授予工程师的职称，发放各种计算机等级合格证书等，但是从网络犯罪的案例来看，有相当一部分人水平高超却没有证书或者职称。同时，应当看到在计算机即网络，对所谓具有计算机专业知识的人的要求将会越来越高，网络犯罪却将越来越普遍，用具有计算机专业知识这样的标准是不确切的。另外，网络的发展给企业发展电子商务带来了新的生机，企业法人为了争夺新的市场空间，法人作为主体的网络犯罪也应当不足为奇。</span></p><p><span>2、</span><a href='https://baike.baidu.com/item/犯罪主观方面/0?fromModule=lemma_inlink'><span>犯罪主观方面</span></a></p><p><span>犯罪主观方面是指犯罪主体对自己的危害行为及其危害的结果所抱的心理态度，它包括罪过（即犯罪的故意或者犯罪的过失）以及犯罪的目的和动机这几种因素。犯罪在主观方面表现为故意。因为在这类犯罪中，犯罪行为人进入系统以前，需要通过</span><a href='https://baike.baidu.com/item/输入输出设备/0?fromModule=lemma_inlink'><span>输入输出设备</span></a><span>打入指令或者利用技术手段突破系统的安全保护屏障，利用机信息网络实施危害社会的行为，破坏网络管理秩序。这表明犯罪主体具有明显的犯罪故意，而且这种故意常常是直接的。即使是为了显示自己能力的侵入系统的犯罪，行为人也具备明显的“非要侵入不可”等等的念头，显示了极强的主观故意。</span></p><p><span>3、犯罪</span><a href='https://baike.baidu.com/item/客体/0?fromModule=lemma_inlink'><span>客体</span></a></p><p><a href='https://baike.baidu.com/item/计算机网络犯罪/0?fromModule=lemma_inlink'><span>计算机网络犯罪</span></a><span>的客体是指计算机网络犯罪所侵害的，为我国刑法所保护的</span><a href='https://baike.baidu.com/item/社会关系/0?fromModule=lemma_inlink'><span>社会关系</span></a><span>。由于计算机网络犯罪是以犯罪的手段和对象，不是以犯罪的同类课题为标准而划分的犯罪类型，所以计算机网络犯罪侵害的客体具有多样性。计算机网络犯罪它一方面对计算机系统的管理秩序造成严重破坏，另一方面也往往会直接严重危害到其他社会利益。计算机网络犯罪侵犯的是</span><a href='https://baike.baidu.com/item/复杂客体/0?fromModule=lemma_inlink'><span>复杂客体</span></a><span>，既计算机犯罪是对两种或者两种以上</span><a href='https://baike.baidu.com/item/直接客体/0?fromModule=lemma_inlink'><span>直接客体</span></a><span>进行侵害的行为。比如在非法侵入计算机系统犯罪中，一方面侵犯了计算机系统所有人的排他性的权益，如所有权、使用权和处置权，另一方面又扰乱、侵害甚至破坏了国家</span><a href='https://baike.baidu.com/item/计算机信息管理/0?fromModule=lemma_inlink'><span>计算机信息管理</span></a><span>秩序，同时还有可能对受害人的计算机系统当中数据所涉及的第三人的权益造成危害。进行计算机犯罪，必然要违反国家的管理规定，从而破坏这种管理秩序。这是计算机网络犯罪在客观方面的显著特征。</span></p><p><span>4、客观方面</span></p><p><a href='https://baike.baidu.com/item/犯罪客观方面/0?fromModule=lemma_inlink'><span>犯罪客观方面</span></a><span>是刑法所规定的、说明行为对刑法所保护的社会关系造成侵害的客观外在事实特征。表现为利用计算机实施偷窥、复制、更改或者删除计算机信息，诈骗、教唆犯罪，网络色情传播，以及犯罪网络侮辱、诽谤与恐吓等犯罪。还有违反有关计算机网络管理、法规，侵入国家事务、国防建设、尖端技术领域的计算机系统，对计算机信息系统功能、数据和程序进行删除、修改，或者破坏计算机系统软件、硬件设备等侵害</span><a href='https://baike.baidu.com/item/计算机系统安全/0?fromModule=lemma_inlink'><span>计算机系统安全</span></a><span>的行为，网络犯罪的行为只能是作为。这是因为犯罪人必须利用自己掌握的计算机及网络技术通过自己的思考在计算机上输入计算机命令通过</span><a href='https://baike.baidu.com/item/防火墙/0?fromModule=lemma_inlink'><span>防火墙</span></a><span>（网络安全保障系统）来侵入网络，造成破坏。这种网络犯罪的行为是积极的作为。</span></p><p><span> </span></p></div></div>
+</body>
+</html>

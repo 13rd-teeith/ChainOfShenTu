@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>法律咨询</title>
+  <link rel="stylesheet" href="vendors/feather/feather.css">
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
+  <link rel="stylesheet" href="vendors/datatables.net-bs4/dataTables.bootstrap4.css">
+  <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
+  <link rel="stylesheet" type="text/css" href="js/select.dataTables.min.css">
+  <link rel="stylesheet" href="css/vertical-layout-light/style.css">
+  <link rel="shortcut icon" href="images/favicon.png" />
+
+  <link rel="shortcut icon" type="image/x-icon" href="assets/img/favicon.png" />
+
+  <link rel="stylesheet" href="../assets/css/bootstrap-5.0.0-alpha.min.css" />
+  <link rel="stylesheet" href="../assets/css/LineIcons.2.0.css" />
+  <link rel="stylesheet" href="../assets/css/animate.css" />
+  <link rel="stylesheet" href="../assets/css/tiny-slider.css" />
+  <link rel="stylesheet" href="../assets/css/glightbox.min.css" />
+  <link rel="stylesheet" href="../assets/css/main.css" />
+
+
+
+
+</head>
+
+<body>
+  <div class="container-scroller">
+    <nav class="mynav navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+      <style>
+        .mynav {
+          height: 68px;
+        }
+      </style>
+
+      <style>
+        .logo-container {
+          width: 110px;
+          /* 设置框的宽度 */
+          height: 110px;
+          /* 设置框的高度 */
+        }
+
+        .logo-container img {
+          max-width: 100%;
+          /* 设置logo的最大宽度为框的宽度 */
+          max-height: 100%;
+          /* 设置logo的最大高度为框的高度 */
+          height: auto;
+
+          justify-content: center;
+          /* 水平居中 */
+          align-items: center;
+        }
+      </style>
+
+
+
+      <div class="text-center navbar-brand-wrapper d-flex justify-content-center">
+        <div class="logo-container">
+          <img src="../assets/img/logo/logo.svg" alt="Logo" />
+        </div>
+      </div>
+
+      <div class="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
+          <span class="icon-menu"></span>
+        </button>
+        <ul class="navbar-nav mr-lg-2">
+          <li class="nav-item nav-search d-none d-lg-block">
+
+            <form action="#" class="search-form thisheader">
+              <input type="text" placeholder="Search" />
+              <button type="submit">
+                <i class="lni lni-search-alt"></i>
+              </button>
+            </form>
+            <style>
+              .thisheader {
+                height: 50px;
+                box-shadow: 3px 3px 10px rgb(153, 124, 190),
+                  -3px -3px 10px rgb(178, 220, 255);
+                letter-spacing: 2px;
+              }
+
+              .thisheader:hover {
+                box-shadow: 3px 3px 10px rgb(176, 138, 225),
+                  -3px -3px 10px rgb(178, 179, 255);
+                letter-spacing: 2px;
+              }
+
+              .thisheader:focus {
+                box-shadow: 3px 3px 10px rgb(153, 124, 190),
+                  -3px -3px 10px rgb(178, 220, 255);
+                letter-spacing: 2px;
+              }
+            </style>
+          </li>
+        </ul>
+
+        <ul class="navbar-nav navbar-nav-right">
+          <li class="nav-item nav-profile dropdown">
+            <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
+              <img src="../assets/img/team/zhao.png" alt="profile" />
+            </a>
+            <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
+              <a class="dropdown-item" href="index_nor.html">
+                <i class="ti-settings text-primary"></i>
+              </a>
+              <a class="dropdown-item" onclick=logout()>
+                <i class="ti-power-off text-primary"></i>
+                登出
+              </a>
+              <script>
+                function logout() {
+                  window.location.href = "../index_off.html";
+                }
+              </script>
+            </div>
+          </li>
+        </ul>
+        <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button"
+          data-toggle="offcanvas">
+          <span class="icon-menu"></span>
+        </button>
+      </div>
+    </nav>
+
+
+    <!-- partial -->
+    <div class="container-fluid page-body-wrapper">
+      <nav class="sidebar sidebar-offcanvas" id="sidebar">
+        <ul class="nav">
+          <style>
+            .balala {
+              display: flex;
+              justify-content: center;
+              align-items: center;
+            }
+
+            .hahaha {
+              background-color: #f5f7ff;
+              box-shadow: inset 0 -5px 5px rgba(0, 0, 0, 0.01);
+              /* 底部阴影效果 */
+              font-size: 18px;
+              border-radius: 10px;
+              height: 65px;
+              transition: background-color 2.8s ease-out, box-shadow 0.8s ease-out;
+            }
+
+            .hahaha:hover {
+              background-color: rgb(249, 249, 253);
+              background-image: linear-gradient(150deg, rgba(88, 105, 239, 1), rgb(108, 64, 219));
+              color: aliceblue;
+              box-shadow: 2px 2px 10px rgba(88, 105, 239, 0.3);
+            }
+          </style>
+          <li class="con">
+            <a class="con balala nav-link" id="con" href="index.html">
+              <i class="icon-grid menu-icon"></i>
+              <span>&nbsp&nbsp法律咨询</span>
+              <style>
+                .con {
+                  font-size: 18px;
+                  border-radius: 10px;
+                  height: 65px;
+                  transition: background-color 2.8s ease-out, box-shadow 0.8s ease-out;
+                  background-color: rgb(249, 249, 253);
+                  background-image: linear-gradient(150deg, rgba(88, 105, 239, 1), rgb(108, 64, 219));
+                  color: aliceblue;
+                  box-shadow: 2px 2px 10px rgba(88, 105, 239, 0.3);
+                }
+
+                .con :hover {
+                  color: #fff;
+                }
+              </style>
+            </a>
+          </li>
+          <br>
+          <li class="hahaha wuhu">
+            <a class="hahaha balala nav-link" href="studyolforusr.html">
+              <i class="icon-grid-2 menu-icon"></i>
+              <span class="menu-arrow">&nbsp&nbsp在线学习</span>
+            </a>
+          </li>
+          <br>
+          <li class="hahaha wuhu">
+            <a class="hahaha balala nav-link" href="datasrh.html">
+              <i class="icon-layout menu-icon"></i>
+              <span class="menu-">&nbsp&nbsp数据查阅</span>
+            </a>
+          </li>
+          <br>
+          <li class="hahaha wuhu">
+            <a class="hahaha balala nav-link" href="selfmanage.html">
+              <i class="icon-layout menu-icon"></i>
+              <span class="menu-">&nbsp&nbsp账户管理</span>
+            </a>
+          </li>
+          <br>
+          <li class="hahaha wuhu">
+            <a class="hahaha balala nav-link" href="followup.html">
+              <i class="icon-layout menu-icon"></i>
+              <span class="menu-">&nbsp&nbsp案件追踪</span>
+            </a>
+          </li>
+          <br>
+          <li class="">
+            <a class="">
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <div class="chat-container">
+        <div class="chat-messages">
+        </div>
+
+        <textarea id="shentuSubmit" class="input-field" placeholder="输入你的问题..." wrap="soft"></textarea>
+        <button class="send-button" onclick=submit()> 发送 </button>
+        <div class="typing-indicator">
+          <span>Bot is typing...</span>
+          <svg xmlns="http://www.w3.org/2000/svg" width="30" height="14" fill="#1f948c" viewBox="0 0 120 30">
+            <circle cx="15" cy="15" r="15" fill="var(--primary, red)">
+              <animate attributeName="r" begin="0s" calcMode="linear" dur="0.8s" from="15" repeatCount="indefinite"
+                to="15" values="15;9;15"></animate>
+              <animate attributeName="fill-opacity" begin="0s" calcMode="linear" dur="0.8s" from="1"
+                repeatCount="indefinite" to="1" values="1;.5;1"></animate>
+            </circle>
+            <circle cx="60" cy="15" r="9" fill="var(--primary, red)" fill-opacity="0.3">
+              <animate attributeName="r" begin="0s" calcMode="linear" dur="0.8s" from="9" repeatCount="indefinite"
+                to="9" values="9;15;9"></animate>
+              <animate attributeName="fill-opacity" begin="0s" calcMode="linear" dur="0.8s" from="0.5"
+                repeatCount="indefinite" to="0.5" values=".5;1;.5"></animate>
+            </circle>
+            <circle cx="105" cy="15" r="15" fill="var(--primary, red)">
+              <animate attributeName="r" begin="0s" calcMode="linear" dur="0.8s" from="15" repeatCount="indefinite"
+                to="15" values="15;9;15"></animate>
+              <animate attributeName="fill-opacity" begin="0s" calcMode="linear" dur="0.8s" from="1"
+                repeatCount="indefinite" to="1" values="1;.5;1"></animate>
+            </circle>
+          </svg>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <script>
+    let chat_property = localStorage.getItem('chat_pro');
+    let uid;
+    let chatMessages = document.querySelector('.chat-messages');
+    let speed_bot = 20;
+    let speed_usr = 3;
+    let bot_record = [];
+    let usr_record = [];
+
+    init();
+
+    function init() {
+      if (chat_property !== null) {
+        console.log('前' + chat_property);
+        let chat_wo = JSON.parse(chat_property);
+        uid = chat_wo.uid;
+        console.log(uid);
+        bot_record = chat_wo.bot;
+        usr_record = chat_wo.usr;
+
+        let len_bigger = bot_record.length > usr_record.length ? bot_record.length : usr_record.length;
+        for (let i = 0; i < len_bigger; i++) {
+          console.log(speed_bot + '-' + speed_usr);
+          if (i < bot_record.length) addBotMessage(bot_record[i],1);
+          if (i < usr_record.length) addUserMessage(usr_record[i],1);
+        }
+
+        return;
+      }
+
+      let content_here = '神荼法律助手初始化中...即将为您服务！';
+      const botMessage = document.createElement('div');
+      botMessage.className = 'message bot-message';
+
+      const logo = document.createElement('img');
+      logo.src = './images/chat/shentu.png';
+      logo.className = 'logo';
+
+      const additionalText = document.createElement('span');
+      additionalText.textContent = '神荼锁链法律助手';
+      additionalText.className = 'additional-text';
+
+      const messageContainer = document.createElement('div');
+      messageContainer.className = 'message-container';
+
+      messageContainer.appendChild(logo);
+      messageContainer.appendChild(additionalText);
+      chatMessages.appendChild(messageContainer);
+      chatMessages.appendChild(botMessage);
+      botMessage.textContent = '';
+
+      let index = 0;
+      function robot_init() {
+        if (index < content_here.length) {
+          botMessage.textContent += content_here.charAt(index);
+          index++;
+          setTimeout(robot_init, speed_bot);
+        }
+      }
+
+      robot_init();
+
+      //向后端请求初始化
+      fetch('http://localhost:8000/chat_begin')
+        .then(response => {
+          if (!response.ok) {
+            throw new Error('error');
+          }
+          return response.text();
+        })
+        .then(data => {
+          let retMessage = JSON.parse(data);
+
+          botMessage.textContent = '';
+
+          let index = 0;
+          let content_back = 
+          '您好,神荼锁链法律助手为您服务！我可以提供法律资源查询、法律问题解答、法律法条解读等法律服务。请问有什么可以帮助您的吗？'
+          +'[注意]神荼助手暂不支持为用户存储聊天记录,若登出、切换账号或者清除浏览器记录,会导致您与神荼助手的聊天记录丢失!';
+          
+          bot_record.push(content_back);
+          function robot_type() {
+            if (index < content_back.length) {
+              botMessage.textContent += content_back.charAt(index);
+              index++;
+              setTimeout(robot_type, speed_bot);
+            }
+          }
+
+          robot_type();
+        
+
+          uid = retMessage.user_id;
+
+          chat_property = {
+            uid: uid,
+            bot: bot_record,
+            usr: usr_record
+          }
+          localStorage.setItem('chat_pro', JSON.stringify(chat_property));
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+    }
+
+
+    function addBotMessage(content, isAdd) {
+
+      const botMessage = document.createElement('div');
+      botMessage.className = 'message bot-message';
+
+      const logo = document.createElement('img');
+      logo.src = './images/chat/shentu.png';
+      logo.className = 'logo';
+
+      const additionalText = document.createElement('span');
+      additionalText.textContent = '神荼锁链法律助手';
+      additionalText.className = 'additional-text';
+
+      const messageContainer = document.createElement('div');
+      messageContainer.className = 'message-container';
+
+      messageContainer.appendChild(logo);
+      messageContainer.appendChild(additionalText);
+      chatMessages.appendChild(messageContainer);
+      chatMessages.appendChild(botMessage);
+
+      botMessage.textContent = '';
+
+      if(isAdd === 1){
+        botMessage.textContent = content;
+        return;
+      }
+      let index = 0;
+      function robot_type() {
+        if (index < content.length) {
+          botMessage.textContent += content.charAt(index);
+          index++;
+          setTimeout(robot_type, speed_bot);
+        }
+      }
+
+      robot_type();
+    }
+
+    function addUserMessage(content, isAdd) {
+
+      const userMessage = document.createElement('div');
+      userMessage.className = 'message user-message';
+      userMessage.textContent = '';
+      chatMessages.appendChild(userMessage);
+
+      let index_usr = 0;
+      
+      if(isAdd === 1){
+        userMessage.textContent = content;
+        return;
+      }
+      
+      function user_type() {
+        if (index_usr < content.length) {
+          userMessage.textContent += content.charAt(index_usr);
+          index_usr++;
+          setTimeout(user_type, speed_usr);
+        }
+      }
+      user_type();
+    }
+
+    function submit() {
+      if (chat_property === null) {
+        return;
+      }
+
+      let usr_content = document.getElementById('shentuSubmit').value;
+      if (usr_content === '') {
+        return;
+      }
+      addUserMessage(usr_content,0);
+      usr_record.push(usr_content);
+      let tmo = {
+        uid: uid,
+        bot: bot_record,
+        usr: usr_record
+      }
+      localStorage.removeItem('chat_pro');
+      localStorage.setItem('chat_pro', JSON.stringify(tmo));
+      document.getElementById('shentuSubmit').value = '';
+      let subData = {
+        message: usr_content,
+        user_id: uid
+      }
+
+      fetch('http://localhost:8000/chat_ing', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(subData)
+      })
+        .then(response => response.text())
+        .then(data => {
+          let retMessage = JSON.parse(data);
+          addBotMessage(retMessage.message,0);
+          bot_record.push(retMessage.message);
+          let tmo = {
+            uid: uid,
+            bot: bot_record,
+            usr: usr_record
+          }
+          localStorage.removeItem('chat_pro');
+          localStorage.setItem('chat_pro', JSON.stringify(tmo));
+        })
+        .catch(error => {
+          console.error('Error:', error);
+        });
+    }
+  </script>
+
+
+  <style>
+    .message-container {
+      color: #16003a;
+      display: flex;
+      align-items: flex-end;
+    }
+
+    .additional-text {
+      align-self: center;
+    }
+
+    .logo {
+      width: 50px;
+      height: 50px;
+      padding-bottom: 5px;
+      padding-right: 4px;
+      /* 设置内边距为5px */
+    }
+
+
+    /* Chat container */
+    .chat-container {
+      width: 90%;
+      height: 700px;
+      /* 设置为页面宽度的90% */
+      max-width: 1200px;
+      margin: 0 auto;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      padding-top: 5px;
+      padding-left: 10px;
+    }
+
+    /* Chat messages */
+    .chat-messages {
+      font-weight: bold;
+      flex: 1;
+      max-height: 70vh;
+      /* 设置最大高度为视口高度的70% */
+      overflow-y: scroll;
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 10px;
+    }
+
+    /* Single message */
+    .message {
+      max-width: 600px;
+      margin-bottom: 10px;
+      padding: 10px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+    }
+
+    /* User message */
+    .user-message {
+      margin-left: auto;
+      background-color: #E7F8FF;
+      color: rgba(88, 105, 239, 1);
+    }
+
+    /* Bot message */
+    .bot-message {
+      margin-right: auto;
+      background-color: #f1f1f1;
+      color: #333;
+    }
+
+    /* Avatar */
+    .avatar {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      margin-right: 10px;
+    }
+
+    /* Input field */
+    .input-field {
+      width: calc(100% - 20px);
+      height: 100px;
+      /* 设置输入框高度 */
+      padding: 10px;
+      border: none;
+      border-top: 1px solid #ccc;
+      box-sizing: border-box;
+      resize: vertical;
+      /* 允许垂直自动调整大小 */
+    }
+
+    /* Send button */
+    .send-button {
+      width: 100%;
+      padding: 10px;
+      background-color: rgba(88, 105, 239, 0.8);
+      color: #fff;
+      border: none;
+      border-radius: 0 0 10px 10px;
+      cursor: pointer;
+    }
+
+    /* Typing indicator */
+    .typing-indicator {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 10px;
+    }
+
+    .typing-indicator svg {
+      margin: 0 5px;
+    }
+
+    a {
+      color: rgb(60, 66, 108);
+      text-decoration: none;
+      font-weight: bolder;
+    }
+  </style>
+
+  </div>
+  <footer class="footer">
+    <div class="d-sm-flex justify-content-center justify-content-sm-between">
+      <span class="text-muted text-center text-sm-left d-block d-sm-inline-block">神荼锁链：取证研判系统</span>
+      <span class="float-none float-sm-right d-block mt-1 mt-sm-0 text-center"> 神荼锁链
+      </span>
+    </div>
+  </footer>
+  <script src="vendors/js/vendor.bundle.base.js"></script>
+
+  <script src="vendors/chart.js/Chart.min.js"></script>
+  <script src="vendors/datatables.net/jquery.dataTables.js"></script>
+  <script src="vendors/datatables.net-bs4/dataTables.bootstrap4.js"></script>
+  <script src="js/dataTables.select.min.js"></script>
+
+  <script src="js/off-canvas.js"></script>
+  <script src="js/hoverable-collapse.js"></script>
+  <script src="js/template.js"></script>
+  <script src="js/settings.js"></script>
+  <script src="js/todolist.js"></script>
+  <script src="js/dashboard.js"></script>
+  <script src="js/Chart.roundedBarCharts.js"></script>
+</body>
+
+</html>

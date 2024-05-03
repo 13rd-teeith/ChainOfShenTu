@@ -1,0 +1,180 @@
+{
+  "listOfService": [
+    {
+      "name": "中华人民共和国最高人民检察院",
+      "path": "LIST-https://www.spp.gov.cn/",
+      "type": "官方主页"
+    },
+    {
+      "name": "中华人民共和国最高人民法院",
+      "path": "LIST-https://www.court.gov.cn/index.html",
+      "type": "官方主页"
+    },
+    {
+      "name": "中国裁判文书网",
+      "path": "LIST-https://wenshu.court.gov.cn/website/wenshu/181010CARHS5BS3C/index.html?open=login",
+      "type": "官方主页"
+    },
+    {
+      "name": "中国审判流程信息公开网",
+      "path": "LIST-https://splcgk.court.gov.cn/gzfwww/",
+      "type": "官方主页"
+    },
+    {
+      "name": "中国庭审公开网",
+      "path": "LIST-http://tingshen.court.gov.cn/",
+      "type": "官方主页"
+    },
+    {
+      "name": "中国执行信息公开",
+      "path": "LIST-http://zxgk.court.gov.cn/",
+      "type": "官方主页"
+    },
+    {
+      "name": "中国司法大数据服务网",
+      "path": "LIST-https://data.court.gov.cn/pages/index.html",
+      "type": "官方主页"
+    },
+    {
+      "name": "北大法宝",
+      "path": "LIST-https://www.spp.gov.cn/",
+      "type": "法律助手"
+    },
+    {
+      "name": "法信",
+      "path": "LIST-https://www.faxin.cn/",
+      "type": "法律助手"
+    },
+    {
+      "name": "知网搜法",
+      "path": "LIST-http://law.cnki.net/",
+      "type": "法律助手"
+    },
+    {
+      "name": "无讼案例",
+      "path": "LIST-https://www.itslaw.com/home",
+      "type": "法律助手"
+    }
+  ],
+  "againstCybercrime": [
+    {
+      "name": "国家网络安全宣传周特别报道·严惩电信网络诈骗犯罪聚焦反诈难题 守护网络安全",
+      "path": "./src/main/resources/data/system/article/againstCybercrime/20240501165003211.html",
+      "type": "特别报道"
+    },
+    {
+      "name": "增强安全防范意识 远离电信网络诈骗",
+      "path": "./src/main/resources/data/system/article/againstCybercrime/20240501165003213.html",
+      "type": "专题宣传"
+    },
+    {
+      "name": "新华全媒+｜警惕网络违法犯罪的新套路",
+      "path": "./src/main/resources/data/system/article/againstCybercrime/20240501165003216.html",
+      "type": "专题宣传"
+    },
+    {
+      "name": "警惕网络犯罪黑手伸向青少年",
+      "path": "./src/main/resources/data/system/article/againstCybercrime/20240501165003218.html",
+      "type": "专题宣传"
+    },
+    {
+      "name": "最高检 指导性案例跨境电信网络诈骗案取证策略与证据体系构建",
+      "path": "./src/main/resources/data/system/article/againstCybercrime/20240503130540527.html",
+      "type": "专业学习"
+    },
+    {
+      "name": "电子证据，法院怎么才认可",
+      "path": "./src/main/resources/data/system/article/againstCybercrime/20240503130540580.html",
+      "type": "专业学习"
+    }
+  ],
+  "anti_fraudAssistant": [
+    {
+      "name": "96110一定要接听 阿里揭秘：它是如何知道你正在被骗的",
+      "path": "./src/main/resources/data/system/article/anti_fraudAssistant/20240501165003073.html",
+      "type": "反诈技巧"
+    },
+    {
+      "name": "国家反诈中心推出《2023版防范电信网络诈骗宣传手册》",
+      "path": "./src/main/resources/data/system/article/anti_fraudAssistant/20240501165003179.html",
+      "type": "政务宣传"
+    },
+    {
+      "name": "电信诈骗防范常识宣传材料",
+      "path": "./src/main/resources/data/system/article/anti_fraudAssistant/20240501165003182.html",
+      "type": "反诈技巧"
+    },
+    {
+      "name": "这两种电话，一个不能接！一个必须接！",
+      "path": "./src/main/resources/data/system/article/anti_fraudAssistant/20240501165003185.html",
+      "type": "反诈技巧"
+    },
+    {
+      "name": "防范于心，反诈于行——防范电信网络诈骗知识宣传",
+      "path": "./src/main/resources/data/system/article/anti_fraudAssistant/20240501165003188.html",
+      "type": "反诈技巧"
+    }
+  ],
+  "classicCases": [
+    {
+      "name": "“猫池”——曾某某等14人诈骗、侵犯公民个人信息、非法利用信息网络案",
+      "path": "./src/main/resources/data/system/article/classicCases/20240503125612134.html",
+      "type": "信息窃取"
+    },
+    {
+      "name": "卫某某、龚某、薛某某非法获取计算机信息系统数据案",
+      "path": "./src/main/resources/data/system/article/classicCases/20240503125612184.html",
+      "type": "信息窃取"
+    },
+    {
+      "name": "“恶意代码植入”——梁某某等34人侵犯公民个人信息案",
+      "path": "./src/main/resources/data/system/article/classicCases/20240503125802692.html",
+      "type": "信息窃取"
+    },
+    {
+      "name": "“暗网”——田某侵犯公民个人信息案",
+      "path": "./src/main/resources/data/system/article/classicCases/20240503125802733.html",
+      "type": "信息窃取"
+    },
+    {
+      "name": "“钓鱼网站”——陈某某、黄某某窃取信用卡信息案",
+      "path": "./src/main/resources/data/system/article/classicCases/20240503125802739.html",
+      "type": "信息窃取"
+    },
+    {
+      "name": "“DDoS攻击”——朱某某非法利用信息网络案",
+      "path": "./src/main/resources/data/system/article/classicCases/20240503125850774.html",
+      "type": "攻击破坏"
+    },
+    {
+      "name": "“删库”——韩某破坏计算机信息系统案",
+      "path": "./src/main/resources/data/system/article/classicCases/20240503125850821.html",
+      "type": "攻击破坏"
+    },
+    {
+      "name": "“流量劫持”——某科技公司、马某等7人破坏计算机信息系统案",
+      "path": "./src/main/resources/data/system/article/classicCases/20240503125850827.html",
+      "type": "攻击破坏"
+    },
+    {
+      "name": "“薅羊毛”——黄某某提供侵入、非法控制计算机信息系统程序、工具案",
+      "path": "./src/main/resources/data/system/article/classicCases/20240503125850832.html",
+      "type": "攻击破坏"
+    },
+    {
+      "name": "“逻辑炸弹”——牛某某破坏计算机信息系统案",
+      "path": "./src/main/resources/data/system/article/classicCases/20240503125850838.html",
+      "type": "攻击破坏"
+    },
+    {
+      "name": "“虚拟货币”——郭某某等二人掩饰、隐瞒犯罪所得案",
+      "path": "./src/main/resources/data/system/article/classicCases/20240503130053377.html",
+      "type": "非法货币"
+    },
+    {
+      "name": "“VoIP”——林某某等46人跨境电信网络诈骗案",
+      "path": "./src/main/resources/data/system/article/classicCases/20240503130114629.html",
+      "type": "网络诈骗"
+    }
+  ]
+}

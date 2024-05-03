@@ -1,0 +1,673 @@
+<!doctype html>
+<html style='font-size:20px !important'>
+<head>
+<meta charset='UTF-8'><meta name='viewport' content='width=device-width initial-scale=1'>
+
+<link href='https://fonts.loli.net/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext' rel='stylesheet' type='text/css' /><link href='https://fonts.loli.net/css?family=Lato:900,300&subset=latin-ext' rel='stylesheet' type='text/css' /><style type='text/css'>html {overflow-x: initial !important;}:root { --bg-color:#ffffff; --text-color:#333333; --select-text-bg-color:#B5D6FC; --select-text-font-color:auto; --monospace:"Lucida Console",Consolas,"Courier",monospace; --title-bar-height:20px; }
+.mac-os-11 { --title-bar-height:28px; }
+html { font-size: 14px; background-color: var(--bg-color); color: var(--text-color); font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; -webkit-font-smoothing: antialiased; }
+body { margin: 0px; padding: 0px; height: auto; inset: 0px; font-size: 1rem; line-height: 1.42857; overflow-x: hidden; background: inherit; tab-size: 4; }
+iframe { margin: auto; }
+a.url { word-break: break-all; }
+a:active, a:hover { outline: 0px; }
+.in-text-selection, ::selection { text-shadow: none; background: var(--select-text-bg-color); color: var(--select-text-font-color); }
+#write { margin: 0px auto; height: auto; width: inherit; word-break: normal; overflow-wrap: break-word; position: relative; white-space: normal; overflow-x: visible; padding-top: 36px; }
+#write.first-line-indent p { text-indent: 2em; }
+#write.first-line-indent li p, #write.first-line-indent p * { text-indent: 0px; }
+#write.first-line-indent li { margin-left: 2em; }
+.for-image #write { padding-left: 8px; padding-right: 8px; }
+body.typora-export { padding-left: 30px; padding-right: 30px; }
+.typora-export .footnote-line, .typora-export li, .typora-export p { white-space: pre-wrap; }
+.typora-export .task-list-item input { pointer-events: none; }
+@media screen and (max-width: 500px) {
+  body.typora-export { padding-left: 0px; padding-right: 0px; }
+  #write { padding-left: 20px; padding-right: 20px; }
+  .CodeMirror-sizer { margin-left: 0px !important; }
+  .CodeMirror-gutters { display: none !important; }
+}
+#write li > figure:last-child { margin-bottom: 0.5rem; }
+#write ol, #write ul { position: relative; }
+img { max-width: 100%; vertical-align: middle; image-orientation: from-image; }
+button, input, select, textarea { color: inherit; font: inherit; }
+input[type="checkbox"], input[type="radio"] { line-height: normal; padding: 0px; }
+*, ::after, ::before { box-sizing: border-box; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p, #write pre { width: inherit; }
+#write h1, #write h2, #write h3, #write h4, #write h5, #write h6, #write p { position: relative; }
+p { line-height: inherit; }
+h1, h2, h3, h4, h5, h6 { break-after: avoid-page; break-inside: avoid; orphans: 4; }
+p { orphans: 4; }
+h1 { font-size: 2rem; }
+h2 { font-size: 1.8rem; }
+h3 { font-size: 1.6rem; }
+h4 { font-size: 1.4rem; }
+h5 { font-size: 1.2rem; }
+h6 { font-size: 1rem; }
+.md-math-block, .md-rawblock, h1, h2, h3, h4, h5, h6, p { margin-top: 1rem; margin-bottom: 1rem; }
+.hidden { display: none; }
+.md-blockmeta { color: rgb(204, 204, 204); font-weight: 700; font-style: italic; }
+a { cursor: pointer; }
+sup.md-footnote { padding: 2px 4px; background-color: rgba(238, 238, 238, 0.7); color: rgb(85, 85, 85); border-radius: 4px; cursor: pointer; }
+sup.md-footnote a, sup.md-footnote a:hover { color: inherit; text-transform: inherit; text-decoration: inherit; }
+#write input[type="checkbox"] { cursor: pointer; width: inherit; height: inherit; }
+figure { overflow-x: auto; margin: 1.2em 0px; max-width: calc(100% + 16px); padding: 0px; }
+figure > table { margin: 0px; }
+tr { break-inside: avoid; break-after: auto; }
+thead { display: table-header-group; }
+table { border-collapse: collapse; border-spacing: 0px; width: 100%; overflow: auto; break-inside: auto; text-align: left; }
+table.md-table td { min-width: 32px; }
+.CodeMirror-gutters { border-right: 0px; background-color: inherit; }
+.CodeMirror-linenumber { user-select: none; }
+.CodeMirror { text-align: left; }
+.CodeMirror-placeholder { opacity: 0.3; }
+.CodeMirror pre { padding: 0px 4px; }
+.CodeMirror-lines { padding: 0px; }
+div.hr:focus { cursor: none; }
+#write pre { white-space: pre-wrap; }
+#write.fences-no-line-wrapping pre { white-space: pre; }
+#write pre.ty-contain-cm { white-space: normal; }
+.CodeMirror-gutters { margin-right: 4px; }
+.md-fences { font-size: 0.9rem; display: block; break-inside: avoid; text-align: left; overflow: visible; white-space: pre; background: inherit; position: relative !important; }
+.md-fences-adv-panel { width: 100%; margin-top: 10px; text-align: center; padding-top: 0px; padding-bottom: 8px; overflow-x: auto; }
+#write .md-fences.mock-cm { white-space: pre-wrap; }
+.md-fences.md-fences-with-lineno { padding-left: 0px; }
+#write.fences-no-line-wrapping .md-fences.mock-cm { white-space: pre; overflow-x: auto; }
+.md-fences.mock-cm.md-fences-with-lineno { padding-left: 8px; }
+.CodeMirror-line, twitterwidget { break-inside: avoid; }
+.footnotes { opacity: 0.8; font-size: 0.9rem; margin-top: 1em; margin-bottom: 1em; }
+.footnotes + .footnotes { margin-top: 0px; }
+.md-reset { margin: 0px; padding: 0px; border: 0px; outline: 0px; vertical-align: top; background: 0px 0px; text-decoration: none; text-shadow: none; float: none; position: static; width: auto; height: auto; white-space: nowrap; cursor: inherit; -webkit-tap-highlight-color: transparent; line-height: normal; font-weight: 400; text-align: left; box-sizing: content-box; direction: ltr; }
+li div { padding-top: 0px; }
+blockquote { margin: 1rem 0px; }
+li .mathjax-block, li p { margin: 0.5rem 0px; }
+li blockquote { margin: 1rem 0px; }
+li { margin: 0px; position: relative; }
+blockquote > :last-child { margin-bottom: 0px; }
+blockquote > :first-child, li > :first-child { margin-top: 0px; }
+.footnotes-area { color: rgb(136, 136, 136); margin-top: 0.714rem; padding-bottom: 0.143rem; white-space: normal; }
+#write .footnote-line { white-space: pre-wrap; }
+@media print {
+  body, html { border: 1px solid transparent; height: 99%; break-after: avoid; break-before: avoid; font-variant-ligatures: no-common-ligatures; }
+  #write { margin-top: 0px; padding-top: 0px; border-color: transparent !important; }
+  .typora-export * { -webkit-print-color-adjust: exact; }
+  .typora-export #write { break-after: avoid; }
+  .typora-export #write::after { height: 0px; }
+  .is-mac table { break-inside: avoid; }
+  .typora-export-show-outline .typora-export-sidebar { display: none; }
+}
+.footnote-line { margin-top: 0.714em; font-size: 0.7em; }
+a img, img a { cursor: pointer; }
+pre.md-meta-block { font-size: 0.8rem; min-height: 0.8rem; white-space: pre-wrap; background: rgb(204, 204, 204); display: block; overflow-x: hidden; }
+p > .md-image:only-child:not(.md-img-error) img, p > img:only-child { display: block; margin: auto; }
+#write.first-line-indent p > .md-image:only-child:not(.md-img-error) img { left: -2em; position: relative; }
+p > .md-image:only-child { display: inline-block; width: 100%; }
+#write .MathJax_Display { margin: 0.8em 0px 0px; }
+.md-math-block { width: 100%; }
+.md-math-block:not(:empty)::after { display: none; }
+.MathJax_ref { fill: currentcolor; }
+[contenteditable="true"]:active, [contenteditable="true"]:focus, [contenteditable="false"]:active, [contenteditable="false"]:focus { outline: 0px; box-shadow: none; }
+.md-task-list-item { position: relative; list-style-type: none; }
+.task-list-item.md-task-list-item { padding-left: 0px; }
+.md-task-list-item > input { position: absolute; top: 0px; left: 0px; margin-left: -1.2em; margin-top: calc(1em - 10px); border: none; }
+.math { font-size: 1rem; }
+.md-toc { min-height: 3.58rem; position: relative; font-size: 0.9rem; border-radius: 10px; }
+.md-toc-content { position: relative; margin-left: 0px; }
+.md-toc-content::after, .md-toc::after { display: none; }
+.md-toc-item { display: block; color: rgb(65, 131, 196); }
+.md-toc-item a { text-decoration: none; }
+.md-toc-inner:hover { text-decoration: underline; }
+.md-toc-inner { display: inline-block; cursor: pointer; }
+.md-toc-h1 .md-toc-inner { margin-left: 0px; font-weight: 700; }
+.md-toc-h2 .md-toc-inner { margin-left: 2em; }
+.md-toc-h3 .md-toc-inner { margin-left: 4em; }
+.md-toc-h4 .md-toc-inner { margin-left: 6em; }
+.md-toc-h5 .md-toc-inner { margin-left: 8em; }
+.md-toc-h6 .md-toc-inner { margin-left: 10em; }
+@media screen and (max-width: 48em) {
+  .md-toc-h3 .md-toc-inner { margin-left: 3.5em; }
+  .md-toc-h4 .md-toc-inner { margin-left: 5em; }
+  .md-toc-h5 .md-toc-inner { margin-left: 6.5em; }
+  .md-toc-h6 .md-toc-inner { margin-left: 8em; }
+}
+a.md-toc-inner { font-size: inherit; font-style: inherit; font-weight: inherit; line-height: inherit; }
+.footnote-line a:not(.reversefootnote) { color: inherit; }
+.md-attr { display: none; }
+.md-fn-count::after { content: "."; }
+code, pre, samp, tt { font-family: var(--monospace); }
+kbd { margin: 0px 0.1em; padding: 0.1em 0.6em; font-size: 0.8em; color: rgb(36, 39, 41); background: rgb(255, 255, 255); border: 1px solid rgb(173, 179, 185); border-radius: 3px; box-shadow: rgba(12, 13, 14, 0.2) 0px 1px 0px, rgb(255, 255, 255) 0px 0px 0px 2px inset; white-space: nowrap; vertical-align: middle; }
+.md-comment { color: rgb(162, 127, 3); opacity: 0.6; font-family: var(--monospace); }
+code { text-align: left; vertical-align: initial; }
+a.md-print-anchor { white-space: pre !important; border-width: initial !important; border-style: none !important; border-color: initial !important; display: inline-block !important; position: absolute !important; width: 1px !important; right: 0px !important; outline: 0px !important; background: 0px 0px !important; text-decoration: initial !important; text-shadow: initial !important; }
+.os-windows.monocolor-emoji .md-emoji { font-family: "Segoe UI Symbol", sans-serif; }
+.md-diagram-panel > svg { max-width: 100%; }
+[lang="flow"] svg, [lang="mermaid"] svg { max-width: 100%; height: auto; }
+[lang="mermaid"] .node text { font-size: 1rem; }
+table tr th { border-bottom: 0px; }
+video { max-width: 100%; display: block; margin: 0px auto; }
+iframe { max-width: 100%; width: 100%; border: none; }
+.highlight td, .highlight tr { border: 0px; }
+mark { background: rgb(255, 255, 0); color: rgb(0, 0, 0); }
+.md-html-inline .md-plain, .md-html-inline strong, mark .md-inline-math, mark strong { color: inherit; }
+.md-expand mark .md-meta { opacity: 0.3 !important; }
+mark .md-meta { color: rgb(0, 0, 0); }
+@media print {
+  .typora-export h1, .typora-export h2, .typora-export h3, .typora-export h4, .typora-export h5, .typora-export h6 { break-inside: avoid; }
+}
+.md-diagram-panel .messageText { stroke: none !important; }
+.md-diagram-panel .start-state { fill: var(--node-fill); }
+.md-diagram-panel .edgeLabel rect { opacity: 1 !important; }
+.md-fences.md-fences-math { font-size: 1em; }
+.md-fences-advanced:not(.md-focus) { padding: 0px; white-space: nowrap; border: 0px; }
+.md-fences-advanced:not(.md-focus) { background: inherit; }
+.typora-export-show-outline .typora-export-content { max-width: 1440px; margin: auto; display: flex; flex-direction: row; }
+.typora-export-sidebar { width: 300px; font-size: 0.8rem; margin-top: 80px; margin-right: 18px; }
+.typora-export-show-outline #write { --webkit-flex:2; flex: 2 1 0%; }
+.typora-export-sidebar .outline-content { position: fixed; top: 0px; max-height: 100%; overflow: hidden auto; padding-bottom: 30px; padding-top: 60px; width: 300px; }
+@media screen and (max-width: 1024px) {
+  .typora-export-sidebar, .typora-export-sidebar .outline-content { width: 240px; }
+}
+@media screen and (max-width: 800px) {
+  .typora-export-sidebar { display: none; }
+}
+.outline-content li, .outline-content ul { margin-left: 0px; margin-right: 0px; padding-left: 0px; padding-right: 0px; list-style: none; }
+.outline-content ul { margin-top: 0px; margin-bottom: 0px; }
+.outline-content strong { font-weight: 400; }
+.outline-expander { width: 1rem; height: 1.42857rem; position: relative; display: table-cell; vertical-align: middle; cursor: pointer; padding-left: 4px; }
+.outline-expander::before { content: ""; position: relative; font-family: Ionicons; display: inline-block; font-size: 8px; vertical-align: middle; }
+.outline-item { padding-top: 3px; padding-bottom: 3px; cursor: pointer; }
+.outline-expander:hover::before { content: ""; }
+.outline-h1 > .outline-item { padding-left: 0px; }
+.outline-h2 > .outline-item { padding-left: 1em; }
+.outline-h3 > .outline-item { padding-left: 2em; }
+.outline-h4 > .outline-item { padding-left: 3em; }
+.outline-h5 > .outline-item { padding-left: 4em; }
+.outline-h6 > .outline-item { padding-left: 5em; }
+.outline-label { cursor: pointer; display: table-cell; vertical-align: middle; text-decoration: none; color: inherit; }
+.outline-label:hover { text-decoration: underline; }
+.outline-item:hover { border-color: rgb(245, 245, 245); background-color: var(--item-hover-bg-color); }
+.outline-item:hover { margin-left: -28px; margin-right: -28px; border-left: 28px solid transparent; border-right: 28px solid transparent; }
+.outline-item-single .outline-expander::before, .outline-item-single .outline-expander:hover::before { display: none; }
+.outline-item-open > .outline-item > .outline-expander::before { content: ""; }
+.outline-children { display: none; }
+.info-panel-tab-wrapper { display: none; }
+.outline-item-open > .outline-children { display: block; }
+.typora-export .outline-item { padding-top: 1px; padding-bottom: 1px; }
+.typora-export .outline-item:hover { margin-right: -8px; border-right: 8px solid transparent; }
+.typora-export .outline-expander::before { content: "+"; font-family: inherit; top: -1px; }
+.typora-export .outline-expander:hover::before, .typora-export .outline-item-open > .outline-item > .outline-expander::before { content: "−"; }
+.typora-export-collapse-outline .outline-children { display: none; }
+.typora-export-collapse-outline .outline-item-open > .outline-children, .typora-export-no-collapse-outline .outline-children { display: block; }
+.typora-export-no-collapse-outline .outline-expander::before { content: "" !important; }
+.typora-export-show-outline .outline-item-active > .outline-item .outline-label { font-weight: 700; }
+.md-inline-math-container mjx-container { zoom: 0.95; }
+
+
+@include-when-export url(https://fonts.loli.net/css?family=Merriweather:900,900italic,300,300italic&subset=latin-ext);
+@include-when-export url(https://fonts.loli.net/css?family=Lato:900,300&subset=latin-ext);
+
+:root {
+	--control-text-color: #777;
+}
+
+/**
+ * forked from pixyll.com
+ * MIT license
+ */
+
+h1,
+.h1,
+.f1 {
+	font-size: 2rem;
+	line-height: 2.5rem;
+}
+h2,
+.h2,
+.f2 {
+	font-size: 1.5rem;
+	line-height: 2rem;
+}
+h3,
+.h3,
+.f3 {
+	font-size: 1.25rem;
+	line-height: 1.5rem;
+}
+p,
+.p,
+.f4,
+h4,
+h5,
+h6,
+dl,
+ol,
+ul,
+pre[cid],
+div[cid],
+#typora-source {
+	font-size: 1.125rem;
+	line-height: 1.5rem;
+}
+
+h4 {
+	font-size: 1.13rem;
+}
+/*
+ Pixyll
+ A simple, beautiful theme for Jekyll that emphasizes content rather than aesthetic fluff.
+ Best served with BASSCSS (http://jxnblk.github.io/basscss)
+ Crafted with <3 by John Otander (@4lpine) - ©2015 John Otander MIT License http://opensource.org/licenses/MIT
+
+*/
+
+body {
+	font-family: "Merriweather", "PT Serif", Georgia, "Times New Roman", "STSong", 'Segoe UI Emoji', Serif;
+	line-height: 1.5rem;
+	font-weight: 400;
+}
+
+#write {
+	max-width: 914px;
+	color: #333;
+}
+
+@media only screen and (min-width: 1400px) {
+	#write {
+		max-width: 1100px;
+	}
+}
+
+@media only screen and (min-width: 1700px) {
+	#write {
+		max-width: 1200px;
+	}
+}
+
+img {
+	width: auto;
+	max-width: 100%;
+}
+body {
+	font-size: 1.5rem;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+}
+
+.ty-table-edit {
+	background: #ededed;
+}
+
+table {
+	width: 100%;
+	font-size: 1.125rem;
+}
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td,
+table > tfoot > tr > th,
+table > tfoot > tr > td {
+	padding: 12px;
+	line-height: 1.2;
+	vertical-align: top;
+	border-top: 1px solid #333;
+}
+table > thead > tr > th {
+	vertical-align: bottom;
+	border-bottom: 2px solid #333;
+}
+table > caption + thead > tr:first-child > th,
+table > caption + thead > tr:first-child > td,
+table > colgroup + thead > tr:first-child > th,
+table > colgroup + thead > tr:first-child > td,
+table > thead:first-child > tr:first-child > th,
+table > thead:first-child > tr:first-child > td {
+	border-top: 0;
+}
+table > tbody + tbody {
+	border-top: 2px solid #333;
+}
+p {
+	font-weight: 300;
+	line-height: 1.5;
+}
+abbr {
+	border-bottom: 1px black dotted;
+	cursor: help;
+}
+pre,
+code {
+	font-family: Menlo, Monaco, "Courier New", monospace;
+}
+
+code,
+.md-fences  {
+	color: #7a7a7a;
+}
+
+.md-fences {
+	padding: 1.125em;
+	margin-bottom: 0.88em;
+	font-size: 1rem;
+	border: 1px solid #7a7a7a;
+	padding-bottom: 0.5rem;
+	padding-top: 0.5rem;
+}
+
+blockquote {
+	padding: 1.33em;
+	font-style: italic;
+	border-left: 5px solid #7a7a7a;
+	color: #555;
+}
+blockquote em {
+	color: #000;
+}
+blockquote footer {
+	font-size: .85rem;
+	font-style: normal;
+	background-color: #fff;
+	color: #7a7a7a;
+	border-color: transparent;
+}
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+	font-family: "Lato", 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: bold;
+	line-height: 1.2;
+	margin: 1em 0 0.5em;
+}
+@media screen and (min-width: 48em) {
+	.h1,
+	h1 {
+		font-size: 3.250rem;
+	}
+	.h2,
+	h2 {
+		font-size: 2.298rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.625rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.3rem;
+	}
+	#write>h4.md-focus:before,
+	#write>h5.md-focus:before,
+	#write>h6.md-focus:before{
+		top: 1px;
+	}
+	.p,
+	p,
+	li {
+		font-size: 1.25rem;
+		line-height: 1.8;
+	}
+	table {
+		font-size: 1.25rem;
+	}
+}
+@media (max-width: 48em) {
+	blockquote {
+		margin-left: 1rem;
+		margin-right: 0;
+		padding: 0.5em;
+	}
+	.h1,
+	h1 {
+		font-size: 2.827rem;
+	}
+	.h2,
+	h2 {
+		font-size: 1.999rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.413rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.3rem;
+	}
+}
+@media screen and (min-width: 64em) {
+	.h1,
+	h1 {
+		font-size: 4.498rem;
+	}
+	.h2,
+	h2 {
+		font-size: 2.29rem;
+	}
+	.h3,
+	h3 {
+		font-size: 1.9rem;
+	}
+	.h4,
+	h4 {
+		font-size: 1.591rem;
+	}
+	#write>h4.md-focus:before{
+		top:4px;
+	}
+}
+a {
+	color: #463F5C;
+	text-decoration: underline;
+}
+
+#write {
+	padding-top: 2rem;
+}
+
+#write pre.md-meta-block {
+	min-height: 35px;
+	padding: 0.5em 1em;
+	white-space: pre;
+	border: 0px;
+
+	border-left: 30px #f8f8f8 solid;
+	border-right: 30px #f8f8f8 solid;
+	width: 100vw;
+	max-width: calc(100% + 60px);
+
+	margin-left: -30px;
+	margin-bottom: 2em;
+	margin-top: -2010px;
+	padding-top: 2000px;
+	padding-bottom: 10px;
+	line-height: 1.5em;
+	color: #7a7a7a;
+	background-color: #fafafa;
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+	font-weight: 300;
+	clear: both;
+	padding-left: 0;
+	font-size:1.125rem;
+}
+.md-image>.md-meta {
+	color: #463F5C
+}
+.footnotes {
+	font-size:1.1rem;
+}
+.md-tag {
+	font-family: 'Lato', 'Helvetica Neue', Helvetica, sans-serif;
+}
+.code-tooltip {
+	background: white;
+}
+.code-tooltip-content {
+	font-size: 1.1rem;
+}
+
+.task-list{
+	padding-left: 0;
+}
+
+.md-task-list-item {
+	padding-left:34px;
+}
+
+.md-task-list-item > input{
+	width: 1.25rem;
+	height: 1.25rem;
+	display: block;
+	-webkit-appearance: initial;
+	top: -0.2rem;
+	margin-left: -1.6em;
+	margin-top: calc(1rem - 7px);
+	border: none;
+}
+
+.md-task-list-item > input:focus{
+	outline: none;
+	box-shadow: none;
+}
+
+.md-task-list-item > input:before{
+	border: 1px solid #555;
+	border-radius: 1.5rem;
+	width: 1.5rem;
+	height: 1.5rem;
+	background: #fff;
+	content: ' ';
+	transition: background-color 200ms ease-in-out;
+	display: block;
+}
+
+.md-task-list-item > input:checked:before,
+.md-task-list-item > input[checked]:before{
+	background: #333;
+	border-width: 2px;
+	display:inline-block;
+	transition: background-color 200ms ease-in-out;
+}
+
+.md-task-list-item > input:checked:after,
+.md-task-list-item > input[checked]:after {
+	opacity: 1;
+}
+
+.md-task-list-item > input:after {
+	opacity: 1;
+	-webkit-transition: opacity 0.05s ease-in-out;
+	-moz-transition: opacity 0.05s ease-in-out;
+	transition: opacity 0.05s ease-in-out;
+	-webkit-transform: rotate(-45deg);
+	-moz-transform: rotate(-45deg);
+	transform: rotate(-45deg);
+	position: absolute;
+	top: 0.4375rem;
+	left: 0.28125rem;
+	width: 0.9375rem;
+	height: 0.5rem;
+	border: 3px solid #fff;
+	border-top: 0;
+	border-right: 0;
+	content: ' ';
+	opacity: 0;
+}
+
+.md-tag {
+	color:inherit;
+}
+
+.md-toc:focus .md-toc-content{
+	margin-top: 19px;
+}
+
+#typora-sidebar {
+	font-size:1rem !important;
+}
+
+.html-for-mac #typora-sidebar {
+	background-color:white;
+}
+
+.outline-content li, .outline-content ul {
+	font-size:1rem !important;
+}
+
+.outline-title {
+	line-height: inherit;
+	margin-top: 10px;
+}
+
+.outline-expander {
+	width: 18px;
+}
+
+.outline-expander:before {
+ 	content: "+";
+	font-family: inherit;
+	color: rgb(108, 108, 108); 
+  font-size: 1.5rem;
+ 	top: -0.1rem;
+}
+
+.outline-expander:hover:before {
+	content: "+";
+}
+
+.outline-item-open>.outline-item>.outline-expander:before{
+	content: "-";
+}
+
+/** source code mode */
+#typora-source {
+	font-family: Courier, monospace;
+    color: #6A6A6A;
+}
+
+.os-windows #typora-source {
+	font-family: inherit;
+}
+
+.cm-s-typora-default .cm-header, 
+.cm-s-typora-default .cm-property,
+.CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
+	color: #428bca;
+}
+
+.cm-s-typora-default .cm-atom, .cm-s-typora-default .cm-number {
+	color: #777777;
+}
+
+.md-diagram-panel {
+	margin-top: 24px;
+	margin-left: -1.2em;
+}
+
+.md-mathjax-midline {
+	background: #fafafa;
+}
+
+.enable-diagrams pre.md-fences[lang="sequence"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="flow"] .code-tooltip,
+.enable-diagrams pre.md-fences[lang="mermaid"] .code-tooltip {
+    bottom: -3.4em;
+}
+
+.dropdown-menu .divider {
+	border-color: #e5e5e5;
+}
+
+
+</style><title></title>
+</head>
+<body class='typora-export os-windows'><div class='typora-export-content'>
+<div id='write'  class=''><h3 id='最高检-指导性案例跨境电信网络诈骗案取证策略与证据体系构建'><span>最高检: 指导性案例|跨境电信网络诈骗案取证策略与证据体系构建</span></h3><p><em><strong><span>*</span><span>侧重点：</span><span>*</span></strong></em><span>证据认定的原则，法学专业性强</span></p><p><em><strong><span>*</span><span>从“检例第67号”看——</span><span>*</span></strong></em></p><p><em><strong><span>*</span><span>跨境电信网络诈骗案取证策略与证据体系构建</span><span>*</span></strong></em></p><p><em><strong><span>*</span><span>编者按</span><span>*</span></strong></em><span>　</span><em><strong><span>*</span><span>近年来，通信和信息网络技术的快速发展给人们的生活带来极大方便，但是，电信网络诈骗特别是跨境诈骗案件数量也呈上升之势，且犯罪手段不断更新，给司法实践带来了许多新的挑战和困难。本期“观点·案例”聚焦最高检第十八批指导性案例中“张凯闵等52人电信网络诈骗案（检例第67号）”，邀请法学专家和办案检察官围绕电子证据的审查重点、构筑证据体系等问题进行探讨，敬请关注。</span><span>*</span></strong></em></p><p><em><strong><span>*</span><span>最高检第十八批指导性案例</span><span>*</span></strong></em></p><p><em><strong><span>*</span><span>张凯闵等52人电信网络诈骗案（检例第67号）</span><span>*</span></strong></em></p><p><em><strong><span>*</span><span>【要旨】</span><span>*</span></strong></em><span>跨境电信网络诈骗犯罪往往涉及大量的境外证据和庞杂的电子数据。对境外获取的证据应着重审查合法性，对电子数据应着重审查客观性。主要成员固定，其他人员有一定流动性的电信网络诈骗犯罪组织，可认定为犯罪集团。</span></p><p><em><strong><span>*</span><span>【基本案情】</span><span>*</span></strong></em><span>2015年6月至2016年4月间，被告人张凯闵等52人先后在国外参加对中国大陆居民进行电信网络诈骗的犯罪集团。在实施诈骗过程中，各被告人分工合作，其中部分被告人负责利用电信网络技术手段对居民的电话进行语音群呼，其内容为“有快递未签收，经查询还有护照签证即将过期，将被限制出境管制，身份信息可能遭泄露”等。当被害人按照内容操作后，电话会自动接通冒充快递公司的一线话务员。一线话务员以帮助被害人报案为由，在被害人不挂断电话时，将电话转接至冒充公安局办案人员的二线话务员。二线话务员向被害人谎称“因泄露的个人信息被用于犯罪活动，需对被害人资金流向进行调查”，欺骗被害人转账、汇款至指定账户。如果被害人对二线话务员的说法仍有怀疑，就会将电话转给冒充检察官的三线话务员继续实施诈骗。至案发，张凯闵等人通过上述诈骗手段骗取被害人钱款共计人民币2300余万元。2017年4月1日，北京市检察院第二分院对张凯闵等人以诈骗罪提起公诉，2017年12月21日，北京市第二中级法院对张凯闵等人作出诈骗罪成立的有罪判决。</span></p><p><img src="file:///C:\Users\dell\AppData\Local\Temp\ksohtml6624\wps1.png" referrerpolicy="no-referrer" alt="img"><span> </span></p><p><em><strong><span>*</span><span>围绕“合法性”和“客观性”确立审查重点</span><span>*</span></strong></em></p><p><em><strong><span>*</span><span>“从构筑证据体系、确立审查重点和以鉴定需求为引领三个维度提供了系统性解决方案，具有普遍指导意义。”</span><span>*</span></strong></em></p><p><span>随着我国对电信网络诈骗犯罪（下称“电诈犯罪”）集团境外窝点的打击力度增大，一些涉案人员相继进入刑事诉讼程序，这类案件的增多给司法实践带来了新挑战。</span></p><p><span>从证据材料组成结构看，除了物证、书证和言词证据外，电子数据是电诈犯罪案件办理中的核心证据形态。这类电子数据主要有两类来源：一类是内容数据，如保存在涉案人员电脑、手机中的非公开文件、电子邮件和社交软件中的聊天记录等，这类数据一般是从涉案人员的作案设备中获取；另一类为路径数据，即通过查明涉案信息数据的传输路径以确定能够识别用户身份的“元数据”，这类数据一般是从涉案信息所经过的数据池、数据管道中获取。由于来源特殊、分布散乱且体量较大，如何对这些证据材料尤其是电子数据进行审查认定，科学构建起证据体系成为司法实践的一道难题。最高检第十八批指导性案例中“张凯闵等52人电信网络诈骗案（检例第67号）”（下称“检例第67号”）的办理，从构筑证据体系、确立审查重点和以鉴定需求为引领三个维度提供了系统性解决方案，具有普遍指导意义。</span></p><p><em><strong><span>*</span><span>围绕“人”和“事”两主轴建立拓扑关联</span><span>*</span></strong></em></p><p><span>“检例第67号”中，办案人员紧紧围绕被追诉人和案件事实这两个要素建立主轴，并围绕两个主轴建立拓扑关联，构筑起全案证据体系。</span></p><p><span>第一，人的要素。迥异于传统案件办理，电诈犯罪横跨虚拟和物理两个空间，侦查取证往往沿循着“案（案件事实）→机（作案电脑或手机）→人（作案电脑或手机的使用者）”这样一个逻辑推进。在这个过程中，搭建“案→机”这个环节的证据桥梁比较容易，但“机→人”这个环节的证据桥梁却存在较大不确定性。比如，尽管在现场人机一并被查获，但并不能排除这台电脑（手机）在被查获人接手前由其他人员使用的可能性。那么，如何建立“机→人”之间的对应性？如何确定虚拟身份和现实身份的同一性？这是在证据运用层面必须解决的问题，如果仅依赖被追诉人口供来证明，那么一旦出现“零口供”或被追诉人翻供的情况，证据桥梁就将断裂。“检例第67号”较好地采用补强证据规则解决了这个问题：办案检察官在被追诉人稳定供述的前提下，综合运用“出入境记录”等书证，“返乡订票记录单”、Skype账户登录信息等电子数据，同案人员供述等证人证言，非常扎实地对被追诉人的口供进行了补强，有效解决了“机→人”的证据认定问题，从而稳固搭建起“案→机→人”的证据桥梁。</span></p><p><span>第二，事的要素。在电诈犯罪案件中，由于被害人分布散乱且人数众多，加之犯罪金额多为小额单笔，这为准确认定案件事实尤其是犯罪金额带来了较大困难。“检例第67号”中，办案人员紧紧围绕电话卡和银行卡来佐证案件事实：用电话卡证明“人员流”“信息流”；用银行卡证明“资金流”；两卡结合辅助以银行账户交易明细、银行客户通知书等证据材料证明电诈犯罪组织→被害人→犯罪事实（后果）之间的关联性，从而形成了严密的证据链条。</span></p><p><span>同时，由于电诈犯罪是一种典型的链条型犯罪，每个涉案人员在案件中所处环节和所起作用不同，在案件事实认定中，如何运用证据证明诸如被追诉人参与时间、行为方式、有无犯意联络等问题，对于准确查明案件事实具有重要作用。“检例第67号”中，办案人员以查明“行为轨迹”为主线，综合运用网络电话的通话记录、Skype聊天记录等电子数据，辅助以犯罪嫌疑人供述及证人证言等证据相佐证，准确查明了涉案人员在犯罪集团中的地位和作用，从而区别出主犯和从犯，对本案作出了公正处理。</span></p><p><em><strong><span>*</span><span>围绕“合法性”和“客观性”两属性确立审查重点</span><span>*</span></strong></em></p><p><span>“检例第67号”中，检察官通过对证据材料合法性和客观性的全面细致审查后及时发现问题，并通过引导补充侦查解决相关问题，从而筑牢了全案的证据基础。</span></p><p><span>第一，合法性。一般而言，谈及刑事证据的合法性问题时，往往是从取证主体、取证程序和证据形式三个角度着手，而对于境外获取的证据材料，在合法性审查上则更为复杂。“检例第67号”中，办案人员对相关证据材料的合法性审查从几个问题层面递进：首先，审查证据材料在形式上是否符合我国刑事诉讼法的规定，解决材料形式合法性问题；其次，通过审查相关条约、司法协助协议等证据材料解决境外执法人员的取证在我国的“适法性”问题；再次，对移交程序进行审查，解决证据保管链的完整性问题。此外，对于当事人及其辩护人、诉讼代理人提供的来自境外的证据材料，也对其是否按照规定经过了公正和认证等法定程序进行了审查。这种细致全面的审查，保障了境外证据在我国刑事诉讼语境中的可采性。</span></p><p><span>第二，客观性。就其属性而言，电子数据属于实物证据的一种，因此从证据客观性的形式要件看，它是客观存在的。但电子数据又是一种特殊的实物证据，它在生成、提取、流传、运用等环节都存在伪造或毁损的可能性，这种特性使得除了要从电子数据本身判断其客观性，还需要根据其与犯罪事实之间的关系、与相关证据的联系以及与全部犯罪事实的关系，多方面判断电子数据的客观性。综合域外及我国相关立法规定来看，当前对电子数据的客观性审查主要是从形式和内容两个层面进行。在形式上，主要审查以下方面：一是电子数据的生成、传输和存储的硬件及软件系统是否可靠，系统运行是否正常，传输和存储是否有加密等安全措施；二是电子数据的制作主体、制作方法以及制作方法是否可靠；三是电子数据的内容是否完整，有无人为增加、删除或篡改。在内容上，一般通过证据之间的相互印证来审查电子数据内容的客观性。“检例第67号”中，在形式客观性审查上，检察官一方面审查存储介质，另一方面以“无污损鉴定”的技术标准对电子数据的提取、保管、流转等过程进行审查。在内容客观性审查上，检察官一方面审查在案言词证据能否与电子数据相互印证、不同电子数据间能否相互印证，另一方面通过言词证据、书证、物证等证据呈现电子数据与案件事实的关联性，通过电话卡、银行卡、言词证据等建立起电子数据与被害人及犯罪嫌疑人的关联性。这种体系性解决方案极具借鉴意义。</span></p><p><em><strong><span>*</span><span>围绕“原始性”和“完整性”两标准明确鉴定需求</span><span>*</span></strong></em></p><p><span>原始性和完整性是保障电子数据客观性的前提，“检例第67号”中的“无污损鉴定”实际上就是围绕电子数据的原始性和完整性展开。可以说，正是办案检察官对鉴定工作的重视，使得本案中涉案电子数据的证据能力和证明力都得到了增强，从而保证了诉讼的顺利推进。</span></p><p><span>第一，原始性。电子数据具有易篡改、易湮灭、隐蔽性强等特点，从而导致它的原始性很容易受到损坏，因此，在利用电子数据作为证据证明某个待证事实过程中，如何证明其原始性就成为解决问题的关键。本案审查起诉阶段，办案检察官敏锐地发现电子数据“无污损鉴定意见”的起始基准时间晚于犯罪嫌疑人归案时间11个小时，不能排除此期间电子数据被污损的可能性，因此通过补充侦查实现了鉴定起始基准时间与抓获犯罪嫌疑人并起获涉案设备时间的一致性，从而保障了电子数据的原始性。</span></p><p><span>第二，完整性。电子数据的完整性，不仅是指对涉案电子数据无遗漏、无毁损的提取，还包括对电子数据进行的“全面提取”。众所周知，计算机的软件、硬件环境会影响、改变电子数据的形态。“检例第67号”中有一个细节，即检察人员会同侦查人员共赴鉴定机构向技术专家咨询，从而知悉电子数据“无污损鉴定”的具体要求，明确了提取、固定电子数据的范围、程序等问题的解决思路，从而为鉴定工作提供了合格检材，保障了鉴定工作顺利进行。这种做法极具启示意义：电子数据的完整提取作为一种对技术要求较高的取证行为，在缺乏技术专家指导的情况下，一般侦查人员很难实现对复杂电子数据的完整取证，如果能够在侦查取证阶段及时向鉴定专家咨询，了解电子数据的鉴定标准和检材需求，就能够更有针对性地制定取证预案，从而更准确、更高效地实现完整取证。</span></p><p><span>此外，电子数据的勘验和鉴定是两种不同的诉讼行为：勘验是由侦查人员依法进行的取证工作，鉴定是鉴定人运用专门工具和专门知识所进行的检验分析工作，两项工作的主体不同、目的不同，不能将二者混淆。“检例第67号”中，检察官及时纠正了将《司法鉴定书》代替《勘验笔录》的做法，从而避免了产生“以鉴代勘”的质疑，进而保障了取证程序和鉴定程序的合法性，对此值得称赞。</span></p><p><span>（作者为重庆邮电大学网络空间安全与信息法学院教授、司法鉴定中心主任）</span></p><p><em><strong><span>*</span><span>基于“双重载体”特性明确数据真实性审查路径</span><span>*</span></strong></em></p><p><span> </span></p><p><span>谢莉</span></p><p><em><strong><span>*</span><span>“从存储介质、电子数据本体、电子数据内容三个方面分步骤、分层次对电子数据真实性进行审查，可操作性强，对司法办案具有一定的参考价值。”</span><span>*</span></strong></em></p><p><span>电信网络诈骗案件中，电子数据占据了犯罪所涉证据类型的主导地位，电子数据对于诈骗事实认定、犯罪嫌疑人身份确定以及犯罪数额计算等均起着重要作用。由于电子数据缺乏稳定性，极其容易被篡改或损坏，因此，司法实践中办案人员在审查判断电子数据时，面临最突出的问题就是证据的真实性问题。“张凯闵等52人电信网络诈骗案（检例第67号）”（下称“检例第67号”）提出，“对电子数据应重点审查真实性”，从存储介质、电子数据本体、电子数据内容三个方面分步骤、分层次对电子数据真实性进行审查，可操作性强，对司法办案具有一定的参考价值。</span></p><p><em><strong><span>*</span><span>电子数据的双重载体</span><span>*</span></strong></em></p><p><span>与刑诉法中传统的实物证据相比，电子数据的形态多样，本质上是二进制表示的“编码数据”，无法单独存在，不能被人直接感知，必须存储或者记录于计算机、手机等设备当中，但是电子数据无法通过存储介质证明案件事实，而是将以电子形态存储的数据转化之后来表达证据事实。因此，电子数据所包含的“证据事实”与其外在表现形式出现了分离，呈现出双重载体的特点。其外在载体主要是承载电子数据的存储介质，在电信网络诈骗案件中主要包括诈骗犯罪组织在实施犯罪活动过程中所使用的电脑、手机等涉案设备；内在载体则是表达电子数据的证据事实，并使电子数据能够被感知的包括文字、图片等在内的各种形式，如诈骗犯罪组织使用的网络电话拨打记录清单、犯罪分子之间以及和被害人之间的通讯工具联系或实施诈骗的记录等。</span></p><p><em><strong><span>*</span><span>电信网络诈骗案件电子数据真实性审查路径</span><span>*</span></strong></em></p><p><span>检察机关在办理“检例第67号”案时，关注到了电子数据“双重鉴真”的问题，围绕电子数据双重载体特性，分步骤、分层次分别对电子数据的外在载体、内在载体以及具体内容进行审查，确保了从境外起获设备中提取、恢复的电子数据的真实性，为案件事实的认定打下基础。</span></p><p><span>首先，对电子数据存储介质的真实性进行审查。电子数据存储介质的真实性，是指存储电子数据的载体、设备在整个刑事诉讼过程中保持原始性、同一性、完整性，不存在被替换、破坏等问题。电子数据存储介质的真实性，主要包括两个方面的要求：一是电子数据载体来源的真实性。《关于办理刑事案件收集提取和审查判断电子数据若干问题的规定》和《公安机关办理刑事案件电子数据取证规则》均规定了以扣押电子数据原始介质为原则的取证规则，因此，应当首先审查侦查机关移交的电子数据是否包括原始存储介质，存储介质的收集是否符合相关规定，通过审查电子数据鉴定意见或检验报告中记载的涉案设备信息，与侦查机关扣押涉案设备的手续中记载的信息进行比对，以确定提取恢复的电子数据来自于诈骗犯罪组织所使用的设备。二是电子数据存储介质在整个刑事诉讼过程中的真实性。在刑事诉讼的各个环节，证据会在多个主体间流转，需要审查原始存储介质在移送、流转中是否保持同一性，可以通过审查存储电子数据的电脑硬盘、手机等载体的扣押、移交等法律手续及清单、相关手续中是否记载了包括序列号以及串码等区别于其他存储介质的唯一性标识，以核实电子数据存储介质在保管、鉴定、检查等各个环节中是否保持同一性和原始性。“检例第67号”中的电子数据的存储介质均为国外警方在诈骗犯罪窝点起获，检察机关重点审查了国外警方的移交清单、侦查机关进行电子数据提取时的检验报告等手续，核实上述手续中记载的涉案设备信息是否一致，并与实物进行比对，确保了电子数据存储介质的原始性和同一性。</span></p><p><span>其次，对电子数据本体的真实性进行审查。在验证了存储介质的真实性之后，需要进一步审查电子数据本体的真实性。和审查电子数据存储介质真实性方法相同，电子数据本体的真实性审查主要也是两个方面：一是电子数据来源的原始性和同一性，二是电子数据在刑事诉讼的各个环节没有被更改或者删减。通过审查电子数据检验报告、鉴定意见中记录的电子数据的来源和收集过程，核实电子数据是否从原始存储介质中提取，以及收集的程序和方法是否符合法律及相关技术规范，如因不便封存等原因无法扣押原始存储介质的，侦查机关采用“在线提取”的方式固定电子数据时，是否对电子数据收集过程进行同步录像，以及是否采用其他保障电子数据真实性的手段，以确保电子数据来源的原始性和同一性。通过审查移交电子数据的清单、计算完整性校验值等方式，确保电子数据在整个刑事诉讼过程中保持同一性、完整性。</span></p><p><span>第三，对电子数据内容的真实性进行审查。电子数据内容的真实性是电子数据真实性的核心问题，主要审查的是电子数据所包含的和案件事实相关的信息是否真实，能否与案件中其他证据所包含的信息相互印证，从而准确证明案件事实。通过审查在案言词证据能否与电子数据相互印证、电子数据能否与实物证据相互印证、不同的电子数据之间能否相互印证等，核实电子数据所包含的案件信息能否与在案的其他证据相互印证，以证实电子数据内容的真实性。办理电信网络诈骗案件，诈骗的具体行为主要反映在通讯联络上，诈骗的犯罪结果主要反映在资金往来上，从而分别形成通讯类和资金类两类电子数据，诈骗犯罪事实的认定也主要围绕该两类证据进行。“检例第67号”中的电子数据主要包括犯罪集团使用的网络电话拨打记录、被害人转款记录等，检察机关通过印证证明规则确认了上述电子数据的真实性之后，在通过电子数据建立被害人与诈骗犯罪集团关联性的基础上，确立了通信类电子数据、资金类电子数据与在案被害人陈述、犯罪嫌疑人供述等其他证据之间严格的印证关系，从而准确认定了犯罪事实以及具体诈骗金额，也得到了法院判决的认可。</span></p><p><em><strong><span>*</span><span>电子数据无污损鉴定问题</span><span>*</span></strong></em></p><p><span>随着网络技术不断发展，以及我国对电信网络诈骗犯罪打击力度的加大，跨境电信网络诈骗犯罪不断增多，当前侦查机关主要通过委托调查、联合侦查等方式对该类犯罪进行打击。通过司法协助等方式获取境外存储介质，被请求国按照条约及请求事项依据本国法取得涉案设备后，需要经过相关审批再移交我国，在设备被外方起获后移交我国之前，存储于其中的电子数据是否有被增加、删除、修改等情形，直接影响电子数据的真实性，因此，对于其中的电子数据首先需要进行无污损鉴定，在证实数据没有增加、删除、修改等情形之后才可以作为证据使用。对于无污损鉴定的起始基准时间，“检例第67号”已经予以明确，即起获设备的时间，如被请求国在相关说明中没有记载该时间，则需要我国驻该国使领馆或侦查机关出具说明予以补正。</span></p></div></div>
+</body>
+</html>
